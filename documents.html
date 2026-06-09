@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teknik Kitaplık — REF YAPI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=12" />
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="REF YAPI">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
+    <li>
+      <a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Our Products</span><span data-lang="ru">Продукты</span><span class="dd-arrow">▾</span></a>
+      <ul class="dd">
+        <li><a href="fire-detection.html"><span data-lang="tr">Yangın Algılama ve Uyarı Sistemleri</span><span data-lang="en">Fire Detection &amp; Alarm</span><span data-lang="ru">Пожарная сигнализация</span></a></li>
+        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
+        <li><a href="automation-systems.html"><span data-lang="tr">Otomasyon Sistemleri</span><span data-lang="en">Automation Systems</span><span data-lang="ru">Автоматизация</span></a></li>
+        <li><a href="audio-visual-systems.html"><span data-lang="tr">Ses ve Işık Sistemleri</span><span data-lang="en">Audio &amp; Visual Systems</span><span data-lang="ru">Аудио и свет</span></a></li>
+        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim Sistemleri</span><span data-lang="en">Data &amp; Communications</span><span data-lang="ru">Связь и данные</span></a></li>
+        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü Sistemleri</span><span data-lang="en">TV &amp; Video Systems</span><span data-lang="ru">ТВ и видео</span></a></li>
+      </ul>
+    </li>
+    <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
+    <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
+    <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lbtn on" onclick="setLang('tr')">TR</button>
+    <button class="lbtn" onclick="setLang('en')">EN</button>
+    <button class="lbtn" onclick="setLang('ru')">RU</button>
+    <button class="hbg" aria-label="Menü"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="svc-hero">
+  <div class="svc-hero-bg" style="background-image:url('assets/istanbul-skyline.png')"></div>
+  <div class="svc-hero-content">
+    <div class="crumb">
+      <a href="index.html"><span data-lang="tr">Ana Sayfa</span><span data-lang="en">Home</span><span data-lang="ru">Главная</span></a>
+      <span class="sep">/</span>
+      <span class="cur"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Technical Library</span><span data-lang="ru">Техническая библиотека</span></span>
+    </div>
+    <div class="svc-hero-eyebrow"><span data-lang="tr">Belgeler</span><span data-lang="en">Documents</span><span data-lang="ru">Документы</span></div>
+    <h1 class="svc-hero-title">
+      <span data-lang="tr">Sertifikalar ve<br>Referanslar</span>
+      <span data-lang="en">Certificates &amp;<br>References</span>
+      <span data-lang="ru">Сертификаты и<br>референции</span>
+    </h1>
+  </div>
+</section>
+
+<section class="lib-main">
+  <div class="lib-main-inner">
+
+    <div class="lib-filters">
+      <button type="button" class="lib-filter on" data-filter="all"><span data-lang="tr">Tümü</span><span data-lang="en">All</span><span data-lang="ru">Все</span></button>
+      <button type="button" class="lib-filter" data-filter="reference"><span data-lang="tr">Referanslar</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></button>
+      <button type="button" class="lib-filter" data-filter="authorization"><span data-lang="tr">Yetkilendirme</span><span data-lang="en">Authorization</span><span data-lang="ru">Авторизация</span></button>
+      <button type="button" class="lib-filter" data-filter="iso"><span data-lang="tr">ISO</span><span data-lang="en">ISO</span><span data-lang="ru">ISO</span></button>
+      <button type="button" class="lib-filter" data-filter="certificate"><span data-lang="tr">Sertifikalar</span><span data-lang="en">Certificates</span><span data-lang="ru">Сертификаты</span></button>
+    </div>
+
+    <div class="lib-viewer" id="libViewer">
+      <div class="lib-viewer-head">
+        <div class="lib-viewer-title"></div>
+        <div class="lib-viewer-meta">
+          <span class="lib-viewer-counter">1 / 16</span>
+        </div>
+      </div>
+      <div class="lib-viewer-stage">
+        <button type="button" class="lib-nav-btn lib-nav-prev" aria-label="Previous">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <img class="lib-viewer-img" src="assets/certificates/cert-01-anadolu-saglik.png" alt="" />
+        <button type="button" class="lib-nav-btn lib-nav-next" aria-label="Next">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="lib-viewer-tools">
+        <span class="lib-tools-label"><span data-lang="tr">Görüntüle</span><span data-lang="en">View</span><span data-lang="ru">Просмотр</span></span>
+        <button type="button" class="lib-tool-btn lib-zoom-out" aria-label="Zoom out">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" class="lib-tool-btn lib-zoom-reset" aria-label="Reset zoom">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <button type="button" class="lib-tool-btn lib-zoom-in" aria-label="Zoom in">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" class="lib-tool-btn lib-fullscreen" aria-label="Fullscreen">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="lib-grid" id="libGrid">
+
+      <article class="lib-card" id="cert-1" data-category="reference" data-src="assets/certificates/cert-01-anadolu-saglik.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-01-anadolu-saglik.png" alt="Anadolu Sağlık Merkezi referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Anadolu Sağlık Merkezi — Referans Mektubu</span><span data-lang="en">Anadolu Medical Center — Reference Letter</span><span data-lang="ru">Anadolu Medical Center — рекомендательное письмо</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans · 2008</span><span data-lang="en">Reference · 2008</span><span data-lang="ru">Референция · 2008</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-2" data-category="authorization" data-src="assets/certificates/cert-02-fnv-yetki-tr.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-02-fnv-yetki-tr.png" alt="FNV Elektronik REF YAPI yetkilendirme belgesi" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">FNV Elektronik — REF YAPI Yetkilendirme (TR)</span><span data-lang="en">FNV Elektronik — REF YAPI Authorization (TR)</span><span data-lang="ru">FNV Elektronik — авторизация REF YAPI (TR)</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Yetkilendirme · Honeywell</span><span data-lang="en">Authorization · Honeywell</span><span data-lang="ru">Авторизация · Honeywell</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-3" data-category="iso" data-src="assets/certificates/cert-03-iso9001-fnv.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-03-iso9001-fnv.png" alt="ISO 9001:2015 FNV Elektronik sertifikası" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 9001:2015 — FNV Elektronik</span><span data-lang="en">ISO 9001:2015 — FNV Elektronik</span><span data-lang="ru">ISO 9001:2015 — FNV Elektronik</span></div>
+          <div class="lib-card-cat">ISO 9001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-4" data-category="reference" data-src="assets/certificates/cert-04-anel-referans.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-04-anel-referans.png" alt="Anel Group referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Anel Group — Referans Mektubu</span><span data-lang="en">Anel Group — Reference Letter</span><span data-lang="ru">Anel Group — рекомендательное письмо</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans · 2020</span><span data-lang="en">Reference · 2020</span><span data-lang="ru">Референция · 2020</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-5" data-category="certificate" data-src="assets/certificates/cert-05-fnv-marka-tescil.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-05-fnv-marka-tescil.png" alt="FNV Elektronik marka tescil belgesi" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">FNV Elektronik — Marka Tescil Belgesi</span><span data-lang="en">FNV Elektronik — Trademark Certificate</span><span data-lang="ru">FNV Elektronik — свидетельство о товарном знаке</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Marka · 2016</span><span data-lang="en">Trademark · 2016</span><span data-lang="ru">Товарный знак · 2016</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-6" data-category="reference" data-src="assets/certificates/cert-06-thy-technic.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-06-thy-technic.png" alt="Turkish Technic THY HABOM referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Turkish Technic — THY HABOM Referans</span><span data-lang="en">Turkish Technic — THY HABOM Reference</span><span data-lang="ru">Turkish Technic — референция THY HABOM</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans · 2020</span><span data-lang="en">Reference · 2020</span><span data-lang="ru">Референция · 2020</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-7" data-category="authorization" data-src="assets/certificates/cert-07-fnv-yetki-en.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-07-fnv-yetki-en.png" alt="FNV Elektronik REF YAPI authorization letter" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">FNV Elektronik — REF YAPI Yetkilendirme (EN)</span><span data-lang="en">FNV Elektronik — REF YAPI Authorization (EN)</span><span data-lang="ru">FNV Elektronik — авторизация REF YAPI (EN)</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Yetkilendirme · Honeywell</span><span data-lang="en">Authorization · Honeywell</span><span data-lang="ru">Авторизация · Honeywell</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-8" data-category="authorization" data-src="assets/certificates/cert-08-honeywell-gold.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-08-honeywell-gold.png" alt="Honeywell GOLD Channel Partner sertifikası" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Honeywell GOLD Channel Partner</span><span data-lang="en">Honeywell GOLD Channel Partner</span><span data-lang="ru">Honeywell GOLD Channel Partner</span></div>
+          <div class="lib-card-cat">2018–2019</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-9" data-category="reference" data-src="assets/certificates/cert-09-regnum-carya.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-09-regnum-carya.png" alt="Regnum Carya referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Regnum Carya — Referans Mektubu</span><span data-lang="en">Regnum Carya — Reference Letter</span><span data-lang="ru">Regnum Carya — рекомендательное письмо</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans</span><span data-lang="en">Reference</span><span data-lang="ru">Референция</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-10" data-category="reference" data-src="assets/certificates/cert-10-thy-technic-2.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-10-thy-technic-2.png" alt="Turkish Technic referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Turkish Technic — Referans Mektubu</span><span data-lang="en">Turkish Technic — Reference Letter</span><span data-lang="ru">Turkish Technic — рекомендательное письмо</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans · 2020</span><span data-lang="en">Reference · 2020</span><span data-lang="ru">Референция · 2020</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-11" data-category="certificate" data-src="assets/certificates/cert-11-sshy-fnv.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-11-sshy-fnv.png" alt="Satış sonrası hizmet yeterlilik belgesi" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Satış Sonrası Hizmet Yeterlilik Belgesi</span><span data-lang="en">After-Sales Service Qualification Certificate</span><span data-lang="ru">Сертификат квалификации послепродажного обслуживания</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Ticaret Bakanlığı · 2020</span><span data-lang="en">Ministry of Trade · 2020</span><span data-lang="ru">Минторг · 2020</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-12" data-category="iso" data-src="assets/certificates/cert-12-iso9001-ref-tr.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-12-iso9001-ref-tr.png" alt="ISO 9001 REF Yapı sertifikası Türkçe" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 9001:2015 — REF Yapı (TR)</span><span data-lang="en">ISO 9001:2015 — REF Yapı (TR)</span><span data-lang="ru">ISO 9001:2015 — REF Yapı (TR)</span></div>
+          <div class="lib-card-cat">ISO 9001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-13" data-category="iso" data-src="assets/certificates/cert-13-iso45001-ref-en.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-13-iso45001-ref-en.png" alt="ISO 45001 REF Yapı certificate English" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 45001:2018 — REF Yapı (EN)</span><span data-lang="en">ISO 45001:2018 — REF Yapı (EN)</span><span data-lang="ru">ISO 45001:2018 — REF Yapı (EN)</span></div>
+          <div class="lib-card-cat">ISO 45001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-14" data-category="iso" data-src="assets/certificates/cert-14-iso45001-ref-tr.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-14-iso45001-ref-tr.png" alt="ISO 45001 REF Yapı sertifikası Türkçe" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 45001:2018 — REF Yapı (TR)</span><span data-lang="en">ISO 45001:2018 — REF Yapı (TR)</span><span data-lang="ru">ISO 45001:2018 — REF Yapı (TR)</span></div>
+          <div class="lib-card-cat">ISO 45001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-15" data-category="iso" data-src="assets/certificates/cert-15-iso9001-ref-en.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-15-iso9001-ref-en.png" alt="ISO 9001 REF Yapı certificate English" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 9001:2015 — REF Yapı (EN)</span><span data-lang="en">ISO 9001:2015 — REF Yapı (EN)</span><span data-lang="ru">ISO 9001:2015 — REF Yapı (EN)</span></div>
+          <div class="lib-card-cat">ISO 9001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-16" data-category="certificate" data-src="assets/certificates/cert-16-sshy-2019.png">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-16-sshy-2019.png" alt="Satış sonrası hizmet yeterlilik belgesi 2019" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Satış Sonrası Hizmet Yeterlilik Belgesi</span><span data-lang="en">After-Sales Service Qualification Certificate</span><span data-lang="ru">Сертификат квалификации послепродажного обслуживания</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Ticaret Bakanlığı · 2019</span><span data-lang="en">Ministry of Trade · 2019</span><span data-lang="ru">Минторг · 2019</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div>
+      <img class="ft-brand-logo" src="assets/logo.png" alt="REF YAPI">
+      <p class="ft-brand-sub">
+        <span data-lang="tr">Elektrik Zayıf Akım Sistemleri alanında güvenilir çözüm ortağınız. 2012'den bu yana Türkiye ve Özbekistan'da hizmetinizdeyiz.</span>
+        <span data-lang="en">Your trusted partner for low-current systems. Serving Turkey and Uzbekistan since 2012.</span>
+        <span data-lang="ru">Надёжный партнёр в слаботочных системах. Работаем с 2012 года.</span>
+      </p>
+    </div>
+    <div>
+      <p class="ft-col-head"><span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></p>
+      <ul class="ft-links">
+        <li><a href="fire-detection.html"><span data-lang="tr">Yangın Sistemleri</span><span data-lang="en">Fire Systems</span><span data-lang="ru">Пожарные системы</span></a></li>
+        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
+        <li><a href="automation-systems.html"><span data-lang="tr">Otomasyon</span><span data-lang="en">Automation</span><span data-lang="ru">Автоматизация</span></a></li>
+        <li><a href="audio-visual-systems.html"><span data-lang="tr">Ses ve Işık</span><span data-lang="en">Audio &amp; Visual</span><span data-lang="ru">Аудио и свет</span></a></li>
+        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim</span><span data-lang="en">Data &amp; Comms</span><span data-lang="ru">Связь и данные</span></a></li>
+        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü</span><span data-lang="en">TV &amp; Video</span><span data-lang="ru">ТВ и видео</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-col-head"><span data-lang="tr">Şirket</span><span data-lang="en">Company</span><span data-lang="ru">Компания</span></p>
+      <ul class="ft-links">
+        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
+        <li><a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Products</span><span data-lang="ru">Продукция</span></a></li>
+        <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
+        <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
+        <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-col-head"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></p>
+      <ul class="ft-links">
+        <li><a href="tel:+902164413350">+90 216 441 33 50</a></li>
+        <li><a href="tel:+998781294949">+998 78 129 49 49</a></li>
+        <li><a href="mailto:info@refyapi.com">info@refyapi.com</a></li>
+        <li><a href="http://www.refyapi.com" target="_blank">www.refyapi.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>© 2024 REF YAPI Teknolojileri · <span data-lang="tr">Tüm Hakları Saklıdır</span><span data-lang="en">All Rights Reserved</span><span data-lang="ru">Все права защищены</span></span>
+    <span>İstanbul · Taşkent</span>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=12"></script>
+<script src="assets/lib-viewer.js?v=12"></script>
+</body>
+</html>
