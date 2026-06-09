@@ -482,6 +482,28 @@ footer { background: var(--ink); }
 .eq-card h3 { font-family: var(--f-display); font-size: 1.15rem; font-weight: 600; color: #fff; line-height: 1.3; }
 .eq-card p { font-size: .8rem; line-height: 1.7; color: rgba(255,255,255,.45); margin-top: 8px; }
 
+/* System detail blocks */
+.svc-systems { background: var(--white); }
+.svc-systems-inner { max-width: 1200px; margin: 0 auto; padding: 96px 56px; }
+.svc-detail {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+  padding: 64px 0; border-bottom: 1px solid var(--border);
+}
+.svc-detail:first-child { padding-top: 0; }
+.svc-detail:last-child { border-bottom: none; padding-bottom: 0; }
+.svc-detail.reverse { direction: rtl; }
+.svc-detail.reverse > * { direction: ltr; }
+.svc-detail-img { width: 100%; border: 1px solid var(--border); background: var(--cream); }
+.svc-detail-title { font-family: var(--f-display); font-size: clamp(1.6rem,3vw,2.2rem); font-weight: 600; color: var(--ink); line-height: 1.2; margin-bottom: 16px; }
+.svc-detail-intro { font-size: .95rem; line-height: 1.85; color: var(--ink-3); margin-bottom: 20px; }
+.svc-detail-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.svc-detail-list li {
+  position: relative; padding-left: 18px; font-size: .9rem; line-height: 1.75; color: var(--ink-2);
+}
+.svc-detail-list li::before {
+  content: '•'; position: absolute; left: 0; color: var(--gold); font-weight: 700;
+}
+
 /* Other services */
 .svc-other { background: var(--white); }
 .svc-other-inner { max-width: 1200px; margin: 0 auto; padding: 90px 56px; }
@@ -540,6 +562,8 @@ footer { background: var(--ink); }
   .products-header, .refs-top, .services-top { flex-direction: column; align-items: flex-start; }
   .products-header-p, .services-top-right { text-align: left; }
   .svc-overview-inner { grid-template-columns: 1fr; }
+  .svc-detail { grid-template-columns: 1fr; gap: 32px; }
+  .svc-detail.reverse { direction: ltr; }
   .svc-equip-grid, .svc-other-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
@@ -552,6 +576,6 @@ footer { background: var(--ink); }
   .sg, .prod-grid, .refs-grid, .tl-cards { grid-template-columns: 1fr; }
   .catalog-inner { flex-direction: column; }
   .stats-inner { grid-template-columns: 1fr 1fr; padding: 0 20px; }
-  .svc-hero-content, .svc-overview-inner, .svc-equip-inner, .svc-other-inner { padding-left: 20px; padding-right: 20px; }
+  .svc-hero-content, .svc-overview-inner, .svc-equip-inner, .svc-other-inner, .svc-systems-inner { padding-left: 20px; padding-right: 20px; }
   .svc-equip-grid, .svc-other-grid { grid-template-columns: 1fr; }
 }
