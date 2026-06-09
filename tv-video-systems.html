@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=6" />
+  <link rel="stylesheet" href="assets/site.css?v=7" />
 </head>
 <body>
 
@@ -52,6 +52,11 @@
     </div>
     <span class="svc-hero-eyebrow"><span data-lang="tr">Hizmet 06</span><span data-lang="en">Service 06</span><span data-lang="ru">Услуга 06</span></span>
     <h1 class="svc-hero-title"><span data-lang="tr">TV ve Görüntü Sistemleri</span><span data-lang="en">TV &amp; Video Systems</span><span data-lang="ru">Телевидение и видео</span></h1>
+    <nav class="svc-systems-nav" style="margin-top:28px;justify-content:flex-start">
+      <a href="#smatv"><span data-lang="tr">SMATV</span><span data-lang="en">SMATV</span><span data-lang="ru">SMATV</span></a>
+      <a href="#iptv"><span data-lang="tr">IP TV</span><span data-lang="en">IPTV</span><span data-lang="ru">IPTV</span></a>
+      <a href="#intercom"><span data-lang="tr">IP İntercom</span><span data-lang="en">IP Intercom</span><span data-lang="ru">IP-домофон</span></a>
+    </nav>
   </div>
 </section>
 
@@ -73,13 +78,22 @@
   </div>
 </section>
 
-<section class="svc-systems">
+<section class="svc-systems" id="sistemler">
   <div class="svc-systems-inner">
+    <div class="svc-systems-head">
+      <span class="sec-eyebrow"><span data-lang="tr">Sistem Detayları</span><span data-lang="en">System Details</span><span data-lang="ru">Детали систем</span></span>
+      <h2 class="sec-h2"><span data-lang="tr">SMATV, IPTV ve <em>IP İntercom</em></span><span data-lang="en">SMATV, IPTV &amp; <em>IP Intercom</em></span><span data-lang="ru">SMATV, IPTV и <em>IP-домофон</em></span></h2>
+      <nav class="svc-systems-nav" aria-label="Sistem bölümleri">
+        <a href="#smatv"><span data-lang="tr">SMATV</span><span data-lang="en">SMATV</span><span data-lang="ru">SMATV</span></a>
+        <a href="#iptv"><span data-lang="tr">IP TV</span><span data-lang="en">IPTV</span><span data-lang="ru">IPTV</span></a>
+        <a href="#intercom"><span data-lang="tr">IP İntercom</span><span data-lang="en">IP Intercom</span><span data-lang="ru">IP-домофон</span></a>
+      </nav>
+    </div>
 
     <!-- SMATV -->
-    <article class="svc-detail rv">
+    <article class="svc-detail" id="smatv">
       <img class="svc-detail-img" src="assets/tv-smatv-iptv.png" alt="SMATV ve Kablo TV Sistemleri" />
-      <div>
+      <div class="svc-detail-body">
         <h2 class="svc-detail-title"><span data-lang="tr">SMATV ve Kablo TV Sistemleri</span><span data-lang="en">SMATV &amp; Cable TV Systems</span><span data-lang="ru">SMATV и кабельное ТВ</span></h2>
         <p class="svc-detail-intro">
           <span data-lang="tr">SMATV (Satellite Master Antenna Television) sistemleri, birden çok uydu, yayın, video ve ses sinyallerini tek bir bütünleşik kablo ile tüm iç birimlere dağıtmaktadır.</span>
@@ -90,9 +104,9 @@
     </article>
 
     <!-- IPTV -->
-    <article class="svc-detail reverse rv">
+    <article class="svc-detail reverse" id="iptv">
       <img class="svc-detail-img" src="assets/tv-smatv-iptv.png" alt="IP TV Sistemleri" />
-      <div>
+      <div class="svc-detail-body">
         <h2 class="svc-detail-title"><span data-lang="tr">IP TV Sistemleri</span><span data-lang="en">IPTV Systems</span><span data-lang="ru">IPTV-системы</span></h2>
         <p class="svc-detail-intro">
           <span data-lang="tr">Otellerde geniş kullanım alanı bulan IPTV sistemleri, özellikle 4 ve 5 yıldızlı şehir otellerinde daha çok tercih edilmektedir.</span>
@@ -112,9 +126,9 @@
     </article>
 
     <!-- IP Intercom -->
-    <article class="svc-detail rv">
+    <article class="svc-detail" id="intercom">
       <img class="svc-detail-img" src="assets/tv-ip-intercom.png" alt="IP İntercom Sistemi" />
-      <div>
+      <div class="svc-detail-body">
         <h2 class="svc-detail-title"><span data-lang="tr">IP İntercom Sistemi</span><span data-lang="en">IP Intercom System</span><span data-lang="ru">IP-домофонная система</span></h2>
         <p class="svc-detail-intro">
           <span data-lang="tr">IP Interkom altyapısı öncelikli olarak akıllı dijital teknolojilerin kullanıldığı ve IOT tabanlı bir sistem olarak öne çıkar.</span>
@@ -225,6 +239,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=6"></script>
+<script src="assets/site.js?v=7"></script>
 </body>
 </html>
