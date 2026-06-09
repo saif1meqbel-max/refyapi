@@ -10,6 +10,22 @@ if (nav && !nav.classList.contains('solid')) {
   window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 60), { passive: true });
 }
 
+const hbg = document.querySelector('.hbg');
+if (nav && hbg) {
+  hbg.addEventListener('click', e => {
+    e.stopPropagation();
+    nav.classList.toggle('menu-open');
+  });
+  nav.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => nav.classList.remove('menu-open'));
+  });
+  document.addEventListener('click', e => {
+    if (nav.classList.contains('menu-open') && !nav.contains(e.target)) {
+      nav.classList.remove('menu-open');
+    }
+  });
+}
+
 const bg = document.getElementById('heroBg');
 if (bg) {
   window.addEventListener('scroll', () => { bg.style.transform = `scale(1.05) translateY(${scrollY * 0.28}px)`; }, { passive: true });
