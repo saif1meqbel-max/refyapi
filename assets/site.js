@@ -371,6 +371,8 @@ const REF_COUNTRY_LABELS = {
   curacao: { tr: 'Curaçao', en: 'Curaçao', ru: 'Кюрасао' },
   nigeria: { tr: 'Nijerya', en: 'Nigeria', ru: 'Нигерия' },
   fiji: { tr: 'Fiji', en: 'Fiji', ru: 'Фиджи' },
+  kyrgyzstan: { tr: 'Kırgızistan', en: 'Kyrgyzstan', ru: 'Киргизия' },
+  tajikistan: { tr: 'Tacikistan', en: 'Tajikistan', ru: 'Таджикистан' },
 };
 
 const REF_ALL_COUNTRIES_LABEL = {
