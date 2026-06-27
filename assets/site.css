@@ -406,31 +406,34 @@ a { text-decoration: none; color: inherit; }
   transition: color .2s;
 }
 .off-link-hint:hover { color: var(--ink); }
-.london-hero-lead {
+.office-hero-lead {
   max-width: 620px;
   margin-top: 22px;
   font-size: 1.05rem;
   line-height: 1.75;
   color: rgba(255, 255, 255, .78);
 }
-.london-hero { min-height: 400px; }
-.london-hero-bg { background-position: center 42%; }
-.london-contact-inner { max-width: 1200px; margin: 0 auto; padding: 96px 56px; }
-.london-contact-grid {
+.office-hero { min-height: 400px; }
+.office-hero-bg { background-position: center 42%; }
+.office-contact { background: var(--cream-3); }
+.office-contact-inner { max-width: 1200px; margin: 0 auto; padding: 96px 56px; }
+.office-contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 28px;
   margin-top: 48px;
   align-items: stretch;
 }
-.london-office-card { border-top-color: #c45c1a; }
-.london-map-wrap {
+.office-map-wrap {
   min-height: 360px;
   background: var(--white);
   border-top: 3px solid var(--gold);
   overflow: hidden;
 }
-.london-map-wrap iframe { width: 100%; height: 100%; min-height: 360px; border: 0; display: block; }
+.office-map-wrap iframe { width: 100%; height: 100%; min-height: 360px; border: 0; display: block; }
+.london-hero-bg { background-position: center 42%; }
+.istanbul-hero-bg { background-position: center 35%; }
+.tashkent-hero-bg { background-position: center 45%; }
 .office::before {
   content: '';
   position: absolute; top: 0; right: 0;
@@ -729,7 +732,7 @@ footer { background: var(--ink); }
   .about-band { position: static; }
   .techlib-inner { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .london-contact-grid { grid-template-columns: 1fr; }
+  .office-contact-grid { grid-template-columns: 1fr; }
   .sg, .prod-grid, .refs-grid { grid-template-columns: 1fr 1fr; }
   .ft-top { grid-template-columns: 1fr 1fr; }
   .products-header, .refs-top, .services-top { flex-direction: column; align-items: flex-start; }
@@ -743,7 +746,7 @@ footer { background: var(--ink); }
   .nav { padding: 0 18px; }
   .hero-content { padding: 0 20px; }
   .hero-scroll-ind { left: 20px; }
-  .about-inner, .services-inner, .products-inner, .refs-inner, .contact-inner, .techlib-inner, .catalog, .london-contact-inner { padding-left: 20px; padding-right: 20px; }
+  .about-inner, .services-inner, .products-inner, .refs-inner, .contact-inner, .techlib-inner, .catalog, .office-contact-inner { padding-left: 20px; padding-right: 20px; }
   .ft-top { padding: 52px 20px 40px; grid-template-columns: 1fr; }
   .ft-bottom { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
   .sg, .prod-grid, .refs-grid, .tl-cards { grid-template-columns: 1fr; }
