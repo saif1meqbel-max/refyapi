@@ -368,7 +368,7 @@ const REF_COUNTRY_LABELS = {
   turkmenistan: { tr: 'Türkmenistan', en: 'Turkmenistan', ru: 'Туркменистан' },
   belarus: { tr: 'Beyaz Rusya', en: 'Belarus', ru: 'Беларусь' },
   'equatorial-guinea': { tr: 'Ekvator Ginesi', en: 'Equatorial Guinea', ru: 'Экваториальная Гвинея' },
-  netherlands: { tr: 'Hollanda', en: 'Netherlands', ru: 'Нидерланды' },
+  curacao: { tr: 'Curaçao', en: 'Curaçao', ru: 'Кюрасао' },
   nigeria: { tr: 'Nijerya', en: 'Nigeria', ru: 'Нигерия' },
   fiji: { tr: 'Fiji', en: 'Fiji', ru: 'Фиджи' },
 };
