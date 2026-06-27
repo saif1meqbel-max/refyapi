@@ -412,7 +412,8 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.75;
   color: rgba(255, 255, 255, .78);
 }
-.london-contact { background: var(--cream-3); }
+.london-hero { min-height: 400px; }
+.london-hero-bg { background-position: center 42%; }
 .london-contact-inner { max-width: 1200px; margin: 0 auto; padding: 96px 56px; }
 .london-contact-grid {
   display: grid;
