@@ -369,3 +369,73 @@ if (refsGrid && sortBtns.length) {
   sortBtns.forEach(b => b.addEventListener('click', () => applySort(b.dataset.sort)));
   applySort('desc');
 }
+
+(function initNavActive() {
+  const navEl = document.getElementById('mainNav');
+  if (!navEl) return;
+
+  const items = navEl.querySelectorAll('.nav-links > li');
+  const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const SERVICE_PAGES = new Set([
+    'fire-detection.html', 'security-systems.html', 'automation-systems.html',
+    'audio-visual-systems.html', 'data-communications.html', 'tv-video-systems.html',
+  ]);
+  const OFFICE_PAGES = new Set(['istanbul.html', 'tashkent.html', 'london.html']);
+
+  const setActive = li => {
+    items.forEach(i => i.classList.remove('nav-active'));
+    if (li) li.classList.add('nav-active');
+  };
+
+  const liFor = pred => {
+    for (const li of items) {
+      const a = li.querySelector(':scope > a');
+      if (a && pred(a, li)) return li;
+    }
+    return null;
+  };
+
+  const hrefOf = a => (a.getAttribute('href') || '').split('#')[0].split('?')[0];
+
+  if (page === 'references.html') {
+    setActive(liFor(a => hrefOf(a).endsWith('references.html')));
+    return;
+  }
+  if (page === 'documents.html') {
+    setActive(liFor(a => hrefOf(a).endsWith('documents.html')));
+    return;
+  }
+  if (SERVICE_PAGES.has(page)) {
+    setActive(liFor(a => (a.getAttribute('href') || '').includes('urunlerimiz')));
+    return;
+  }
+  if (OFFICE_PAGES.has(page)) {
+    setActive(liFor((_, li) => li.classList.contains('nav-offices')));
+    return;
+  }
+
+  const isHome = page === 'index.html' || page === '' || page.endsWith('/');
+  if (!isHome) return;
+
+  const sections = [
+    { id: 'hakkimizda', match: a => (a.getAttribute('href') || '').includes('hakkimizda') },
+    { id: 'urunlerimiz', match: a => (a.getAttribute('href') || '').includes('urunlerimiz') },
+    { id: 'referanslar', match: a => hrefOf(a).endsWith('references.html') },
+    {
+      id: 'iletisim',
+      match: (a, li) => (a.getAttribute('href') || '').includes('iletisim') && !li.classList.contains('nav-offices'),
+    },
+  ].map(s => ({ ...s, el: document.getElementById(s.id) })).filter(s => s.el);
+
+  const update = () => {
+    const offset = 120;
+    let current = sections[0];
+    for (const s of sections) {
+      if (s.el.getBoundingClientRect().top <= offset) current = s;
+    }
+    setActive(liFor(current.match));
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();

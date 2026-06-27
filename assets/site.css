@@ -132,10 +132,10 @@ a { text-decoration: none; color: inherit; }
 .nav.solid .lbtn:hover, .nav.solid .lbtn.on { background: var(--gold-pale); border-color: var(--gold); color: var(--gold); }
 .nav.solid .hbg span { background: var(--ink); }
 
-/* Current office page — keep Offices visible in nav */
-.nav-links > li.nav-offices > a { color: var(--gold); }
-.nav.sc .nav-links > li.nav-offices > a,
-.nav.solid .nav-links > li.nav-offices > a { color: var(--gold); }
+.nav-links > li.nav-active > a { color: var(--gold); }
+.nav.sc .nav-links > li.nav-active > a,
+.nav.solid .nav-links > li.nav-active > a { color: var(--gold); }
+.nav.menu-open .nav-links > li.nav-active > a { color: var(--gold); }
 
 /* ─── HERO ───────────────────────────────────────── */
 .hero { position: relative; height: 100vh; min-height: 680px; display: flex; align-items: center; overflow: hidden; }
