@@ -518,10 +518,10 @@ footer { background: var(--ink); }
 /* ─── LANGUAGE SYSTEM ────────────────────────────── */
 [data-lang] { display: none; }
 [data-lang="tr"] { display: revert; }
-.lang-en [data-lang="tr"] { display: none; }
-.lang-en [data-lang="en"] { display: revert; }
-.lang-ru [data-lang="tr"] { display: none; }
-.lang-ru [data-lang="ru"] { display: revert; }
+:is(html, body).lang-en [data-lang="tr"] { display: none; }
+:is(html, body).lang-en [data-lang="en"] { display: revert; }
+:is(html, body).lang-ru [data-lang="tr"] { display: none; }
+:is(html, body).lang-ru [data-lang="ru"] { display: revert; }
 
 /* ─── SERVICE DETAIL PAGE ────────────────────────── */
 .svc-hero {

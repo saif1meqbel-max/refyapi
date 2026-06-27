@@ -1,9 +1,25 @@
+const LANG_KEY = 'fnv-lang';
+const VALID_LANGS = new Set(['tr', 'en', 'ru']);
+
 function setLang(l) {
+  if (!VALID_LANGS.has(l)) l = 'tr';
+  try { localStorage.setItem(LANG_KEY, l); } catch (_) {}
   const base = document.body.dataset.base || '';
   document.body.className = (base ? base + ' ' : '') + (l === 'tr' ? '' : 'lang-' + l);
-  document.querySelectorAll('.lbtn').forEach(b => b.classList.toggle('on', b.textContent.trim().toLowerCase() === l));
   document.documentElement.lang = l;
+  document.documentElement.classList.remove('lang-en', 'lang-ru');
+  if (l !== 'tr') document.documentElement.classList.add('lang-' + l);
+  document.querySelectorAll('.lbtn').forEach(b => b.classList.toggle('on', b.textContent.trim().toLowerCase() === l));
 }
+
+(function initLang() {
+  let l = 'tr';
+  try {
+    const stored = localStorage.getItem(LANG_KEY);
+    if (stored && VALID_LANGS.has(stored)) l = stored;
+  } catch (_) {}
+  setLang(l);
+})();
 
 const nav = document.getElementById('mainNav');
 if (nav && !nav.classList.contains('solid')) {
