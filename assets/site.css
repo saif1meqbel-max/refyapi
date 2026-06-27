@@ -726,13 +726,16 @@ footer { background: var(--ink); }
 .lib-viewer-counter { font-size: .72rem; font-weight: 600; letter-spacing: .1em; color: var(--ink-3); min-width: 48px; text-align: center; }
 
 .lib-viewer-stage {
-  position: relative; min-height: min(72vh, 680px); background: #1a1712;
-  display: flex; align-items: center; justify-content: center; overflow: auto; padding: 24px;
+  position: relative; min-height: min(78vh, 760px); background: #f5f2ec;
+  display: flex; align-items: center; justify-content: center; overflow: auto; padding: 24px 64px;
 }
 .lib-viewer-img {
-  max-width: 100%; max-height: min(68vh, 640px); width: auto; height: auto;
+  max-width: none; max-height: none; width: auto; height: auto;
+  max-width: min(100%, 1200px); max-height: min(72vh, 700px);
   object-fit: contain; transition: transform .25s var(--ease); cursor: zoom-in;
-  image-rendering: -webkit-optimize-contrast;
+  filter: contrast(1.06) brightness(1.02);
+  image-rendering: auto;
+  box-shadow: 0 4px 24px rgba(24,21,15,.12);
 }
 
 .lib-nav-btn, .lib-tool-btn {
@@ -760,7 +763,7 @@ footer { background: var(--ink); }
 }
 
 .lib-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px;
 }
 .lib-card {
   border: 2px solid transparent; background: var(--white); cursor: pointer;
@@ -771,11 +774,13 @@ footer { background: var(--ink); }
 .lib-card.active { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
 .lib-card[hidden] { display: none; }
 .lib-card-thumb {
-  aspect-ratio: 3/4; background: #eae6df; overflow: hidden;
+  aspect-ratio: 3/4; background: #f0ece4; overflow: hidden;
+  padding: 6px;
 }
 .lib-card-thumb img {
-  width: 100%; height: 100%; object-fit: cover; object-position: top;
-  image-rendering: -webkit-optimize-contrast;
+  width: 100%; height: 100%; object-fit: contain; object-position: center top;
+  filter: contrast(1.08) brightness(1.02);
+  image-rendering: auto;
 }
 .lib-card-body { padding: 12px 14px 14px; }
 .lib-card-title { font-size: .78rem; font-weight: 600; line-height: 1.35; color: var(--ink); }
