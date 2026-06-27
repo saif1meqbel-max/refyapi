@@ -136,6 +136,215 @@ document.querySelectorAll('.contact-sheet-trigger').forEach(btn => {
   });
 });
 
+const QUOTE_EMAIL = 'info@fnvelektronik.com';
+const SERVICE_OPTIONS = [
+  { v: 'fire', tr: 'Yangın Algılama', en: 'Fire Detection', ru: 'Пожарная сигнализация' },
+  { v: 'security', tr: 'Güvenlik Sistemleri', en: 'Security Systems', ru: 'Системы безопасности' },
+  { v: 'automation', tr: 'Otomasyon Sistemleri', en: 'Automation Systems', ru: 'Автоматизация' },
+  { v: 'audio', tr: 'Ses ve Işık', en: 'Audio & Visual', ru: 'Аудио и свет' },
+  { v: 'data', tr: 'Data ve İletişim', en: 'Data & Communications', ru: 'Связь и данные' },
+  { v: 'tv', tr: 'TV ve Görüntü', en: 'TV & Video', ru: 'ТВ и видео' },
+  { v: 'general', tr: 'Genel / Diğer', en: 'General / Other', ru: 'Общий / Другое' },
+];
+
+function serviceOptionsHtml() {
+  const lang = document.documentElement.lang || 'tr';
+  const key = lang === 'en' ? 'en' : lang === 'ru' ? 'ru' : 'tr';
+  return SERVICE_OPTIONS.map(o => `<option value="${o.v}">${o[key]}</option>`).join('');
+}
+
+function initQuoteModal() {
+  let modal = document.getElementById('quoteModal');
+  if (modal) return modal;
+  modal = document.createElement('div');
+  modal.id = 'quoteModal';
+  modal.className = 'quote-modal';
+  modal.setAttribute('aria-hidden', 'true');
+  modal.innerHTML = `
+    <div class="quote-modal-backdrop"></div>
+    <div class="quote-modal-panel" role="dialog" aria-labelledby="quoteModalTitle">
+      <div class="quote-modal-head">
+        <div>
+          <h2 class="quote-modal-title" id="quoteModalTitle">
+            <span data-lang="tr">Teklif Talep Formu</span>
+            <span data-lang="en">Request a Quote</span>
+            <span data-lang="ru">Запрос сметы</span>
+          </h2>
+          <p class="quote-modal-sub">
+            <span data-lang="tr">Projeniz hakkında kısa bilgi verin — en kısa sürede size dönüş yapalım.</span>
+            <span data-lang="en">Tell us briefly about your project and we will get back to you shortly.</span>
+            <span data-lang="ru">Кратко опишите проект — мы свяжемся с вами в ближайшее время.</span>
+          </p>
+        </div>
+        <button type="button" class="quote-modal-close" aria-label="Close">
+          <svg width="22" height="22" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l10 10M14 4L4 14"/></svg>
+        </button>
+      </div>
+      <form class="quote-form" id="quoteForm" novalidate>
+        <div class="quote-field-row">
+          <div class="quote-field">
+            <label class="quote-label" for="quoteName"><span data-lang="tr">Ad Soyad *</span><span data-lang="en">Full Name *</span><span data-lang="ru">Имя *</span></label>
+            <input class="quote-input" id="quoteName" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="quote-field">
+            <label class="quote-label" for="quoteCompany"><span data-lang="tr">Şirket</span><span data-lang="en">Company</span><span data-lang="ru">Компания</span></label>
+            <input class="quote-input" id="quoteCompany" name="company" type="text" autocomplete="organization" />
+          </div>
+        </div>
+        <div class="quote-field-row">
+          <div class="quote-field">
+            <label class="quote-label" for="quoteEmail"><span data-lang="tr">E-posta *</span><span data-lang="en">Email *</span><span data-lang="ru">Эл. почта *</span></label>
+            <input class="quote-input" id="quoteEmail" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="quote-field">
+            <label class="quote-label" for="quotePhone"><span data-lang="tr">Telefon</span><span data-lang="en">Phone</span><span data-lang="ru">Телефон</span></label>
+            <input class="quote-input" id="quotePhone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="quote-field-row">
+          <div class="quote-field">
+            <label class="quote-label" for="quoteCountry"><span data-lang="tr">Ülke</span><span data-lang="en">Country</span><span data-lang="ru">Страна</span></label>
+            <select class="quote-select" id="quoteCountry" name="country">
+              <option value="Turkey">Turkey</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="quote-field">
+            <label class="quote-label" for="quoteService"><span data-lang="tr">Hizmet</span><span data-lang="en">Service</span><span data-lang="ru">Услуга</span></label>
+            <select class="quote-select" id="quoteService" name="service">${serviceOptionsHtml()}</select>
+          </div>
+        </div>
+        <div class="quote-field">
+          <label class="quote-label" for="quoteSize"><span data-lang="tr">Proje Ölçeği</span><span data-lang="en">Project Size</span><span data-lang="ru">Масштаб проекта</span></label>
+          <select class="quote-select" id="quoteSize" name="project_size">
+            <option value="small">Small (&lt; 1,000 m²)</option>
+            <option value="medium">Medium (1,000–10,000 m²)</option>
+            <option value="large">Large (&gt; 10,000 m²)</option>
+            <option value="unknown">Not sure yet</option>
+          </select>
+        </div>
+        <div class="quote-field">
+          <label class="quote-label" for="quoteMessage"><span data-lang="tr">Proje Detayları</span><span data-lang="en">Project Details</span><span data-lang="ru">Детали проекта</span></label>
+          <textarea class="quote-textarea" id="quoteMessage" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="quote-submit">
+          <span data-lang="tr">Teklif Talebini Gönder</span>
+          <span data-lang="en">Send Quote Request</span>
+          <span data-lang="ru">Отправить запрос</span>
+        </button>
+      </form>
+      <div class="quote-success" id="quoteSuccess">
+        <div class="quote-success-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3><span data-lang="tr">Talebiniz Alındı</span><span data-lang="en">Request Received</span><span data-lang="ru">Запрос получен</span></h3>
+        <p><span data-lang="tr">Ekibimiz en kısa sürede sizinle iletişime geçecektir.</span><span data-lang="en">Our team will contact you as soon as possible.</span><span data-lang="ru">Наша команда свяжется с вами в ближайшее время.</span></p>
+      </div>
+    </div>`;
+  document.body.appendChild(modal);
+
+  modal.querySelector('.quote-modal-backdrop').addEventListener('click', closeQuoteModal);
+  modal.querySelector('.quote-modal-close').addEventListener('click', closeQuoteModal);
+  modal.querySelector('#quoteForm').addEventListener('submit', submitQuoteForm);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeQuoteModal();
+  });
+  return modal;
+}
+
+function openQuoteModal(presetService) {
+  const modal = initQuoteModal();
+  const form = modal.querySelector('#quoteForm');
+  const success = modal.querySelector('#quoteSuccess');
+  form.reset();
+  form.style.display = '';
+  success.classList.remove('on');
+  if (presetService) {
+    const sel = modal.querySelector('#quoteService');
+    if (sel) sel.value = presetService;
+  }
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  if (nav) nav.classList.remove('menu-open');
+  setTimeout(() => modal.querySelector('#quoteName')?.focus(), 100);
+}
+
+function closeQuoteModal() {
+  const modal = document.getElementById('quoteModal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+async function submitQuoteForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.quote-submit');
+  const fd = new FormData(form);
+  const payload = Object.fromEntries(fd.entries());
+  if (!payload.name?.trim() || !payload.email?.trim()) {
+    form.querySelector('#quoteName').reportValidity();
+    form.querySelector('#quoteEmail').reportValidity();
+    return;
+  }
+
+  btn.disabled = true;
+  const serviceLabel = SERVICE_OPTIONS.find(s => s.v === payload.service);
+  const lang = document.documentElement.lang || 'tr';
+  const sk = lang === 'en' ? 'en' : lang === 'ru' ? 'ru' : 'tr';
+  const bodyText = [
+    `Name: ${payload.name}`,
+    `Company: ${payload.company || '—'}`,
+    `Email: ${payload.email}`,
+    `Phone: ${payload.phone || '—'}`,
+    `Country: ${payload.country}`,
+    `Service: ${serviceLabel ? serviceLabel[sk] : payload.service}`,
+    `Project size: ${payload.project_size}`,
+    '',
+    payload.message || ''
+  ].join('\n');
+
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(QUOTE_EMAIL)}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: payload.name,
+        email: payload.email,
+        company: payload.company,
+        phone: payload.phone,
+        country: payload.country,
+        service: serviceLabel ? serviceLabel.en : payload.service,
+        project_size: payload.project_size,
+        message: payload.message,
+        _subject: `FNV Quote Request — ${payload.name}`,
+        _template: 'table'
+      })
+    });
+    if (!res.ok) throw new Error('submit failed');
+    form.style.display = 'none';
+    document.getElementById('quoteSuccess').classList.add('on');
+  } catch (_) {
+    const subject = encodeURIComponent(`FNV Quote Request — ${payload.name}`);
+    const body = encodeURIComponent(bodyText);
+    window.location.href = `mailto:${QUOTE_EMAIL}?subject=${subject}&body=${body}`;
+    closeQuoteModal();
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+document.addEventListener('click', e => {
+  const trigger = e.target.closest('.quote-trigger');
+  if (!trigger) return;
+  e.preventDefault();
+  openQuoteModal(trigger.dataset.service || '');
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     if (a.classList.contains('contact-sheet-trigger') && mobileMq.matches) return;
