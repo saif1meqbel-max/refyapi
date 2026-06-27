@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=23" />
+  <link rel="stylesheet" href="assets/site.css?v=25" />
 </head>
 <body>
 
@@ -79,20 +79,40 @@
       </p>
     </div>
 
-    <div class="refs-sort rv">
-      <span class="refs-sort-label"><span data-lang="tr">Sırala</span><span data-lang="en">Sort by</span><span data-lang="ru">Сортировать</span></span>
-      <button class="sortbtn" data-sort="desc" type="button">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span data-lang="tr">Yeniden Eskiye</span><span data-lang="en">Newest First</span><span data-lang="ru">Сначала новые</span>
-      </button>
-      <button class="sortbtn" data-sort="asc" type="button">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span data-lang="tr">Eskiden Yeniye</span><span data-lang="en">Oldest First</span><span data-lang="ru">Сначала старые</span>
-      </button>
+    <div class="refs-filters rv">
+      <div class="refs-sort">
+        <span class="refs-sort-label"><span data-lang="tr">Sırala</span><span data-lang="en">Sort by</span><span data-lang="ru">Сортировать</span></span>
+        <button class="sortbtn" data-sort="desc" type="button">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-lang="tr">Yeniden Eskiye</span><span data-lang="en">Newest First</span><span data-lang="ru">Сначала новые</span>
+        </button>
+        <button class="sortbtn" data-sort="asc" type="button">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13V3M4 7l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-lang="tr">Eskiden Yeniye</span><span data-lang="en">Oldest First</span><span data-lang="ru">Сначала старые</span>
+        </button>
+      </div>
+
+      <div class="refs-country">
+        <span class="refs-sort-label"><span data-lang="tr">Ülke</span><span data-lang="en">Country</span><span data-lang="ru">Страна</span></span>
+        <div class="refs-country-dd" id="refsCountryDd">
+          <button class="refs-country-btn" type="button" aria-expanded="false" aria-haspopup="listbox" id="refsCountryBtn">
+            <span class="refs-country-btn-label">
+              <span data-lang="tr">Tüm Ülkeler</span><span data-lang="en">All Countries</span><span data-lang="ru">Все страны</span>
+            </span>
+            <svg class="refs-country-chevron" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="refs-country-menu" id="refsCountryMenu" role="listbox" hidden></ul>
+        </div>
+      </div>
     </div>
 
     <div class="refs-grid">
-      <div class="ref-card rv d1">
+      <p class="refs-empty" id="refsEmpty" hidden>
+        <span data-lang="tr">Bu ülkede henüz listelenen proje yok.</span>
+        <span data-lang="en">No projects listed for this country yet.</span>
+        <span data-lang="ru">Для этой страны проектов пока нет.</span>
+      </p>
+      <div class="ref-card rv d1" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref01-bera-otel.jpg?v=2" alt="Bera Otel Antalya" loading="lazy" />
           <span class="ref-year">2007</span>
@@ -103,7 +123,7 @@
           <div class="ref-loc"><span data-lang="tr">Antalya, Türkiye</span><span data-lang="en">Antalya, Turkey</span><span data-lang="ru">Анталья, Турция</span></div>
         </div>
       </div>
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="azerbaijan">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref02-devlet-sahil-evleri.jpg?v=2" alt="Devlet Sahil Evleri Tesisleri" loading="lazy" />
           <span class="ref-year">2008</span>
@@ -114,7 +134,7 @@
           <div class="ref-loc"><span data-lang="tr">Azerbaycan · 23.000 m²</span><span data-lang="en">Azerbaijan · 23,000 m²</span><span data-lang="ru">Азербайджан · 23 000 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="russia">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref03-mega-rostov.jpg?v=2" alt="Mega Rostov Alışveriş Merkezi" loading="lazy" />
           <span class="ref-year">2008</span>
@@ -125,7 +145,7 @@
           <div class="ref-loc"><span data-lang="tr">Rusya · 253.861 m²</span><span data-lang="en">Russia · 253,861 m²</span><span data-lang="ru">Россия · 253 861 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d1">
+      <div class="ref-card rv d1" data-country="turkmenistan">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref04-savunma-bakanligi.jpg?v=2" alt="Savunma Bakanlığı Olağanüstü Hal Bakanlığı" loading="lazy" />
           <span class="ref-year">2011</span>
@@ -136,7 +156,7 @@
           <div class="ref-loc"><span data-lang="tr">Türkmenistan</span><span data-lang="en">Turkmenistan</span><span data-lang="ru">Туркменистан</span></div>
         </div>
       </div>
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="turkmenistan">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref05-buz-kosku.jpg?v=2" alt="Buz Köşkü" loading="lazy" />
           <span class="ref-year">2011</span>
@@ -147,7 +167,7 @@
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 72.400 m²</span><span data-lang="en">Turkmenistan · 72,400 m²</span><span data-lang="ru">Туркменистан · 72 400 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="turkmenistan">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref06-pamukyagi-fabrikasi.png" alt="Pamukyağı Fabrikası" loading="lazy" />
           <span class="ref-year">2011</span>
@@ -158,7 +178,7 @@
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 22.000 m²</span><span data-lang="en">Turkmenistan · 22,000 m²</span><span data-lang="ru">Туркменистан · 22 000 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d1">
+      <div class="ref-card rv d1" data-country="turkmenistan">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref07-deskty-mir.png" alt="Deskty Mir Alışveriş Merkezi" loading="lazy" />
           <span class="ref-year">2011</span>
@@ -169,7 +189,7 @@
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 9.841 m²</span><span data-lang="en">Turkmenistan · 9,841 m²</span><span data-lang="ru">Туркменистан · 9 841 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="turkmenistan">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref08-petrol-gaz-universitesi.jpg?v=2" alt="Uluslararası Petrol ve Gaz Üniversitesi" loading="lazy" />
           <span class="ref-year">2012</span>
@@ -180,7 +200,7 @@
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 109.368 m²</span><span data-lang="en">Turkmenistan · 109,368 m²</span><span data-lang="ru">Туркменистан · 109 368 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="turkmenistan">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref09-polis-akademisi.png" alt="Türkmenistan Polis Akademisi" loading="lazy" />
           <span class="ref-year">2012</span>
@@ -191,7 +211,7 @@
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 117.325 m²</span><span data-lang="en">Turkmenistan · 117,325 m²</span><span data-lang="ru">Туркменистан · 117 325 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d1">
+      <div class="ref-card rv d1" data-country="belarus">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref10-prezident-otel.jpg?v=2" alt="President Hotel Minsk" loading="lazy" />
           <span class="ref-year">2013</span>
@@ -202,7 +222,7 @@
           <div class="ref-loc"><span data-lang="tr">Beyaz Rusya · 40.000 m²</span><span data-lang="en">Belarus · 40,000 m²</span><span data-lang="ru">Беларусь · 40 000 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="equatorial-guinea">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref11-oyala-hukumet-konagi.jpg?v=2" alt="Oyala Hükümet Konağı" loading="lazy" />
           <span class="ref-year">2013</span>
@@ -213,7 +233,7 @@
           <div class="ref-loc"><span data-lang="tr">Ekvator Ginesi · 23.750 m²</span><span data-lang="en">Equatorial Guinea · 23,750 m²</span><span data-lang="ru">Экваториальная Гвинея · 23 750 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref12-rixos-downtown.jpg?v=2" alt="Rixos Downtown Otel" loading="lazy" />
           <span class="ref-year">2013</span>
@@ -225,7 +245,7 @@
         </div>
       </div>
 
-      <div class="ref-card rv d1">
+      <div class="ref-card rv d1" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref13-akasya-apartmani.jpg" alt="Akasya Apartmanı" loading="lazy" />
           <span class="ref-year">2017</span>
@@ -236,7 +256,7 @@
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 3.320 m²</span><span data-lang="en">Istanbul, Turkey · 3,320 m²</span><span data-lang="ru">Стамбул, Турция · 3 320 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref14-marmermer-plaza.jpg?v=2" alt="Marmermer Plaza" loading="lazy" />
           <span class="ref-year">2016</span>
@@ -247,7 +267,7 @@
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
       </div>
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref15-ari-apartmani.jpg?v=2" alt="Arı Apartmanı" loading="lazy" />
           <span class="ref-year">2017</span>
@@ -258,7 +278,7 @@
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 1.750 m²</span><span data-lang="en">Istanbul, Turkey · 1,750 m²</span><span data-lang="ru">Стамбул, Турция · 1 750 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d1">
+      <div class="ref-card rv d1" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref16-ege-universitesi-hastanesi.jpg?v=2" alt="Ege Üniversitesi Hastanesi" loading="lazy" />
           <span class="ref-year">2018</span>
@@ -269,7 +289,7 @@
           <div class="ref-loc"><span data-lang="tr">İzmir, Türkiye</span><span data-lang="en">Izmir, Turkey</span><span data-lang="ru">Измир, Турция</span></div>
         </div>
       </div>
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref17-koru-apartmani.jpg" alt="Koru Apartmanı" loading="lazy" />
           <span class="ref-year">2017</span>
@@ -280,7 +300,7 @@
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
       </div>
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref18-guven-apartmani.jpg?v=2" alt="Güven Apartmanı" loading="lazy" />
           <span class="ref-year">2017</span>
@@ -291,7 +311,7 @@
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
       </div>
-      <div class="ref-card rv d1">
+      <div class="ref-card rv d1" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref19-thy-bakim-merkezi.jpg?v=2" alt="THY Bakım Onarım ve Modifikasyon Merkezi" loading="lazy" />
           <span class="ref-year">2017</span>
@@ -302,7 +322,7 @@
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 372.000 m²</span><span data-lang="en">Istanbul, Turkey · 372,000 m²</span><span data-lang="ru">Стамбул, Турция · 372 000 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref20-kempinski-bodrum.jpg?v=2" alt="Kempinski Residences Barbaros Reserve Bodrum" loading="lazy" />
           <span class="ref-year">2017</span>
@@ -313,7 +333,7 @@
           <div class="ref-loc"><span data-lang="tr">Bodrum, Türkiye · 11.000 m²</span><span data-lang="en">Bodrum, Turkey · 11,000 m²</span><span data-lang="ru">Бодрум, Турция · 11 000 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="netherlands">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref21-otrobanda-hastanesi.jpg?v=2" alt="Yeni Otrobanda Hastanesi" loading="lazy" />
           <span class="ref-year">2020</span>
@@ -325,7 +345,7 @@
         </div>
       </div>
 
-      <div class="ref-card rv d1">
+      <div class="ref-card rv d1" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref22-ref-plaza.jpg?v=3" alt="Ref Plaza" loading="lazy" />
           <span class="ref-year">2016</span>
@@ -336,7 +356,7 @@
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 4.073 m²</span><span data-lang="en">Istanbul, Turkey · 4,073 m²</span><span data-lang="ru">Стамбул, Турция · 4 073 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="nigeria">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref23-ikot-ekpene-otel.jpg?v=2" alt="Ikot Ekpene Otel" loading="lazy" />
           <span class="ref-year">2015</span>
@@ -347,7 +367,7 @@
           <div class="ref-loc"><span data-lang="tr">Nijerya</span><span data-lang="en">Nigeria</span><span data-lang="ru">Нигерия</span></div>
         </div>
       </div>
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref24-kuris-kule.jpg?v=2" alt="Kuriş Kule" loading="lazy" />
           <span class="ref-year">2015</span>
@@ -358,7 +378,7 @@
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 60.000 m²</span><span data-lang="en">Istanbul, Turkey · 60,000 m²</span><span data-lang="ru">Стамбул, Турция · 60 000 м²</span></div>
         </div>
       </div>
-      <div class="ref-card rv d1">
+      <div class="ref-card rv d1" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref25-park-inn-radisson.jpg?v=2" alt="Park Inn by Radisson İstanbul Atatürk Havalimanı" loading="lazy" />
           <span class="ref-year">2015</span>
@@ -370,7 +390,7 @@
         </div>
       </div>
 
-      <div class="ref-card rv d2">
+      <div class="ref-card rv d2" data-country="turkey">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref26-anadolu-saglik-merkezi.jpg" alt="Anadolu Sağlık Merkezi" loading="lazy" />
           <span class="ref-year">2005</span>
@@ -382,7 +402,7 @@
         </div>
       </div>
 
-      <div class="ref-card rv d3">
+      <div class="ref-card rv d3" data-country="fiji">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref27-google-data-center-fiji.jpg" alt="Google Data Center Fiji" loading="lazy" />
           <span class="ref-year">2026</span>
@@ -458,6 +478,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=23"></script>
+<script src="assets/site.js?v=24"></script>
 </body>
 </html>

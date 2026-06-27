@@ -355,19 +355,138 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 const refsGrid = document.querySelector('.refs-grid');
 const sortBtns = document.querySelectorAll('.sortbtn');
+const refsCountryDd = document.getElementById('refsCountryDd');
+const refsCountryBtn = document.getElementById('refsCountryBtn');
+const refsCountryMenu = document.getElementById('refsCountryMenu');
+const refsCountryBtnLabel = document.querySelector('.refs-country-btn-label');
+const refsEmpty = document.getElementById('refsEmpty');
+
+const REF_COUNTRY_LABELS = {
+  turkey: { tr: 'Türkiye', en: 'Turkey', ru: 'Турция' },
+  azerbaijan: { tr: 'Azerbaycan', en: 'Azerbaijan', ru: 'Азербайджан' },
+  russia: { tr: 'Rusya', en: 'Russia', ru: 'Россия' },
+  turkmenistan: { tr: 'Türkmenistan', en: 'Turkmenistan', ru: 'Туркменистан' },
+  belarus: { tr: 'Beyaz Rusya', en: 'Belarus', ru: 'Беларусь' },
+  'equatorial-guinea': { tr: 'Ekvator Ginesi', en: 'Equatorial Guinea', ru: 'Экваториальная Гвинея' },
+  netherlands: { tr: 'Hollanda', en: 'Netherlands', ru: 'Нидерланды' },
+  nigeria: { tr: 'Nijerya', en: 'Nigeria', ru: 'Нигерия' },
+  fiji: { tr: 'Fiji', en: 'Fiji', ru: 'Фиджи' },
+};
+
+const REF_ALL_COUNTRIES_LABEL = {
+  tr: 'Tüm Ülkeler', en: 'All Countries', ru: 'Все страны',
+};
+
 if (refsGrid && sortBtns.length) {
   const yearOf = card => {
     const y = card.querySelector('.ref-year');
     return y ? parseInt(y.textContent, 10) : 0;
   };
-  const applySort = dir => {
-    const cards = Array.from(refsGrid.querySelectorAll(':scope > .ref-card'));
-    cards.sort((a, b) => dir === 'asc' ? yearOf(a) - yearOf(b) : yearOf(b) - yearOf(a));
-    cards.forEach(c => refsGrid.appendChild(c));
-    sortBtns.forEach(b => b.classList.toggle('on', b.dataset.sort === dir));
+
+  let sortDir = 'desc';
+  let countryFilter = 'all';
+
+  const allCards = () => Array.from(refsGrid.querySelectorAll(':scope > .ref-card'));
+
+  const countryLabelHtml = slug => {
+    if (slug === 'all') {
+      return ['tr', 'en', 'ru'].map(l =>
+        `<span data-lang="${l}">${REF_ALL_COUNTRIES_LABEL[l]}</span>`
+      ).join('');
+    }
+    const labels = REF_COUNTRY_LABELS[slug];
+    if (!labels) return slug;
+    return ['tr', 'en', 'ru'].map(l =>
+      `<span data-lang="${l}">${labels[l]}</span>`
+    ).join('');
   };
-  sortBtns.forEach(b => b.addEventListener('click', () => applySort(b.dataset.sort)));
-  applySort('desc');
+
+  const applyRefsView = () => {
+    const cards = allCards();
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const match = countryFilter === 'all' || card.dataset.country === countryFilter;
+      card.hidden = !match;
+      if (match) visibleCount++;
+    });
+    const visible = cards.filter(c => !c.hidden);
+    visible.sort((a, b) => sortDir === 'asc' ? yearOf(a) - yearOf(b) : yearOf(b) - yearOf(a));
+    visible.forEach(c => refsGrid.appendChild(c));
+    cards.filter(c => c.hidden).forEach(c => refsGrid.appendChild(c));
+    if (refsEmpty) {
+      refsEmpty.hidden = visibleCount > 0;
+      refsEmpty.classList.toggle('show', visibleCount === 0);
+      if (visibleCount === 0) refsGrid.insertBefore(refsEmpty, refsGrid.firstChild);
+    }
+    sortBtns.forEach(b => b.classList.toggle('on', b.dataset.sort === sortDir));
+    if (refsCountryMenu) {
+      refsCountryMenu.querySelectorAll('.refs-country-option').forEach(opt => {
+        opt.classList.toggle('on', opt.dataset.country === countryFilter);
+      });
+    }
+  };
+
+  sortBtns.forEach(b => {
+    b.addEventListener('click', () => {
+      sortDir = b.dataset.sort;
+      applyRefsView();
+    });
+  });
+
+  if (refsCountryMenu && refsCountryBtn && refsCountryDd) {
+    const countries = [...new Set(allCards().map(c => c.dataset.country).filter(Boolean))]
+      .sort((a, b) => (REF_COUNTRY_LABELS[a]?.en || a).localeCompare(REF_COUNTRY_LABELS[b]?.en || b));
+
+    const allItem = document.createElement('li');
+    allItem.innerHTML = `<button type="button" class="refs-country-option on" data-country="all" role="option">${countryLabelHtml('all')}</button>`;
+    refsCountryMenu.appendChild(allItem);
+
+    countries.forEach(slug => {
+      const li = document.createElement('li');
+      li.innerHTML = `<button type="button" class="refs-country-option" data-country="${slug}" role="option">${countryLabelHtml(slug)}</button>`;
+      refsCountryMenu.appendChild(li);
+    });
+
+    const setCountry = slug => {
+      countryFilter = slug;
+      if (refsCountryBtnLabel) refsCountryBtnLabel.innerHTML = countryLabelHtml(slug);
+      closeCountryMenu();
+      applyRefsView();
+    };
+
+    const openCountryMenu = () => {
+      refsCountryDd.classList.add('open');
+      refsCountryBtn.setAttribute('aria-expanded', 'true');
+      refsCountryMenu.hidden = false;
+    };
+
+    const closeCountryMenu = () => {
+      refsCountryDd.classList.remove('open');
+      refsCountryBtn.setAttribute('aria-expanded', 'false');
+      refsCountryMenu.hidden = true;
+    };
+
+    refsCountryBtn.addEventListener('click', () => {
+      if (refsCountryDd.classList.contains('open')) closeCountryMenu();
+      else openCountryMenu();
+    });
+
+    refsCountryMenu.addEventListener('click', e => {
+      const opt = e.target.closest('.refs-country-option');
+      if (!opt) return;
+      setCountry(opt.dataset.country);
+    });
+
+    document.addEventListener('click', e => {
+      if (!refsCountryDd.contains(e.target)) closeCountryMenu();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeCountryMenu();
+    });
+  }
+
+  applyRefsView();
 }
 
 (function initNavActive() {
