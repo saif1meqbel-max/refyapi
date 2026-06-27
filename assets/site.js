@@ -361,7 +361,7 @@ if (refsGrid && sortBtns.length) {
     return y ? parseInt(y.textContent, 10) : 0;
   };
   const applySort = dir => {
-    const cards = Array.from(refsGrid.children);
+    const cards = Array.from(refsGrid.querySelectorAll(':scope > .ref-card'));
     cards.sort((a, b) => dir === 'asc' ? yearOf(a) - yearOf(b) : yearOf(b) - yearOf(a));
     cards.forEach(c => refsGrid.appendChild(c));
     sortBtns.forEach(b => b.classList.toggle('on', b.dataset.sort === dir));
