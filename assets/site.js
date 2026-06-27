@@ -373,6 +373,7 @@ const REF_COUNTRY_LABELS = {
   fiji: { tr: 'Fiji', en: 'Fiji', ru: 'Фиджи' },
   kyrgyzstan: { tr: 'Kırgızistan', en: 'Kyrgyzstan', ru: 'Киргизия' },
   tajikistan: { tr: 'Tacikistan', en: 'Tajikistan', ru: 'Таджикистан' },
+  uzbekistan: { tr: 'Özbekistan', en: 'Uzbekistan', ru: 'Узбекистан' },
 };
 
 const REF_ALL_COUNTRIES_LABEL = {
