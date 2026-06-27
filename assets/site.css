@@ -50,8 +50,12 @@ a { text-decoration: none; color: inherit; }
 
 /* Logo */
 .nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo img { height: 42px; object-fit: contain; filter: brightness(0) invert(1); transition: filter .4s; }
-.nav.sc .nav-logo img { filter: none; }
+.nav-logo img { height: 42px; object-fit: contain; transition: opacity .4s; }
+.nav-logo .logo-dark { display: none; }
+.nav.sc .nav-logo .logo-light,
+.nav.solid .nav-logo .logo-light { display: none; }
+.nav.sc .nav-logo .logo-dark,
+.nav.solid .nav-logo .logo-dark { display: block; }
 .nav-logo-text { font-family: var(--f-display); font-size: 1.3rem; font-weight: 600; letter-spacing: .06em; color: #fff; transition: color .4s; }
 .nav.sc .nav-logo-text { color: var(--ink); }
 
@@ -101,7 +105,6 @@ a { text-decoration: none; color: inherit; }
 
 /* When the nav sits on a light page (no dark hero behind it) keep it solid */
 .nav.solid { background: rgba(245,241,234,.96); backdrop-filter: blur(16px); box-shadow: 0 1px 0 var(--border); }
-.nav.solid .nav-logo img { filter: none; }
 .nav.solid .nav-logo-text { color: var(--ink); }
 .nav.solid .nav-links > li > a { color: var(--ink-2); }
 .nav.solid .nav-links > li > a:hover { color: var(--ink); }
@@ -380,7 +383,7 @@ a { text-decoration: none; color: inherit; }
 /* ─── FOOTER ─────────────────────────────────────── */
 footer { background: var(--ink); }
 .ft-top { max-width: 1200px; margin: 0 auto; padding: 72px 56px 52px; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 52px; border-bottom: 1px solid rgba(255,255,255,.07); }
-.ft-brand-logo { height: 38px; margin-bottom: 18px; filter: brightness(0) invert(1) opacity(.75); }
+.ft-brand-logo { height: 38px; margin-bottom: 18px; opacity: .9; }
 .ft-brand-name { font-family: var(--f-display); font-size: 1.4rem; font-weight: 600; color: rgba(255,255,255,.85); margin-bottom: 12px; }
 .ft-brand-sub { font-size: .8rem; color: rgba(255,255,255,.32); line-height: 1.8; max-width: 220px; }
 .ft-col-head { font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 22px; }
@@ -622,7 +625,8 @@ footer { background: var(--ink); }
 
   /* Mobile menu open state */
   .nav.menu-open { background: rgba(245,241,234,.98); backdrop-filter: blur(16px); box-shadow: 0 1px 0 var(--border); }
-  .nav.menu-open .nav-logo img { filter: none; }
+  .nav.menu-open .nav-logo .logo-light { display: none; }
+  .nav.menu-open .nav-logo .logo-dark { display: block; }
   .nav.menu-open .nav-logo-text { color: var(--ink); }
   .nav.menu-open .lbtn { border-color: var(--border); color: var(--ink-3); }
   .nav.menu-open .hbg span { background: var(--ink); }

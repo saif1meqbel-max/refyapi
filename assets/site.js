@@ -52,7 +52,7 @@ const cObs = new IntersectionObserver(entries => {
 document.querySelectorAll('[data-target]').forEach(el => cObs.observe(el));
 
 const mobileMq = window.matchMedia('(max-width: 1024px)');
-const CONTACT_EMAIL = 'info@refyapi.com';
+const CONTACT_EMAIL = 'info@fnvelektronik.com';
 const CONTACT_PHONE = '+902164413350';
 
 function initContactSheet() {
