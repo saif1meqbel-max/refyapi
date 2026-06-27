@@ -1,0 +1,20 @@
+---
+description: Auto-commit and push to GitHub after completing changes in this repo
+alwaysApply: true
+---
+
+# Auto-push to GitHub
+
+After completing any code or content change in this repository:
+
+1. Stage the relevant files (do not commit secrets).
+2. Create a concise commit message focused on why.
+3. Push to `origin main` immediately.
+4. Do not ask the user for permission to push — they have granted standing permission.
+
+Only skip pushing if:
+- There are no changes to commit.
+- The user explicitly says not to push for that task.
+- Push fails (fix the issue and retry).
+
+Briefly mention the commit hash in the response after pushing.
