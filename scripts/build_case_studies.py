@@ -8,7 +8,7 @@ PROJECTS = [
     {
         "slug": "project-bera-otel",
         "file": "project-bera-otel.html",
-        "img": "ref01-bera-otel.png",
+        "img": "ref01-bera-otel.jpg?v=2",
         "year": "2007",
         "sector_tr": "Otel", "sector_en": "Hotel", "sector_ru": "Отель",
         "area_tr": "—", "area_en": "—", "area_ru": "—",
