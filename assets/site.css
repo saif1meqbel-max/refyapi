@@ -237,6 +237,12 @@ a { text-decoration: none; color: inherit; }
 
 .about-img-wrap { position: relative; width: 100%; max-width: 440px; margin: 0 auto; }
 .about-img { width: 100%; height: auto; display: block; }
+.about-logo-panel {
+  background: var(--white); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  min-height: 280px; padding: 48px 32px;
+}
+.about-logo { max-width: 220px; width: 100%; height: auto; display: block; }
 .about-band {
   background: var(--gold); color: #fff; padding: 18px 26px;
   display: flex; align-items: center; justify-content: space-between;
