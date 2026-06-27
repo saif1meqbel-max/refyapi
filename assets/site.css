@@ -403,8 +403,9 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--gold);
+  transition: color .2s;
 }
-.office-link:hover .off-link-hint { color: var(--ink); }
+.off-link-hint:hover { color: var(--ink); }
 .london-hero-lead {
   max-width: 620px;
   margin-top: 22px;
