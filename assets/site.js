@@ -130,10 +130,8 @@ document.querySelectorAll('.contact-sheet-trigger').forEach(btn => {
 
 const QUOTE_EMAIL = 'info@fnvelektronik.com';
 const SERVICE_OPTIONS = [
-  { v: 'fire', tr: 'Yangın Algılama', en: 'Fire Detection', ru: 'Пожарная сигнализация' },
+  { v: 'integrated', tr: 'Honeywell · Entegre Bina Sistemleri', en: 'Honeywell · Integrated Building Systems', ru: 'Honeywell · Интегрированные системы' },
   { v: 'security', tr: 'Güvenlik Sistemleri', en: 'Security Systems', ru: 'Системы безопасности' },
-  { v: 'automation', tr: 'Otomasyon Sistemleri', en: 'Automation Systems', ru: 'Автоматизация' },
-  { v: 'audio', tr: 'Ses ve Işık', en: 'Audio & Visual', ru: 'Аудио и свет' },
   { v: 'data', tr: 'Data ve İletişim', en: 'Data & Communications', ru: 'Связь и данные' },
   { v: 'tv', tr: 'TV ve Görüntü', en: 'TV & Video', ru: 'ТВ и видео' },
   { v: 'general', tr: 'Genel / Diğer', en: 'General / Other', ru: 'Общий / Другое' },
@@ -491,8 +489,9 @@ if (refsGrid && sortBtns.length) {
   const items = navEl.querySelectorAll('.nav-links > li');
   const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   const SERVICE_PAGES = new Set([
-    'fire-detection.html', 'security-systems.html', 'automation-systems.html',
-    'audio-visual-systems.html', 'data-communications.html', 'tv-video-systems.html',
+    'integrated-building-systems.html', 'fire-detection.html', 'security-systems.html',
+    'automation-systems.html', 'audio-visual-systems.html', 'data-communications.html',
+    'tv-video-systems.html',
   ]);
   const OFFICE_PAGES = new Set(['istanbul.html', 'london.html', 'middle-east-asia.html']);
 
