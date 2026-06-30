@@ -338,7 +338,9 @@ a { text-decoration: none; color: inherit; }
 .ref-card:hover { border-color: var(--gold); box-shadow: 0 12px 36px rgba(0,0,0,.1); transform: translateY(-4px); }
 .ref-imgwrap { position: relative; overflow: hidden; }
 .ref-img { width: 100%; height: 200px; object-fit: cover; display: block; transition: transform .5s var(--ease); }
+.ref-img--contain { object-fit: contain; background: var(--cream); padding: 8px; box-sizing: border-box; }
 .ref-card:hover .ref-img { transform: scale(1.05); }
+.ref-card:hover .ref-img--contain { transform: none; }
 .ref-year { position: absolute; top: 0; right: 0; background: var(--gold); color: #fff; font-family: var(--f-display); font-size: 1.05rem; font-weight: 600; letter-spacing: .04em; padding: 5px 14px; }
 .ref-body { padding: 24px; }
 .ref-tag { font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; line-height: 1.5; }
