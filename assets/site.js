@@ -502,7 +502,7 @@ if (refsGrid && sortBtns.length) {
     'fire-detection.html', 'security-systems.html', 'automation-systems.html',
     'audio-visual-systems.html', 'data-communications.html', 'tv-video-systems.html',
   ]);
-  const OFFICE_PAGES = new Set(['istanbul.html', 'tashkent.html', 'london.html']);
+  const OFFICE_PAGES = new Set(['istanbul.html', 'london.html']);
 
   const setActive = li => {
     items.forEach(i => i.classList.remove('nav-active'));
