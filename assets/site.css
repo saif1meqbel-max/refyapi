@@ -441,7 +441,9 @@ a { text-decoration: none; color: inherit; }
 /* ─── CONTACT ────────────────────────────────────── */
 .contact { background: var(--cream-3); }
 .contact-inner { max-width: 1200px; margin: 0 auto; padding: 100px 56px; }
-.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 56px; max-width: 900px; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+.off-coverage { font-size: .82rem; color: var(--ink-3); line-height: 1.6; padding-left: 0; }
+.off-coverage::before { display: none; }
 .contact-branches { margin-top: 56px; }
 .contact-branches-head { margin-bottom: 24px; }
 .contact-branch-grid { display: grid; grid-template-columns: minmax(0, 420px); gap: 24px; }
