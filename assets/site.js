@@ -69,7 +69,6 @@ document.querySelectorAll('[data-target]').forEach(el => cObs.observe(el));
 
 const mobileMq = window.matchMedia('(max-width: 1024px)');
 const CONTACT_EMAIL = 'info@fnvelektronik.com';
-const CONTACT_PHONE = '+902164413350';
 
 function initContactSheet() {
   let sheet = document.getElementById('contactSheet');
@@ -92,13 +91,6 @@ function initContactSheet() {
             <div>
               <div class="contact-sheet-btn-label"><span data-lang="tr">E-posta</span><span data-lang="en">Email</span><span data-lang="ru">Эл. почта</span></div>
               <div class="contact-sheet-btn-value">${CONTACT_EMAIL}</div>
-            </div>
-          </a>
-          <a href="tel:${CONTACT_PHONE}" class="contact-sheet-btn">
-            <svg width="22" height="22" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h3l1.5 3.5-2 1.2A11 11 0 0010.3 12.5l1.2-2L15 12v3a1 1 0 01-1 1C6.16 16 2 11.84 2 4a1 1 0 011-1z"/></svg>
-            <div>
-              <div class="contact-sheet-btn-label"><span data-lang="tr">Telefon</span><span data-lang="en">Call</span><span data-lang="ru">Позвонить</span></div>
-              <div class="contact-sheet-btn-value">+90 216 441 33 50</div>
             </div>
           </a>
         </div>
