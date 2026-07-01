@@ -271,7 +271,14 @@ TITLE_RU = {
   "changes": "Изменения Политики конфиденциальности",
 }
 
-NAV = open(ROOT / "documents.html", encoding="utf-8").read().split("<nav class=\"nav\"")[1].split("</nav>")[0]
+def extract_nav_inner(path):
+    text = open(path, encoding="utf-8").read()
+    start = text.index("<nav")
+    start = text.index(">", start) + 1
+    end = text.index("</nav>", start)
+    return text[start:end].strip()
+
+NAV = extract_nav_inner(ROOT / "documents.html")
 FOOTER = open(ROOT / "index.html", encoding="utf-8").read().split("<footer>")[1].split("</footer>")[0]
 
 def section_html(key, title_key, bodies):
@@ -305,7 +312,8 @@ html = f'''<!DOCTYPE html>
 </head>
 <body>
 
-<nav class="nav solid" id="mainNav">{NAV}
+<nav class="nav solid" id="mainNav">
+{NAV}
 </nav>
 
 <section class="svc-hero">
