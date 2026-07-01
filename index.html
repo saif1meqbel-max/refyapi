@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=37" />
+  <link rel="stylesheet" href="assets/site.css?v=39" />
 </head>
 
 <body>
@@ -205,97 +205,402 @@
         </h2>
       </div>
       <p class="services-top-right rv d2">
-        <span data-lang="tr">Projenizin her aşamasında yanınızdayız — tasarımdan devreye almaya, bakımdan teknik desteğe kadar.</span>
-        <span data-lang="en">We are by your side at every stage — from design to commissioning, maintenance to technical support.</span>
-        <span data-lang="ru">Мы рядом на каждом этапе — от проектирования до ввода в эксплуатацию.</span>
+        <span data-lang="tr">Projenizin her aşamasında yanınızdayız — 12 hizmet alanında tasarımdan devreye almaya, bakımdan teknik desteğe kadar. Bir karta tıklayarak detayları görün.</span>
+        <span data-lang="en">We are by your side at every stage across 12 service areas — from design to commissioning and maintenance. Click a card to view details.</span>
+        <span data-lang="ru">Мы рядом на каждом этапе в 12 областях — от проектирования до обслуживания. Нажмите на карточку для подробностей.</span>
       </p>
     </div>
 
     <div class="sg sg-12">
-      <a href="fire-detection.html" class="sc-card rv d1">
+      <button type="button" class="sc-card rv d1 is-active" data-service="fire" aria-pressed="true">
         <span class="sc-n">01</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="15" r="5.5"/><path d="M7.5 38.5c2.5-9 8.5-13.5 15.5-13.5"/><path d="M22.5 27.5 31 31.5"/><rect x="29" y="13" width="20" height="24" rx="2.5"/><circle cx="39" cy="25" r="5.5"/><circle cx="39" cy="25" r="2"/><path d="M50.5 47.5c0 4.2-3.2 6.8-4.5 8.8-1.3-2-4.5-4.6-4.5-8.8 0-3.2 2.2-5.6 4.5-7.8 2.3 2.2 4.5 4.6 4.5 7.8z"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Yangın Alarm Sistemleri</span><span data-lang="en">Fire Alarm Systems</span><span data-lang="ru">Системы пожарной сигнализации</span></h3>
         <p class="sc-desc"><span data-lang="tr">Orta ve büyük ölçekli projeler için akıllı adresli yangın algılama ve alarm sistemleri.</span><span data-lang="en">Smart addressable fire detection and alarm systems for large and medium-sized projects.</span><span data-lang="ru">Интеллектуальные адресные системы пожарной сигнализации для проектов среднего и крупного масштаба.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="security-systems.html#kartli-gecis" class="sc-card rv d2">
+      </button>
+      <button type="button" class="sc-card rv d2" data-service="access" aria-pressed="false">
         <span class="sc-n">02</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="18" width="18" height="28" rx="2.5"/><path d="M14 24h10M14 30h10"/><circle cx="19" cy="38" r="2.2"/><path d="M34 16v40"/><path d="M34 16h16a4 4 0 0 1 4 4v32a4 4 0 0 1-4 4H34"/><rect x="42" y="28" width="12" height="16" rx="1.5"/><path d="M45 34h6"/><circle cx="48" cy="38" r="1.5"/><path d="M22 32h8"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Erişim Kontrol ve Personel Takip</span><span data-lang="en">Access Control & Staff Tracking</span><span data-lang="ru">Контроль доступа и учёт персонала</span></h3>
         <p class="sc-desc"><span data-lang="tr">Kısıtlı alanlara kontrollü erişim ve personel giriş-çıkış takip sistemleri.</span><span data-lang="en">Controlled permission to restricted areas and personnel entry-exit tracking systems.</span><span data-lang="ru">Контролируемый доступ в ограниченные зоны и учёт входа/выхода персонала.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="data-communications.html" class="sc-card rv d3">
+      </button>
+      <button type="button" class="sc-card rv d3" data-service="data" aria-pressed="false">
         <span class="sc-n">03</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="14" width="24" height="10" rx="2"/><rect x="12" y="27" width="24" height="10" rx="2"/><rect x="12" y="40" width="24" height="10" rx="2"/><circle cx="18" cy="19" r="1.3"/><circle cx="18" cy="32" r="1.3"/><circle cx="18" cy="45" r="1.3"/><path d="M24 19h8M24 32h8M24 45h8"/><circle cx="46" cy="20" r="3"/><circle cx="46" cy="44" r="3"/><path d="M46 23v18"/><path d="M40 32h12"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Data ve Altyapı Sistemleri</span><span data-lang="en">Data & Infrastructure Systems</span><span data-lang="ru">Data и инфраструктура</span></h3>
         <p class="sc-desc"><span data-lang="tr">Zayıf akım sistemlerinin vazgeçilmez unsuru olan data ve altyapı hizmetlerimizi inceleyin.</span><span data-lang="en">See our data & infrastructure services, which are indispensable elements of weak current systems.</span><span data-lang="ru">Data и инфраструктурные услуги — неотъемлемая часть слаботочных систем.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="automation-systems.html#otel-kapi" class="sc-card rv d1">
+      </button>
+      <button type="button" class="sc-card rv d1" data-service="hotel-door" aria-pressed="false">
         <span class="sc-n">04</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14h28v36H14z"/><path d="M28 14v36"/><rect x="18" y="24" width="7" height="10" rx="1"/><path d="M21.5 29h1"/><circle cx="33" cy="32" r="2.2"/><path d="M44 22v8"/><path d="M41 26h6"/><path d="M10 50h36"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Otel Kapı Sistemleri</span><span data-lang="en">Hotel Door Systems</span><span data-lang="ru">Дверные системы для отелей</span></h3>
         <p class="sc-desc"><span data-lang="tr">Otel yönetimine güvenli hizmet sunarak misafirlere konforlu konaklama sağlar.</span><span data-lang="en">Comfortable accommodation for guests by providing safe service to hotel administration.</span><span data-lang="ru">Безопасный сервис для администрации отеля и комфортное проживание гостей.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="audio-visual-systems.html#genel-anons" class="sc-card rv d2">
+      </button>
+      <button type="button" class="sc-card rv d2" data-service="pa" aria-pressed="false">
         <span class="sc-n">05</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 24v16l10 6V18z"/><path d="M28 22c4 2.5 4 17.5 0 20"/><path d="M34 19c6 3.5 6 22.5 0 26"/><path d="M40 16c8 4.5 8 27.5 0 32"/><rect x="46" y="20" width="10" height="24" rx="2"/><path d="M49 26h4M49 32h4M49 38h4"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Genel Anons ve Sesli Alarm</span><span data-lang="en">Public Announcement & Voice Alarm</span><span data-lang="ru">Оповещение и голосовая сигнализация</span></h3>
         <p class="sc-desc"><span data-lang="tr">Fon müziği, alarm ve tahliye faaliyetleri için entegre çözümler.</span><span data-lang="en">Solutions for background music, alarm and evacuation activities.</span><span data-lang="ru">Решения для фоновой музыки, сигнализации и эвакуации.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="automation-systems.html#mekanik" class="sc-card rv d3">
+      </button>
+      <button type="button" class="sc-card rv d3" data-service="mechanical" aria-pressed="false">
         <span class="sc-n">06</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="32" r="10"/><circle cx="40" cy="32" r="10"/><path d="M24 22v4M24 38v4M14 32h4M30 32h4"/><path d="M40 22v4M40 38v4M30 32h4M46 32h4"/><path d="M20.5 25.5 27.5 38.5M43.5 25.5 36.5 38.5"/><rect x="12" y="46" width="40" height="6" rx="1.5"/><path d="M18 46v-6M26 46v-4M32 46v-6M38 46v-4M46 46v-6"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Mekanik Otomasyon Sistemleri</span><span data-lang="en">Mechanical Automation Systems</span><span data-lang="ru">Механическая автоматизация</span></h3>
         <p class="sc-desc"><span data-lang="tr">Yürüyen merdiven, asansör, aydınlatma ve iklimlendirme gibi hizmetleri tek noktadan yönetin.</span><span data-lang="en">Manage services such as escalators, elevators, lighting and air conditioning from a single point.</span><span data-lang="ru">Управление эскалаторами, лифтами, освещением и кондиционированием из одной точки.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="data-communications.html#telefon-voip" class="sc-card rv d1">
+      </button>
+      <button type="button" class="sc-card rv d1" data-service="phone" aria-pressed="false">
         <span class="sc-n">07</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 22c2 10 14 22 24 24l6-6c1-1 2.5-.8 3.5.2l4.5 4.5c1 1 1 2.6 0 3.6-2.5 2.5-6 4-9.5 2.5-11-4.5-20.5-14-25-25-1.5-3.5 0-7 2.5-9.5 1-1 2.6-1 3.6 0l4.5 4.5c1 1 1.2 2.5.2 3.5z"/><path d="M42 12c4 1.5 7 4.5 8.5 8.5"/><path d="M42 18c2.2.8 4 2.6 4.8 4.8"/><path d="M42 24c1 .4 1.8 1.2 2.2 2.2"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Telefon Sistemleri</span><span data-lang="en">Phone Systems</span><span data-lang="ru">Телефонные системы</span></h3>
         <p class="sc-desc"><span data-lang="tr">VoIP ile telekomünikasyon maliyetlerinizi %50 ile %70 arasında azaltabilirsiniz.</span><span data-lang="en">Through VoIP, it is possible to reduce your telecommunication costs between 50% and 70%.</span><span data-lang="ru">VoIP позволяет снизить затраты на телекоммуникации на 50–70%.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="tv-video-systems.html#intercom" class="sc-card rv d2">
+      </button>
+      <button type="button" class="sc-card rv d2" data-service="intercom" aria-pressed="false">
         <span class="sc-n">08</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="10" width="32" height="44" rx="4"/><rect x="22" y="16" width="20" height="14" rx="2"/><circle cx="32" cy="38" r="4"/><path d="M24 46h16"/><path d="M28 50h8"/><circle cx="26" cy="23" r="1.2"/><circle cx="32" cy="23" r="1.2"/><circle cx="38" cy="23" r="1.2"/></svg>
         <h3 class="sc-title"><span data-lang="tr">IP İntercom Sistemleri</span><span data-lang="en">IP Intercom Systems</span><span data-lang="ru">IP-домофонные системы</span></h3>
         <p class="sc-desc"><span data-lang="tr">Akıllı dijital teknolojilerin kullanıldığı IoT tabanlı IP intercom altyapısı.</span><span data-lang="en">An IoT-based system in which smart digital technologies are used for IP intercom infrastructure.</span><span data-lang="ru">IoT-инфраструктура IP-домофона с использованием цифровых технологий.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="security-systems.html#cctv" class="sc-card rv d3">
+      </button>
+      <button type="button" class="sc-card rv d3" data-service="cctv" aria-pressed="false">
         <span class="sc-n">09</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 28h10l6-8h8l6 8h10"/><rect x="18" y="28" width="28" height="14" rx="3"/><circle cx="32" cy="35" r="5"/><path d="M32 40v6"/><path d="M24 46h16"/><path d="M46 32l6-4v14l-6-4"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Kapalı Devre Kamera (CCTV)</span><span data-lang="en">CCTV Systems</span><span data-lang="ru">Системы видеонаблюдения</span></h3>
         <p class="sc-desc"><span data-lang="tr">Güvenlik gereksinimleri için son teknoloji kamera sistemleri.</span><span data-lang="en">Cutting-edge technology camera systems for security requirements.</span><span data-lang="ru">Камерные системы последнего поколения для задач безопасности.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="automation-systems.html#aydinlatma" class="sc-card rv d1">
+      </button>
+      <button type="button" class="sc-card rv d1" data-service="lighting" aria-pressed="false">
         <span class="sc-n">10</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 46V28l14-10 14 10v18"/><path d="M24 46h16"/><path d="M28 36h8"/><path d="M32 14v-4"/><path d="M22 16l-2-3.5"/><path d="M42 16l2-3.5"/><path d="M16 24l-3.5-2"/><path d="M48 24l3.5-2"/><circle cx="32" cy="8" r="3.5"/><path d="M32 4.5V2"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Bina ve Aydınlatma Otomasyonu</span><span data-lang="en">Building & Lighting Automation</span><span data-lang="ru">Автоматизация зданий и освещения</span></h3>
         <p class="sc-desc"><span data-lang="tr">Aydınlatma, HVAC ve enerji yönetimini tek BMS platformundan kontrol edin.</span><span data-lang="en">Manage building services such as lighting, HVAC and energy from a single platform.</span><span data-lang="ru">Управление освещением, HVAC и энергией с единой платформы BMS.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="automation-systems.html#hemsire" class="sc-card rv d2">
+      </button>
+      <button type="button" class="sc-card rv d2" data-service="nurse" aria-pressed="false">
         <span class="sc-n">11</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12v40"/><path d="M18 26h28"/><circle cx="32" cy="32" r="14"/><circle cx="32" cy="32" r="6"/><path d="M32 26v12"/><path d="M26 32h12"/><path d="M46 46l4 4"/><path d="M46 50l4-4"/><circle cx="48" cy="48" r="2"/></svg>
         <h3 class="sc-title"><span data-lang="tr">Hemşire Çağrı ve Mavi Kod</span><span data-lang="en">Nurse Call & Code Blue</span><span data-lang="ru">Вызов медсестры и Code Blue</span></h3>
         <p class="sc-desc"><span data-lang="tr">Hasta ile sağlık personeli arasında IP teknolojisiyle kritik iletişim.</span><span data-lang="en">An important function in communication between the patient and healthcare staff with IP technology.</span><span data-lang="ru">IP-связь между пациентом и медицинским персоналом.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="tv-video-systems.html#smatv" class="sc-card rv d3">
+      </button>
+      <button type="button" class="sc-card rv d3" data-service="iptv" aria-pressed="false">
         <span class="sc-n">12</span>
         <svg class="sc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="16" width="40" height="28" rx="3"/><path d="M22 48h20"/><path d="M32 44v4"/><path d="M26 24l8 6-8 6z"/><path d="M42 30h6"/><path d="M42 34h4"/><path d="M10 22h2M52 22h2"/></svg>
         <h3 class="sc-title"><span data-lang="tr">IPTV Sistemleri</span><span data-lang="en">IPTV Systems</span><span data-lang="ru">IPTV-системы</span></h3>
         <p class="sc-desc"><span data-lang="tr">Özellikle otellerde tercih edilen IPTV çözümleri — 4 ve 5 yıldızlı şehir otellerinde yaygın.</span><span data-lang="en">Especially preferred by hotels, IPTV systems are frequently used in 4 and 5 star city hotels.</span><span data-lang="ru">IPTV-решения, особенно востребованные в отелях 4 и 5 звёзд.</span></p>
         <span class="sc-more"><span data-lang="tr">Detaylar</span><span data-lang="en">Details</span><span data-lang="ru">Подробнее</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+      </button>
+    </div>
+
+    <div class="svc-preview" id="svcPreview" aria-live="polite">
+      <div class="svc-preview-panels">
+      <article class="svc-preview-panel is-active" data-service="fire" id="svc-fire">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">01</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Yangın Alarm Sistemleri</span><span data-lang="en">Fire Alarm Systems</span><span data-lang="ru">Системы пожарной сигнализации</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">Adresli ve konvansiyonel yangın algılama sistemlerini projelendiriyor, kuruyor ve devreye alıyoruz — duman ve ısı detektörlerinden ihbar panellerine, sesli-ışıklı uyarıcılardan tahliye senaryolarına kadar.</span><span data-lang="en">We design, install and commission addressable and conventional fire detection — from smoke and heat detectors to alarm panels, sirens, beacons and full evacuation scenarios.</span><span data-lang="ru">Проектируем, монтируем и вводим в эксплуатацию адресные и конвенциональные системы — от датчиков до панелей, сирен и сценариев эвакуации.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">Adresli panel, dedektör ve manuel buton kurulumu</span><span data-lang="en">Addressable panels, detectors and manual call points</span><span data-lang="ru">Адресные панели, извещатели и ручные извещатели</span></li>
+          <li><span data-lang="tr">Yönetmeliklere uygun sistem tasarımı ve test</span><span data-lang="en">Regulation-compliant design, testing and documentation</span><span data-lang="ru">Проектирование и испытания по нормам</span></li>
+          <li><span data-lang="tr">Bina otomasyonu ve acil anons ile entegrasyon</span><span data-lang="en">Integration with BMS and voice alarm systems</span><span data-lang="ru">Интеграция с BMS и голосовой сигнализацией</span></li>
+          <li><span data-lang="tr">Periyodik bakım ve 7/24 teknik destek</span><span data-lang="en">Periodic maintenance and 24/7 technical support</span><span data-lang="ru">Периодическое обслуживание и поддержка 24/7</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Honeywell · Morley</span><span data-lang="en">Honeywell · Morley</span><span data-lang="ru">Honeywell · Morley</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Hastane · AVM · Havalimanı</span><span data-lang="en">Hospitals · Malls · Airports</span><span data-lang="ru">Больницы · ТРЦ · Аэропорты</span></p>
+            <div class="svc-preview-actions">
+              <a href="fire-detection.html" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="fire"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="access" id="svc-access">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">02</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Erişim Kontrol ve Personel Takip</span><span data-lang="en">Access Control & Staff Tracking</span><span data-lang="ru">Контроль доступа и учёт персонала</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">Kartlı geçiş, biyometrik okuyucular, turnike ve bariyer sistemleri ile personel ve ziyaretçi hareketlerini kayıt altına alıyor; yetkilendirme ve raporlama sağlıyoruz.</span><span data-lang="en">We deploy card readers, biometrics, turnstiles and barriers to control access, track personnel and visitors, and deliver authorisation with full audit reporting.</span><span data-lang="ru">Устанавливаем считыватели, биометрию, турникеты и шлагбаумы для контроля доступа, учёта персонала и полной отчётности.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">Kart, parmak izi ve yüz tanıma okuyucular</span><span data-lang="en">Card, fingerprint and facial recognition readers</span><span data-lang="ru">Считыватели карт, отпечатков и лица</span></li>
+          <li><span data-lang="tr">Turnike, bariyer ve kapı kontrol entegrasyonu</span><span data-lang="en">Turnstile, barrier and door control integration</span><span data-lang="ru">Интеграция с турникетами, шлагбаумами и дверями</span></li>
+          <li><span data-lang="tr">Personel devam ve ziyaretçi yönetimi</span><span data-lang="en">Staff attendance and visitor management</span><span data-lang="ru">Учёт рабамочего времени и управление посетителями</span></li>
+          <li><span data-lang="tr">Merkezi yazılım ile bölge bazlı yetkilendirme</span><span data-lang="en">Zone-based authorisation via central software</span><span data-lang="ru">Зональная авторизация через центральное ПО</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Honeywell · SALTO</span><span data-lang="en">Honeywell · SALTO</span><span data-lang="ru">Honeywell · SALTO</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Ofis · Fabrika · Kamu</span><span data-lang="en">Offices · Factories · Public sector</span><span data-lang="ru">Офисы · Заводы · Госсектор</span></p>
+            <div class="svc-preview-actions">
+              <a href="security-systems.html#kartli-gecis" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="access"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="data" id="svc-data">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">03</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Data ve Altyapı Sistemleri</span><span data-lang="en">Data & Infrastructure Systems</span><span data-lang="ru">Data и инфраструктура</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">Yapısal kablolama, fiber optik, data kabinetleri ve aktif network ekipmanlarını tüm zayıf akım sistemlerinin omurgası olarak tasarlıyor ve kuruyoruz.</span><span data-lang="en">We design and install structured cabling, fibre optics, data cabinets and active network equipment as the backbone for all low-current systems.</span><span data-lang="ru">Проектируем и монтируем СКС, оптоволокно, шкафы и активное сетевое оборудование как основу всех слаботочных систем.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">Cat6/Cat6A ve fiber optik altyapı</span><span data-lang="en">Cat6/Cat6A and fibre optic infrastructure</span><span data-lang="ru">Инфраструктура Cat6/Cat6A и оптоволокно</span></li>
+          <li><span data-lang="tr">Data kabineti, patch panel ve etiketleme</span><span data-lang="en">Data cabinets, patch panels and labelling</span><span data-lang="ru">Шкафы, патч-панели и маркировка</span></li>
+          <li><span data-lang="tr">Switch, router ve kablosuz erişim noktaları</span><span data-lang="en">Switches, routers and wireless access points</span><span data-lang="ru">Коммутаторы, маршрутизаторы и Wi‑Fi</span></li>
+          <li><span data-lang="tr">Sertifikalı test, ölçüm ve devreye alma</span><span data-lang="en">Certified testing, measurement and commissioning</span><span data-lang="ru">Сертифицированные испытания и ввод в эксплуатацию</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Cisco · Commscope</span><span data-lang="en">Cisco · Commscope</span><span data-lang="ru">Cisco · Commscope</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Ofis · Otel · Kampüs</span><span data-lang="en">Offices · Hotels · Campuses</span><span data-lang="ru">Офисы · Отели · Кампусы</span></p>
+            <div class="svc-preview-actions">
+              <a href="data-communications.html" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="data"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="hotel-door" id="svc-hotel-door">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">04</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Otel Kapı Sistemleri</span><span data-lang="en">Hotel Door Systems</span><span data-lang="ru">Дверные системы для отелей</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">RFID kartlı elektronik kilitler, mobil anahtar ve bulut tabanlı erişim yönetimi ile otel kapı sistemlerinde güvenlik ve operasyonel verimliliği bir araya getiriyoruz.</span><span data-lang="en">We combine security and operational efficiency in hotel door systems with RFID electronic locks, mobile keys and cloud-based access management.</span><span data-lang="ru">Объединяем безопасность и операционную эффективность с RFID-замками, мобильными ключами и облачным управлением доступом.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">RFID kartlı oda kilitleri ve mobil anahtar</span><span data-lang="en">RFID room locks and mobile key solutions</span><span data-lang="ru">RFID-замки и мобильные ключи</span></li>
+          <li><span data-lang="tr">PMS ve otel yönetim yazılımı entegrasyonu</span><span data-lang="en">PMS and hotel management software integration</span><span data-lang="ru">Интеграция с PMS и отельным ПО</span></li>
+          <li><span data-lang="tr">Kablo gerektirmeyen kurulum ve hızlı devreye alma</span><span data-lang="en">Wireless installation and rapid commissioning</span><span data-lang="ru">Беспроводной монтаж и быстрый ввод</span></li>
+          <li><span data-lang="tr">Acil çıkış ve yangın standartlarına uyum</span><span data-lang="en">Compliance with emergency exit and fire standards</span><span data-lang="ru">Соответствие нормам эвакуации и пожарной безопасности</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">SALTO · Honeywell</span><span data-lang="en">SALTO · Honeywell</span><span data-lang="ru">SALTO · Honeywell</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Otel · Resort</span><span data-lang="en">Hotels · Resorts</span><span data-lang="ru">Отели · Курорты</span></p>
+            <div class="svc-preview-actions">
+              <a href="automation-systems.html#otel-kapi" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="hotel-door"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="pa" id="svc-pa">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">05</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Genel Anons ve Sesli Alarm</span><span data-lang="en">Public Announcement & Voice Alarm</span><span data-lang="ru">Оповещение и голосовая сигнализация</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">Acil anons, sesli alarm ve fon müziği sistemlerini tek platformda birleştiriyor; tahliye senaryolarını yangın algılama ile entegre ediyoruz.</span><span data-lang="en">We unify emergency PA, voice alarm and background music on a single platform, integrating evacuation scenarios with fire detection.</span><span data-lang="ru">Объединяем оповещение, голосовую сигнализацию и фоновую музыку на одной платформе с интеграцией пожарной сигнализации.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">Acil anons ve sesli tahliye senaryoları</span><span data-lang="en">Emergency PA and voice evacuation scenarios</span><span data-lang="ru">Экстренное оповещение и голосовая эвакуация</span></li>
+          <li><span data-lang="tr">Bölge bazlı fon müziği ve zonal kontrol</span><span data-lang="en">Zone-based background music and zonal control</span><span data-lang="ru">Зональная фоновая музыка и управление</span></li>
+          <li><span data-lang="tr">Mikser, amfi ve hoparlör sistemleri</span><span data-lang="en">Mixer, amplifier and speaker systems</span><span data-lang="ru">Микшеры, усилители и акустика</span></li>
+          <li><span data-lang="tr">EN 54 ve ilgili standartlara uygun tasarım</span><span data-lang="en">Design compliant with EN 54 and relevant standards</span><span data-lang="ru">Проектирование по EN 54 и нормам</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Honeywell · Bosch</span><span data-lang="en">Honeywell · Bosch</span><span data-lang="ru">Honeywell · Bosch</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">AVM · Havalimanı · Stadyum</span><span data-lang="en">Malls · Airports · Stadiums</span><span data-lang="ru">ТРЦ · Аэропорты · Стадионы</span></p>
+            <div class="svc-preview-actions">
+              <a href="audio-visual-systems.html#genel-anons" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="pa"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="mechanical" id="svc-mechanical">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">06</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Mekanik Otomasyon Sistemleri</span><span data-lang="en">Mechanical Automation Systems</span><span data-lang="ru">Механическая автоматизация</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">Honeywell BMS ile asansör, yürüyen merdiven, HVAC ve enerji sistemlerini tek kontrol noktasından izleyip yönetmenizi sağlıyoruz.</span><span data-lang="en">With Honeywell BMS we enable monitoring and control of lifts, escalators, HVAC and energy systems from a single control point.</span><span data-lang="ru">С Honeywell BMS обеспечиваем мониторинг и управление лифтами, эскалаторами, HVAC и энергосистемами из одной точки.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">BMS kontrolörleri ve merkezi izleme yazılımı</span><span data-lang="en">BMS controllers and central monitoring software</span><span data-lang="ru">Контроллеры BMS и центральное ПО мониторинга</span></li>
+          <li><span data-lang="tr">HVAC, iklimlendirme ve enerji optimizasyonu</span><span data-lang="en">HVAC, climate control and energy optimisation</span><span data-lang="ru">HVAC, климат-контроль и оптимизация энергии</span></li>
+          <li><span data-lang="tr">Asansör ve yürüyen merdiven arayüzleri</span><span data-lang="en">Lift and escalator interfaces</span><span data-lang="ru">Интерфейсы лифтов и эскалаторов</span></li>
+          <li><span data-lang="tr">Alarm, trend ve raporlama yetenekleri</span><span data-lang="en">Alarm, trending and reporting capabilities</span><span data-lang="ru">Тревоги, тренды и отчётность</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Honeywell · KNX</span><span data-lang="en">Honeywell · KNX</span><span data-lang="ru">Honeywell · KNX</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Gökdelen · Hastane</span><span data-lang="en">Skyscrapers · Hospitals</span><span data-lang="ru">Небоскрёбы · Больницы</span></p>
+            <div class="svc-preview-actions">
+              <a href="automation-systems.html#mekanik" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="mechanical"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="phone" id="svc-phone">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">07</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Telefon Sistemleri</span><span data-lang="en">Phone Systems</span><span data-lang="ru">Телефонные системы</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">IP tabanlı telefon santralleri, softphone ve unified communications çözümleri ile kurumsal iletişimi modernize ediyor, maliyetleri düşürüyoruz.</span><span data-lang="en">We modernise corporate communications and reduce costs with IP PBX, softphones and unified communications solutions.</span><span data-lang="ru">Модернизируем корпоративную связь и снижаем затраты с IP-АТС, softphone и UC-решениями.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">IP PBX ve bulut tabanlı santral çözümleri</span><span data-lang="en">IP PBX and cloud-based exchange solutions</span><span data-lang="ru">IP-АТС и облачные АТС</span></li>
+          <li><span data-lang="tr">Dahili, trunk ve mobil entegrasyon</span><span data-lang="en">Extension, trunk and mobile integration</span><span data-lang="ru">Интеграция внутренних, транковых и мобильных линий</span></li>
+          <li><span data-lang="tr">Sesli mesaj, IVR ve çağrı yönlendirme</span><span data-lang="en">Voicemail, IVR and call routing</span><span data-lang="ru">Голосовая почта, IVR и маршрутизация</span></li>
+          <li><span data-lang="tr">Mevcut altyapı ile uyumlu migrasyon</span><span data-lang="en">Migration compatible with existing infrastructure</span><span data-lang="ru">Миграция с совместимостью с существующей инфраструктурой</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Cisco · Yealink</span><span data-lang="en">Cisco · Yealink</span><span data-lang="ru">Cisco · Yealink</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Ofis · Otel · Call Center</span><span data-lang="en">Offices · Hotels · Call centres</span><span data-lang="ru">Офисы · Отели · Колл-центры</span></p>
+            <div class="svc-preview-actions">
+              <a href="data-communications.html#telefon-voip" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="phone"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="intercom" id="svc-intercom">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">08</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">IP İntercom Sistemleri</span><span data-lang="en">IP Intercom Systems</span><span data-lang="ru">IP-домофонные системы</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">Video interkom panelleri, daire içi monitörler ve mobil uygulama entegrasyonu ile apartman, site ve kurumsal binalarda güvenli iletişim sağlıyoruz.</span><span data-lang="en">We deliver secure communication in residential and corporate buildings with video intercom panels, indoor monitors and mobile app integration.</span><span data-lang="ru">Обеспечиваем безопасную связь в жилых и корпоративных зданиях с видеодомофонами, мониторами и мобильным приложением.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">IP video kapı panelleri ve iç üniteler</span><span data-lang="en">IP video door panels and indoor stations</span><span data-lang="ru">IP-видеопанели и внутренние блоки</span></li>
+          <li><span data-lang="tr">Akıllı telefon uygulaması ile uzaktan erişim</span><span data-lang="en">Remote access via smartphone app</span><span data-lang="ru">Удалённый доступ через смартфон</span></li>
+          <li><span data-lang="tr">Çok daireli site ve rezidans çözümleri</span><span data-lang="en">Multi-unit residential and site solutions</span><span data-lang="ru">Решения для многоквартирных домов и посёлков</span></li>
+          <li><span data-lang="tr">Erişim kontrol ve CCTV entegrasyonu</span><span data-lang="en">Access control and CCTV integration</span><span data-lang="ru">Интеграция с контролем доступа и CCTV</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">2N · Hikvision</span><span data-lang="en">2N · Hikvision</span><span data-lang="ru">2N · Hikvision</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Site · Rezidans · Ofis</span><span data-lang="en">Sites · Residences · Offices</span><span data-lang="ru">Посёлки · Резиденции · Офисы</span></p>
+            <div class="svc-preview-actions">
+              <a href="tv-video-systems.html#intercom" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="intercom"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="cctv" id="svc-cctv">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">09</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Kapalı Devre Kamera (CCTV)</span><span data-lang="en">CCTV Systems</span><span data-lang="ru">Системы видеонаблюдения</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">IP ve analog kamera sistemleri, NVR/DVR kayıt, video analitik ve merkezi izleme ile kapsamlı güvenlik görüntüleme altyapısı kuruyoruz.</span><span data-lang="en">We build comprehensive security video infrastructure with IP and analogue cameras, NVR/DVR recording, video analytics and central monitoring.</span><span data-lang="ru">Создаём инфраструктуру видеонаблюдения с IP и аналоговыми камерами, NVR/DVR, аналитикой и центральным мониторингом.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">IP, PTZ ve dome kamera çözümleri</span><span data-lang="en">IP, PTZ and dome camera solutions</span><span data-lang="ru">IP, PTZ и купольные камеры</span></li>
+          <li><span data-lang="tr">NVR/DVR ve merkezi video yönetimi</span><span data-lang="en">NVR/DVR and central video management</span><span data-lang="ru">NVR/DVR и централизованное управление видео</span></li>
+          <li><span data-lang="tr">Gece görüşü ve akıllı video analitik</span><span data-lang="en">Night vision and intelligent video analytics</span><span data-lang="ru">Ночное видение и видеоаналитика</span></li>
+          <li><span data-lang="tr">Erişim kontrol ve alarm entegrasyonu</span><span data-lang="en">Access control and alarm integration</span><span data-lang="ru">Интеграция с контролем доступа и сигнализацией</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Hikvision · Honeywell</span><span data-lang="en">Hikvision · Honeywell</span><span data-lang="ru">Hikvision · Honeywell</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">AVM · Banka · Endüstri</span><span data-lang="en">Malls · Banks · Industry</span><span data-lang="ru">ТРЦ · Банки · Промышленность</span></p>
+            <div class="svc-preview-actions">
+              <a href="security-systems.html#cctv" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="cctv"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="lighting" id="svc-lighting">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">10</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Bina ve Aydınlatma Otomasyonu</span><span data-lang="en">Building & Lighting Automation</span><span data-lang="ru">Автоматизация зданий и освещения</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">KNX ve BMS tabanlı aydınlatma otomasyonu ile enerji tüketimini azaltıyor, konfor ve güvenliği artırıyoruz — panjur, iklimlendirme ve senaryo kontrolü dahil.</span><span data-lang="en">KNX and BMS-based lighting automation reduces energy consumption while improving comfort and safety — including blinds, HVAC and scene control.</span><span data-lang="ru">Автоматизация освещения на KNX и BMS снижает энергопотребление и повышает комфорт — шторы, HVAC и сценарии.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">KNX aydınlatma ve perde/panjur kontrolü</span><span data-lang="en">KNX lighting and blind/curtain control</span><span data-lang="ru">KNX-освещение и управление шторами</span></li>
+          <li><span data-lang="tr">Varlık sensörleri ile akıllı aydınlatma</span><span data-lang="en">Smart lighting with occupancy sensors</span><span data-lang="ru">Умное освещение с датчиками присутствия</span></li>
+          <li><span data-lang="tr">Enerji izleme ve raporlama</span><span data-lang="en">Energy monitoring and reporting</span><span data-lang="ru">Мониторинг и отчётность по энергии</span></li>
+          <li><span data-lang="tr">Merkezi görselleştirme ve uzaktan erişim</span><span data-lang="en">Central visualisation and remote access</span><span data-lang="ru">Центральная визуализация и удалённый доступ</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">KNX · Honeywell · Interra</span><span data-lang="en">KNX · Honeywell · Interra</span><span data-lang="ru">KNX · Honeywell · Interra</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Ofis · Otel · Konut</span><span data-lang="en">Offices · Hotels · Residential</span><span data-lang="ru">Офисы · Отели · Жильё</span></p>
+            <div class="svc-preview-actions">
+              <a href="automation-systems.html#aydinlatma" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="lighting"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="nurse" id="svc-nurse">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">11</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">Hemşire Çağrı ve Mavi Kod</span><span data-lang="en">Nurse Call & Code Blue</span><span data-lang="ru">Вызов медсестры и Code Blue</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">IP tabanlı hemşire çağrı sistemleri ile hasta odasından hemşire istasyonuna sesli ve görsel iletişim kuruyor; mavi kod ve acil müdahale süreçlerini hızlandırıyoruz.</span><span data-lang="en">IP-based nurse call systems enable voice and visual communication from patient rooms to nursing stations, accelerating code blue and emergency response.</span><span data-lang="ru">IP-системы вызова медсестры обеспечивают голосовую и визуальную связь от палаты до поста, ускоряя реагирование на Code Blue.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">Yatak başı, WC ve koridor çağrı üniteleri</span><span data-lang="en">Bedside, bathroom and corridor call units</span><span data-lang="ru">Прикроватные, санузловые и коридорные блоки</span></li>
+          <li><span data-lang="tr">Sesli iletişim ve ön bilgi alımı</span><span data-lang="en">Voice communication and pre-assessment</span><span data-lang="ru">Голосовая связь и предварительная информация</span></li>
+          <li><span data-lang="tr">Mavi kod ve acil müdahale butonları</span><span data-lang="en">Code blue and emergency call buttons</span><span data-lang="ru">Кнопки Code Blue и экстренного вызова</span></li>
+          <li><span data-lang="tr">Personel performans kaydı ve raporlama</span><span data-lang="en">Staff response logging and reporting</span><span data-lang="ru">Учёт времени реагирования и отчётность</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Honeywell · ALCAD · Ackermann</span><span data-lang="en">Honeywell · ALCAD · Ackermann</span><span data-lang="ru">Honeywell · ALCAD · Ackermann</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Hastane · Klinik</span><span data-lang="en">Hospitals · Clinics</span><span data-lang="ru">Больницы · Клиники</span></p>
+            <div class="svc-preview-actions">
+              <a href="automation-systems.html#hemsire" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="nurse"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <article class="svc-preview-panel" data-service="iptv" id="svc-iptv">
+        <div class="svc-preview-grid">
+          <div class="svc-preview-main">
+            <span class="svc-preview-num">12</span>
+            <h3 class="svc-preview-title"><span data-lang="tr">IPTV Sistemleri</span><span data-lang="en">IPTV Systems</span><span data-lang="ru">IPTV-системы</span></h3>
+            <p class="svc-preview-lead"><span data-lang="tr">Otel ve konut projelerinde IPTV ve SMATV headend sistemleri ile uydu/kablolu yayın dağıtımı, oda içi interaktif servisler ve merkezi yönetim sunuyoruz.</span><span data-lang="en">We deliver satellite/cable distribution, in-room interactive services and central management with IPTV and SMATV headend systems for hotels and residential projects.</span><span data-lang="ru">Поставляем IPTV и SMATV headend для отелей и жилых проектов — распределение ТВ, интерактивные сервисы и центральное управление.</span></p>
+            <ul class="svc-preview-list">
+          <li><span data-lang="tr">IPTV headend ve oda içi set-top box</span><span data-lang="en">IPTV headend and in-room set-top boxes</span><span data-lang="ru">IPTV headend и приставки в номерах</span></li>
+          <li><span data-lang="tr">SMATV uydu dağıtım altyapısı</span><span data-lang="en">SMATV satellite distribution infrastructure</span><span data-lang="ru">Инфраструктура спутникового SMATV</span></li>
+          <li><span data-lang="tr">Otel bilgi kanalları ve interaktif menüler</span><span data-lang="en">Hotel information channels and interactive menus</span><span data-lang="ru">Информационные каналы и интерактивные меню</span></li>
+          <li><span data-lang="tr">Merkezi yönetim ve içerik güncelleme</span><span data-lang="en">Central management and content updates</span><span data-lang="ru">Центральное управление и обновление контента</span></li>
+            </ul>
+          </div>
+          <aside class="svc-preview-side">
+            <p class="svc-preview-meta-label"><span data-lang="tr">Markalar</span><span data-lang="en">Brands</span><span data-lang="ru">Бренды</span></p>
+            <p class="svc-preview-brands"><span data-lang="tr">Honeywell · Triax</span><span data-lang="en">Honeywell · Triax</span><span data-lang="ru">Honeywell · Triax</span></p>
+            <p class="svc-preview-meta-label"><span data-lang="tr">Uygulama Alanları</span><span data-lang="en">Applications</span><span data-lang="ru">Применение</span></p>
+            <p class="svc-preview-apps"><span data-lang="tr">Otel · Rezidans</span><span data-lang="en">Hotels · Residences</span><span data-lang="ru">Отели · Резиденции</span></p>
+            <div class="svc-preview-actions">
+              <a href="tv-video-systems.html#smatv" class="btn btn-outline svc-preview-link"><span data-lang="tr">Tam sayfayı gör</span><span data-lang="en">View full page</span><span data-lang="ru">Полная страница</span></a>
+              <button type="button" class="btn btn-primary quote-trigger" data-service="iptv"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span></button>
+            </div>
+          </aside>
+        </div>
+      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -313,72 +618,102 @@
         </h2>
       </div>
       <p class="products-header-p rv d2">
-        <span data-lang="tr">Honeywell Platinum İş Ortağı olarak yangın algılama, otomasyon ve ses &amp; ışık sistemlerinde dünya standartlarında ürün ve çözümler sunuyoruz.</span>
-        <span data-lang="en">As a Honeywell Platinum Partner, we deliver world-class products and solutions in fire detection, automation, and audio &amp; visual systems.</span>
-        <span data-lang="ru">Как партнёр Honeywell Platinum, мы поставляем продукцию и решения мирового класса в области пожарной сигнализации, автоматизации и аудио/световых систем.</span>
+        <span data-lang="tr">12 hizmet alanında dünya markalarıyla uçtan uca ürün tedariki — yangından güvenliğe, data altyapısından IPTV'ye.</span>
+        <span data-lang="en">End-to-end product supply across 12 service areas with world-leading brands — from fire to security, data infrastructure to IPTV.</span>
+        <span data-lang="ru">Поставка продукции в 12 областях с мировыми брендами — от пожарной сигнализации до IPTV.</span>
       </p>
     </div>
 
-    <div class="prod-grid prod-grid-4">
-      <div class="prod-card rv d1">
-        <div class="prod-cat"><span data-lang="tr">Honeywell · Yangın · Otomasyon · Ses ve Işık</span><span data-lang="en">Honeywell · Fire · Automation · Audio &amp; Visual</span><span data-lang="ru">Honeywell · Пожарная · Автоматизация · Аудио и свет</span></div>
-        <div class="prod-title"><span data-lang="tr">Entegre Bina Sistemleri</span><span data-lang="en">Integrated Building Systems</span><span data-lang="ru">Интегрированные системы зданий</span></div>
-        <p class="prod-group-label"><span data-lang="tr">Yangın Algılama</span><span data-lang="en">Fire Detection</span><span data-lang="ru">Пожарная сигнализация</span></p>
-        <ul class="prod-items">
-          <li><span data-lang="tr">Adresli Yangın Panelleri</span><span data-lang="en">Addressable Fire Panels</span><span data-lang="ru">Адресные панели</span></li>
-          <li><span data-lang="tr">Optik Duman Dedektörleri</span><span data-lang="en">Optical Smoke Detectors</span><span data-lang="ru">Оптические детекторы дыма</span></li>
-          <li><span data-lang="tr">Isı Detektörleri</span><span data-lang="en">Heat Detectors</span><span data-lang="ru">Тепловые датчики</span></li>
-          <li><span data-lang="tr">Manuel Çekme Butonları</span><span data-lang="en">Manual Call Points</span><span data-lang="ru">Ручные извещатели</span></li>
-          <li><span data-lang="tr">Sesli ve Işıklı Uyarıcılar</span><span data-lang="en">Sirens &amp; Beacons</span><span data-lang="ru">Сирены и маяки</span></li>
-        </ul>
-        <p class="prod-group-label"><span data-lang="tr">Otomasyon</span><span data-lang="en">Automation</span><span data-lang="ru">Автоматизация</span></p>
-        <ul class="prod-items">
-          <li><span data-lang="tr">BMS Kontrolörleri ve Yazılım</span><span data-lang="en">BMS Controllers &amp; Software</span><span data-lang="ru">Контроллеры BMS и ПО</span></li>
-          <li><span data-lang="tr">HVAC Kontrol Vanaları</span><span data-lang="en">HVAC Control Valves</span><span data-lang="ru">Клапаны управления HVAC</span></li>
-          <li><span data-lang="tr">Akıllı Aydınlatma Sistemleri</span><span data-lang="en">Smart Lighting Systems</span><span data-lang="ru">Системы умного освещения</span></li>
-          <li><span data-lang="tr">Enerji Sayaçları ve Analizörleri</span><span data-lang="en">Energy Meters &amp; Analysers</span><span data-lang="ru">Счётчики и анализаторы энергии</span></li>
-          <li><span data-lang="tr">Dokunmatik Panel ve HMI</span><span data-lang="en">Touch Panels &amp; HMI</span><span data-lang="ru">Сенсорные панели и HMI</span></li>
-        </ul>
-        <p class="prod-group-label"><span data-lang="tr">Ses ve Işık</span><span data-lang="en">Audio &amp; Visual</span><span data-lang="ru">Аудио и свет</span></p>
-        <ul class="prod-items">
-          <li><span data-lang="tr">PA Amfi ve Hoparlörler</span><span data-lang="en">PA Amplifiers &amp; Speakers</span><span data-lang="ru">Усилители и динамики</span></li>
-          <li><span data-lang="tr">Konferans Mikrofon Sistemleri</span><span data-lang="en">Conference Microphone Systems</span><span data-lang="ru">Конференц-микрофоны</span></li>
-          <li><span data-lang="tr">Projeksiyon ve Ekranlar</span><span data-lang="en">Projectors &amp; Screens</span><span data-lang="ru">Проекторы и экраны</span></li>
-          <li><span data-lang="tr">LED Display ve Dijital Tabela</span><span data-lang="en">LED Display &amp; Digital Signage</span><span data-lang="ru">LED-экраны и цифровые вывески</span></li>
-        </ul>
+    <div class="prod-showcase">
+      <div class="prod-partner-bar rv">
+        <div class="prod-partner-badge">
+          <span class="prod-partner-icon">◆</span>
+          <span data-lang="tr">Honeywell Platinum İş Ortağı</span>
+          <span data-lang="en">Honeywell Platinum Partner</span>
+          <span data-lang="ru">Партнёр Honeywell Platinum</span>
+        </div>
+        <p class="prod-partner-note">
+          <span data-lang="tr">12 hizmet alanında tasarım, tedarik, kurulum ve bakım — tek muhatap, uçtan uca çözüm.</span>
+          <span data-lang="en">Design, supply, installation and maintenance across 12 service areas — one partner, end-to-end delivery.</span>
+          <span data-lang="ru">Проектирование, поставка, монтаж и обслуживание в 12 областях — один партнёр, полный цикл.</span>
+        </p>
       </div>
-      <div class="prod-card rv d2">
-        <div class="prod-cat"><span data-lang="tr">Güvenlik</span><span data-lang="en">Security</span><span data-lang="ru">Безопасность</span></div>
-        <div class="prod-title"><span data-lang="tr">Güvenlik Ekipmanları</span><span data-lang="en">Security Equipment</span><span data-lang="ru">Охранное оборудование</span></div>
-        <ul class="prod-items">
-          <li><span data-lang="tr">IP ve Analog Kameralar</span><span data-lang="en">IP &amp; Analogue Cameras</span><span data-lang="ru">IP и аналоговые камеры</span></li>
-          <li><span data-lang="tr">DVR / NVR Kayıt Cihazları</span><span data-lang="en">DVR / NVR Recorders</span><span data-lang="ru">DVR / NVR регистраторы</span></li>
-          <li><span data-lang="tr">Erişim Kontrol Panelleri</span><span data-lang="en">Access Control Panels</span><span data-lang="ru">Контроллеры доступа</span></li>
-          <li><span data-lang="tr">Kart ve Parmak İzi Okuyucular</span><span data-lang="en">Card &amp; Fingerprint Readers</span><span data-lang="ru">Считыватели карт и отпечатков</span></li>
-          <li><span data-lang="tr">Turnike ve Bariyer Sistemleri</span><span data-lang="en">Turnstile &amp; Barrier Systems</span><span data-lang="ru">Турникеты и шлагбаумы</span></li>
-        </ul>
+
+      <div class="prod-cat-grid">
+        <a href="integrated-building-systems.html" class="prod-cat-card prod-cat-card--featured rv d1">
+          <div class="prod-cat-head">
+            <span class="prod-cat-label">Honeywell</span>
+            <h3 class="prod-cat-title"><span data-lang="tr">Entegre Bina Sistemleri</span><span data-lang="en">Integrated Building Systems</span><span data-lang="ru">Интегрированные системы зданий</span></h3>
+            <p class="prod-cat-desc"><span data-lang="tr">Yangın algılama, BMS otomasyon ve ses-ışık sistemlerini tek portföyde birleştiren Honeywell çözümleri.</span><span data-lang="en">Honeywell solutions combining fire detection, BMS automation and audio-visual systems in one portfolio.</span><span data-lang="ru">Решения Honeywell: пожарная сигнализация, BMS и аудио/свет в одном портфеле.</span></p>
+          </div>
+          <div class="prod-pillars">
+            <div class="prod-pillar"><strong><span data-lang="tr">Yangın</span><span data-lang="en">Fire</span><span data-lang="ru">Пожарная</span></strong><span><span data-lang="tr">Paneller, dedektörler, MCP</span><span data-lang="en">Panels, detectors, MCPs</span><span data-lang="ru">Панели, извещатели</span></span></div>
+            <div class="prod-pillar"><strong><span data-lang="tr">Otomasyon</span><span data-lang="en">Automation</span><span data-lang="ru">Автоматизация</span></strong><span><span data-lang="tr">BMS, HVAC, aydınlatma</span><span data-lang="en">BMS, HVAC, lighting</span><span data-lang="ru">BMS, HVAC, освещение</span></span></div>
+            <div class="prod-pillar"><strong><span data-lang="tr">Ses &amp; Işık</span><span data-lang="en">Audio &amp; Visual</span><span data-lang="ru">Аудио и свет</span></strong><span><span data-lang="tr">PA, konferans, LED</span><span data-lang="en">PA, conference, LED</span><span data-lang="ru">PA, конференции, LED</span></span></div>
+          </div>
+          <div class="prod-svc-chips">
+            <span class="prod-svc-chip">01</span><span class="prod-svc-chip">04</span><span class="prod-svc-chip">05</span><span class="prod-svc-chip">06</span><span class="prod-svc-chip">10</span><span class="prod-svc-chip">11</span>
+          </div>
+          <span class="prod-cat-cta"><span data-lang="tr">Ürünleri incele</span><span data-lang="en">Explore products</span><span data-lang="ru">Смотреть продукцию</span> →</span>
+        </a>
+
+        <a href="security-systems.html" class="prod-cat-card rv d2">
+          <div class="prod-cat-head">
+            <span class="prod-cat-label"><span data-lang="tr">Güvenlik</span><span data-lang="en">Security</span><span data-lang="ru">Безопасность</span></span>
+            <h3 class="prod-cat-title"><span data-lang="tr">Güvenlik Ekipmanları</span><span data-lang="en">Security Equipment</span><span data-lang="ru">Охранное оборудование</span></h3>
+            <p class="prod-cat-desc"><span data-lang="tr">CCTV, erişim kontrol, turnike ve bariyer sistemleri — entegre güvenlik altyapısı.</span><span data-lang="en">CCTV, access control, turnstiles and barriers — integrated security infrastructure.</span><span data-lang="ru">CCTV, контроль доступа, турникеты и шлагбаумы — интегрированная безопасность.</span></p>
+          </div>
+          <ul class="prod-cat-list">
+            <li><span data-lang="tr">IP ve analog kameralar, NVR/DVR</span><span data-lang="en">IP &amp; analogue cameras, NVR/DVR</span><span data-lang="ru">IP и аналоговые камеры, NVR/DVR</span></li>
+            <li><span data-lang="tr">Kart ve biyometrik okuyucular</span><span data-lang="en">Card &amp; biometric readers</span><span data-lang="ru">Считыватели карт и биометрии</span></li>
+            <li><span data-lang="tr">Turnike ve bariyer sistemleri</span><span data-lang="en">Turnstile &amp; barrier systems</span><span data-lang="ru">Турникеты и шлагбаумы</span></li>
+          </ul>
+          <div class="prod-svc-chips"><span class="prod-svc-chip">02</span><span class="prod-svc-chip">09</span></div>
+          <span class="prod-cat-cta"><span data-lang="tr">Ürünleri incele</span><span data-lang="en">Explore products</span><span data-lang="ru">Смотреть продукцию</span> →</span>
+        </a>
+
+        <a href="data-communications.html" class="prod-cat-card rv d3">
+          <div class="prod-cat-head">
+            <span class="prod-cat-label"><span data-lang="tr">Data &amp; İletişim</span><span data-lang="en">Data &amp; Comms</span><span data-lang="ru">Связь и данные</span></span>
+            <h3 class="prod-cat-title"><span data-lang="tr">Ağ ve İletişim</span><span data-lang="en">Network &amp; Communications</span><span data-lang="ru">Сеть и связь</span></h3>
+            <p class="prod-cat-desc"><span data-lang="tr">Yapısal kablolama, fiber, aktif network ve VoIP telefon altyapısı.</span><span data-lang="en">Structured cabling, fibre, active networking and VoIP telephony infrastructure.</span><span data-lang="ru">СКС, оптоволокно, активное оборудование и VoIP-телефония.</span></p>
+          </div>
+          <ul class="prod-cat-list">
+            <li><span data-lang="tr">Cat6/Cat6A, fiber optik altyapı</span><span data-lang="en">Cat6/Cat6A, fibre infrastructure</span><span data-lang="ru">Cat6/Cat6A, оптоволокно</span></li>
+            <li><span data-lang="tr">Switch, router, kablosuz AP</span><span data-lang="en">Switches, routers, wireless APs</span><span data-lang="ru">Коммутаторы, маршрутизаторы, Wi‑Fi</span></li>
+            <li><span data-lang="tr">IP PBX ve VoIP telefon sistemleri</span><span data-lang="en">IP PBX and VoIP phone systems</span><span data-lang="ru">IP-АТС и VoIP-телефония</span></li>
+          </ul>
+          <div class="prod-svc-chips"><span class="prod-svc-chip">03</span><span class="prod-svc-chip">07</span></div>
+          <span class="prod-cat-cta"><span data-lang="tr">Ürünleri incele</span><span data-lang="en">Explore products</span><span data-lang="ru">Смотреть продукцию</span> →</span>
+        </a>
+
+        <a href="tv-video-systems.html" class="prod-cat-card rv d1">
+          <div class="prod-cat-head">
+            <span class="prod-cat-label"><span data-lang="tr">TV &amp; Görüntü</span><span data-lang="en">TV &amp; Video</span><span data-lang="ru">ТВ и видео</span></span>
+            <h3 class="prod-cat-title"><span data-lang="tr">Yayın ve Görüntü</span><span data-lang="en">Broadcast &amp; Video</span><span data-lang="ru">Вещание и видео</span></h3>
+            <p class="prod-cat-desc"><span data-lang="tr">IPTV, SMATV headend, IP interkom ve otel TV çözümleri.</span><span data-lang="en">IPTV, SMATV headend, IP intercom and hotel TV solutions.</span><span data-lang="ru">IPTV, SMATV headend, IP-домофон и отельное ТВ.</span></p>
+          </div>
+          <ul class="prod-cat-list">
+            <li><span data-lang="tr">IPTV headend ve oda içi servisler</span><span data-lang="en">IPTV headend and in-room services</span><span data-lang="ru">IPTV headend и сервисы в номерах</span></li>
+            <li><span data-lang="tr">SMATV uydu dağıtım sistemleri</span><span data-lang="en">SMATV satellite distribution</span><span data-lang="ru">Спутниковое SMATV</span></li>
+            <li><span data-lang="tr">IP video interkom panelleri</span><span data-lang="en">IP video intercom panels</span><span data-lang="ru">IP-видеодомофоны</span></li>
+          </ul>
+          <div class="prod-svc-chips"><span class="prod-svc-chip">08</span><span class="prod-svc-chip">12</span></div>
+          <span class="prod-cat-cta"><span data-lang="tr">Ürünleri incele</span><span data-lang="en">Explore products</span><span data-lang="ru">Смотреть продукцию</span> →</span>
+        </a>
       </div>
-      <div class="prod-card rv d3">
-        <div class="prod-cat"><span data-lang="tr">Data ve İletişim</span><span data-lang="en">Data &amp; Comms</span><span data-lang="ru">Связь и данные</span></div>
-        <div class="prod-title"><span data-lang="tr">Ağ ve İletişim Ürünleri</span><span data-lang="en">Network &amp; Communication Products</span><span data-lang="ru">Сетевые и коммуникационные продукты</span></div>
-        <ul class="prod-items">
-          <li><span data-lang="tr">Cat6/Cat6A Kablo ve Panolar</span><span data-lang="en">Cat6/Cat6A Cable &amp; Patch Panels</span><span data-lang="ru">Кабель Cat6/Cat6A и патч-панели</span></li>
-          <li><span data-lang="tr">Fiber Optik Kablo ve Splitler</span><span data-lang="en">Fibre Optic Cable &amp; Splitters</span><span data-lang="ru">Оптоволоконные кабели и сплиттеры</span></li>
-          <li><span data-lang="tr">Network Switch ve Router</span><span data-lang="en">Network Switches &amp; Routers</span><span data-lang="ru">Коммутаторы и маршрутизаторы</span></li>
-          <li><span data-lang="tr">Video İnterkom Sistemleri</span><span data-lang="en">Video Intercom Systems</span><span data-lang="ru">Видеодомофонные системы</span></li>
-        </ul>
+
+      <div class="prod-brands-strip rv d2">
+        <span class="prod-brands-label"><span data-lang="tr">Tedarik ettiğimiz markalar</span><span data-lang="en">Brands we supply</span><span data-lang="ru">Поставляемые бренды</span></span>
+        <div class="prod-brands-list">
+          <span>Honeywell</span><span>Morley</span><span>SALTO</span><span>Hikvision</span><span>Cisco</span><span>KNX</span><span>2N</span><span>Bosch</span>
+        </div>
       </div>
-      <div class="prod-card rv d1">
-        <div class="prod-cat"><span data-lang="tr">TV ve Görüntü</span><span data-lang="en">TV &amp; Video</span><span data-lang="ru">ТВ и видео</span></div>
-        <div class="prod-title"><span data-lang="tr">Yayın ve Görüntü Ürünleri</span><span data-lang="en">Broadcast &amp; Video Products</span><span data-lang="ru">Оборудование вещания и видео</span></div>
-        <ul class="prod-items">
-          <li><span data-lang="tr">SMATV Headend ve Dağıtım</span><span data-lang="en">SMATV Headend &amp; Distribution</span><span data-lang="ru">SMATV headend и распределение</span></li>
-          <li><span data-lang="tr">Uydu Alıcı ve LNB</span><span data-lang="en">Satellite Receivers &amp; LNB</span><span data-lang="ru">Спутниковые приёмники и LNB</span></li>
-          <li><span data-lang="tr">Amplifikatör ve Splitter</span><span data-lang="en">Amplifiers &amp; Splitters</span><span data-lang="ru">Усилители и делители</span></li>
-          <li><span data-lang="tr">IP İntercom Panelleri</span><span data-lang="en">IP Intercom Panels</span><span data-lang="ru">IP-домофонные панели</span></li>
-        </ul>
+
+      <div class="prod-map rv d3">
+        <p class="prod-map-label"><span data-lang="tr">Hizmet numaraları ürün kategorileriyle eşleşir — detay için hizmet kartına tıklayın.</span><span data-lang="en">Service numbers map to product categories — click a service card above for details.</span><span data-lang="ru">Номера услуг соответствуют категориям продукции — нажмите на карточку услуги выше.</span></p>
       </div>
-    </div>
+    </div>    </div>
   </div>
 </section>
 
@@ -685,6 +1020,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=34"></script>
+<script src="assets/site.js?v=39"></script>
 </body>
 </html>

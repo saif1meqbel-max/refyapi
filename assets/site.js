@@ -130,9 +130,20 @@ document.querySelectorAll('.contact-sheet-trigger').forEach(btn => {
 
 const QUOTE_EMAIL = 'info@fnvelektronik.com';
 const SERVICE_OPTIONS = [
+  { v: 'fire', tr: 'Yangın Alarm Sistemleri', en: 'Fire Alarm Systems', ru: 'Пожарная сигнализация' },
+  { v: 'access', tr: 'Erişim Kontrol ve Personel Takip', en: 'Access Control & Staff Tracking', ru: 'Контроль доступа' },
+  { v: 'data', tr: 'Data ve Altyapı Sistemleri', en: 'Data & Infrastructure', ru: 'Data и инфраструктура' },
+  { v: 'hotel-door', tr: 'Otel Kapı Sistemleri', en: 'Hotel Door Systems', ru: 'Дверные системы для отелей' },
+  { v: 'pa', tr: 'Genel Anons ve Sesli Alarm', en: 'Public Announcement & Voice Alarm', ru: 'Оповещение и сигнализация' },
+  { v: 'mechanical', tr: 'Mekanik Otomasyon', en: 'Mechanical Automation', ru: 'Механическая автоматизация' },
+  { v: 'phone', tr: 'Telefon / VoIP Sistemleri', en: 'Phone / VoIP Systems', ru: 'Телефония / VoIP' },
+  { v: 'intercom', tr: 'IP İntercom Sistemleri', en: 'IP Intercom Systems', ru: 'IP-домофон' },
+  { v: 'cctv', tr: 'CCTV Sistemleri', en: 'CCTV Systems', ru: 'Видеонаблюдение' },
+  { v: 'lighting', tr: 'Bina ve Aydınlatma Otomasyonu', en: 'Building & Lighting Automation', ru: 'Автоматизация зданий' },
+  { v: 'nurse', tr: 'Hemşire Çağrı ve Mavi Kod', en: 'Nurse Call & Code Blue', ru: 'Вызов медсестры' },
+  { v: 'iptv', tr: 'IPTV Sistemleri', en: 'IPTV Systems', ru: 'IPTV' },
   { v: 'integrated', tr: 'Honeywell · Entegre Bina Sistemleri', en: 'Honeywell · Integrated Building Systems', ru: 'Honeywell · Интегрированные системы' },
   { v: 'security', tr: 'Güvenlik Sistemleri', en: 'Security Systems', ru: 'Системы безопасности' },
-  { v: 'data', tr: 'Data ve İletişim', en: 'Data & Communications', ru: 'Связь и данные' },
   { v: 'tv', tr: 'TV ve Görüntü', en: 'TV & Video', ru: 'ТВ и видео' },
   { v: 'general', tr: 'Genel / Diğer', en: 'General / Other', ru: 'Общий / Другое' },
 ];
@@ -332,8 +343,66 @@ document.addEventListener('click', e => {
   const trigger = e.target.closest('.quote-trigger');
   if (!trigger) return;
   e.preventDefault();
-  openQuoteModal(trigger.dataset.service || '');
+  openQuoteModal(trigger.dataset.service || trigger.dataset.quoteService || '');
 });
+
+function selectHomeService(id, scroll = true) {
+  const cards = document.querySelectorAll('.sg.sg-12 .sc-card[data-service]');
+  const panels = document.querySelectorAll('.svc-preview-panel[data-service]');
+  const preview = document.getElementById('svcPreview');
+  if (!cards.length || !panels.length) return;
+  cards.forEach(c => {
+    const on = c.dataset.service === id;
+    c.classList.toggle('is-active', on);
+    c.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+  panels.forEach(p => p.classList.toggle('is-active', p.dataset.service === id));
+  if (scroll && preview) {
+    preview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+function initHomeServices() {
+  const grid = document.querySelector('.sg.sg-12');
+  if (!grid) return;
+
+  grid.querySelectorAll('.sc-card[data-service]').forEach(card => {
+    card.addEventListener('click', () => selectHomeService(card.dataset.service));
+  });
+
+  document.querySelectorAll('.prod-svc-chip').forEach(chip => {
+    const num = chip.textContent.trim().padStart(2, '0');
+    const map = {
+      '01': 'fire', '02': 'access', '03': 'data', '04': 'hotel-door', '05': 'pa',
+      '06': 'mechanical', '07': 'phone', '08': 'intercom', '09': 'cctv',
+      '10': 'lighting', '11': 'nurse', '12': 'iptv'
+    };
+    const id = map[num];
+    if (!id) return;
+    chip.style.cursor = 'pointer';
+    chip.setAttribute('role', 'button');
+    chip.setAttribute('tabindex', '0');
+    chip.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      document.getElementById('hizmetler')?.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => selectHomeService(id), 400);
+    });
+    chip.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        chip.click();
+      }
+    });
+  });
+
+  const hash = location.hash.replace('#', '');
+  if (hash.startsWith('svc-')) {
+    selectHomeService(hash.replace('svc-', ''), false);
+  }
+}
+
+initHomeServices();
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
