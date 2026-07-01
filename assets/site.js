@@ -192,10 +192,32 @@ function countryLabel(code) {
   return countryNameEn.of(code) || code;
 }
 
-function serviceOptionsHtml() {
+function serviceCheckboxesHtml() {
   const lang = document.documentElement.lang || 'tr';
   const key = lang === 'en' ? 'en' : lang === 'ru' ? 'ru' : 'tr';
-  return SERVICE_OPTIONS.map(o => `<option value="${o.v}">${o[key]}</option>`).join('');
+  return SERVICE_OPTIONS.map(o => `
+      <label class="quote-service-check">
+        <input type="checkbox" name="service" value="${o.v}" />
+        <span>${o[key]}</span>
+      </label>`).join('');
+}
+
+function serviceLabelsFor(values, key = 'en') {
+  return values
+    .map(v => SERVICE_OPTIONS.find(s => s.v === v))
+    .filter(Boolean)
+    .map(s => s[key]);
+}
+
+function getSelectedServices(form) {
+  return [...form.querySelectorAll('input[name="service"]:checked')].map(el => el.value);
+}
+
+function setQuoteServices(form, values) {
+  const set = new Set(Array.isArray(values) ? values : values ? [values] : []);
+  form.querySelectorAll('input[name="service"]').forEach(el => {
+    el.checked = set.has(el.value);
+  });
 }
 
 function initQuoteModal() {
@@ -246,17 +268,29 @@ function initQuoteModal() {
             <input class="quote-input" id="quotePhone" name="phone" type="tel" autocomplete="tel" />
           </div>
         </div>
-        <div class="quote-field-row">
-          <div class="quote-field">
-            <label class="quote-label" for="quoteCountry"><span data-lang="tr">Ülke</span><span data-lang="en">Country</span><span data-lang="ru">Страна</span></label>
-            <select class="quote-select" id="quoteCountry" name="country">
-              ${countryOptionsHtml()}
-            </select>
+        <div class="quote-field">
+          <label class="quote-label" for="quoteCountry"><span data-lang="tr">Ülke</span><span data-lang="en">Country</span><span data-lang="ru">Страна</span></label>
+          <select class="quote-select" id="quoteCountry" name="country">
+            ${countryOptionsHtml()}
+          </select>
+        </div>
+        <div class="quote-field">
+          <span class="quote-label" id="quoteServicesLabel">
+            <span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span>
+          </span>
+          <p class="quote-service-hint">
+            <span data-lang="tr">Birden fazla hizmet seçebilirsiniz.</span>
+            <span data-lang="en">You can select more than one service.</span>
+            <span data-lang="ru">Можно выбрать несколько услуг.</span>
+          </p>
+          <div class="quote-service-grid" id="quoteServices" role="group" aria-labelledby="quoteServicesLabel">
+            ${serviceCheckboxesHtml()}
           </div>
-          <div class="quote-field">
-            <label class="quote-label" for="quoteService"><span data-lang="tr">Hizmet</span><span data-lang="en">Service</span><span data-lang="ru">Услуга</span></label>
-            <select class="quote-select" id="quoteService" name="service">${serviceOptionsHtml()}</select>
-          </div>
+          <p class="quote-service-error" id="quoteServiceError" hidden>
+            <span data-lang="tr">Lütfen en az bir hizmet seçin.</span>
+            <span data-lang="en">Please select at least one service.</span>
+            <span data-lang="ru">Выберите хотя бы одну услугу.</span>
+          </p>
         </div>
         <div class="quote-field">
           <label class="quote-label" for="quoteSize"><span data-lang="tr">Proje Ölçeği</span><span data-lang="en">Project Size</span><span data-lang="ru">Масштаб проекта</span></label>
@@ -290,6 +324,13 @@ function initQuoteModal() {
   modal.querySelector('.quote-modal-backdrop').addEventListener('click', closeQuoteModal);
   modal.querySelector('.quote-modal-close').addEventListener('click', closeQuoteModal);
   modal.querySelector('#quoteForm').addEventListener('submit', submitQuoteForm);
+  modal.querySelector('#quoteServices')?.addEventListener('change', () => {
+    const form = modal.querySelector('#quoteForm');
+    if (getSelectedServices(form).length) {
+      modal.querySelector('#quoteServices')?.classList.remove('is-error');
+      modal.querySelector('#quoteServiceError')?.setAttribute('hidden', '');
+    }
+  });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeQuoteModal();
   });
@@ -303,10 +344,9 @@ function openQuoteModal(presetService) {
   form.reset();
   form.style.display = '';
   success.classList.remove('on');
-  if (presetService) {
-    const sel = modal.querySelector('#quoteService');
-    if (sel) sel.value = presetService;
-  }
+  form.querySelector('#quoteServices')?.classList.remove('is-error');
+  form.querySelector('#quoteServiceError')?.setAttribute('hidden', '');
+  if (presetService) setQuoteServices(form, presetService);
   const countrySel = modal.querySelector('#quoteCountry');
   if (countrySel) countrySel.value = 'TR';
   modal.classList.add('open');
@@ -329,24 +369,37 @@ async function submitQuoteForm(e) {
   const form = e.target;
   const btn = form.querySelector('.quote-submit');
   const fd = new FormData(form);
-  const payload = Object.fromEntries(fd.entries());
+  const payload = Object.fromEntries([...fd.entries()].filter(([k]) => k !== 'service'));
+  const selectedServices = getSelectedServices(form);
   if (!payload.name?.trim() || !payload.email?.trim()) {
     form.querySelector('#quoteName').reportValidity();
     form.querySelector('#quoteEmail').reportValidity();
     return;
   }
 
+  const serviceGrid = form.querySelector('#quoteServices');
+  const serviceError = form.querySelector('#quoteServiceError');
+  if (!selectedServices.length) {
+    serviceGrid?.classList.add('is-error');
+    serviceError?.removeAttribute('hidden');
+    serviceGrid?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    return;
+  }
+  serviceGrid?.classList.remove('is-error');
+  serviceError?.setAttribute('hidden', '');
+
   btn.disabled = true;
-  const serviceLabel = SERVICE_OPTIONS.find(s => s.v === payload.service);
   const lang = document.documentElement.lang || 'tr';
   const sk = lang === 'en' ? 'en' : lang === 'ru' ? 'ru' : 'tr';
+  const serviceText = serviceLabelsFor(selectedServices, sk).join(', ');
+  const serviceTextEn = serviceLabelsFor(selectedServices, 'en').join(', ');
   const bodyText = [
     `Name: ${payload.name}`,
     `Company: ${payload.company || '—'}`,
     `Email: ${payload.email}`,
     `Phone: ${payload.phone || '—'}`,
     `Country: ${countryLabel(payload.country)}`,
-    `Service: ${serviceLabel ? serviceLabel[sk] : payload.service}`,
+    `Services: ${serviceText}`,
     `Project size: ${payload.project_size}`,
     '',
     payload.message || ''
@@ -362,7 +415,7 @@ async function submitQuoteForm(e) {
         company: payload.company,
         phone: payload.phone,
         country: countryLabel(payload.country),
-        service: serviceLabel ? serviceLabel.en : payload.service,
+        service: serviceTextEn,
         project_size: payload.project_size,
         message: payload.message,
         _subject: `FNV Quote Request — ${payload.name}`,
