@@ -264,6 +264,11 @@ a { text-decoration: none; color: inherit; }
 .services-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 60px; }
 .services-top-right { font-size: .88rem; line-height: 1.8; color: var(--ink-3); max-width: 320px; text-align: right; }
 .sg { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; background: var(--cream-3); }
+.sg-12 { grid-template-columns: repeat(3, 1fr); }
+.sg-12 .sc-card { padding: 34px 28px; }
+.sg-12 .sc-n { font-size: 2.4rem; top: 16px; right: 18px; }
+.sg-12 .sc-title { font-size: 1.12rem; }
+.sg-12 .sc-desc { font-size: .8rem; line-height: 1.7; }
 .sc-card {
   background: var(--white); padding: 44px 36px;
   position: relative; overflow: hidden; cursor: pointer;
@@ -916,7 +921,7 @@ footer { background: var(--ink); }
   .techlib-inner { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .office-contact-grid { grid-template-columns: 1fr; }
-  .sg, .prod-grid, .refs-grid { grid-template-columns: 1fr 1fr; }
+  .sg, .sg-12, .prod-grid, .refs-grid { grid-template-columns: 1fr 1fr; }
   .ft-top { grid-template-columns: 1fr 1fr; }
   .products-header, .refs-top, .services-top { flex-direction: column; align-items: flex-start; }
   .products-header-p, .services-top-right { text-align: left; }
@@ -932,7 +937,7 @@ footer { background: var(--ink); }
   .about-inner, .services-inner, .products-inner, .refs-inner, .contact-inner, .techlib-inner, .catalog, .office-contact-inner { padding-left: 20px; padding-right: 20px; }
   .ft-top { padding: 52px 20px 40px; grid-template-columns: 1fr; }
   .ft-bottom { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
-  .sg, .prod-grid, .refs-grid, .tl-cards { grid-template-columns: 1fr; }
+  .sg, .sg-12, .prod-grid, .refs-grid, .tl-cards { grid-template-columns: 1fr; }
   .catalog-inner { flex-direction: column; }
   .stats-inner { grid-template-columns: 1fr 1fr; padding: 0 20px; }
   .svc-hero-content, .svc-overview-inner, .svc-equip-inner, .svc-other-inner, .svc-systems-inner { padding-left: 20px; padding-right: 20px; }
