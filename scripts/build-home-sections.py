@@ -17,7 +17,7 @@ SERVICES = [
       ("Bina otomasyonu ve acil anons ile entegrasyon", "Integration with BMS and voice alarm systems", "Интеграция с BMS и голосовой сигнализацией"),
       ("Periyodik bakım ve 7/24 teknik destek", "Periodic maintenance and 24/7 technical support", "Периодическое обслуживание и поддержка 24/7"),
     ],
-    "tags": ("Honeywell · Morley", "Hastane · AVM · Havalimanı", "Honeywell · Morley", "Hospitals · Malls · Airports", "Honeywell · Morley", "Больницы · ТРЦ · Аэропорты"),
+    "tags": ("Honeywell · Fike · Esser", "Hastane · AVM · Havalimanı", "Honeywell · Fike · Esser", "Hospitals · Malls · Airports", "Honeywell · Fike · Esser", "Больницы · ТРЦ · Аэропорты"),
   },
   {
     "id": "access", "href": "security-systems.html#kartli-gecis", "num": "02", "quote": "security",
@@ -43,7 +43,7 @@ SERVICES = [
       ("Switch, router ve kablosuz erişim noktaları", "Switches, routers and wireless access points", "Коммутаторы, маршрутизаторы и Wi‑Fi"),
       ("Sertifikalı test, ölçüm ve devreye alma", "Certified testing, measurement and commissioning", "Сертифицированные испытания и ввод в эксплуатацию"),
     ],
-    "tags": ("Cisco · Commscope", "Ofis · Otel · Kampüs", "Cisco · Commscope", "Offices · Hotels · Campuses", "Cisco · Commscope", "Офисы · Отели · Кампусы"),
+    "tags": ("Cisco", "Ofis · Otel · Kampüs", "Cisco", "Offices · Hotels · Campuses", "Cisco", "Офисы · Отели · Кампусы"),
   },
   {
     "id": "hotel-door", "href": "automation-systems.html#otel-kapi", "num": "04", "quote": "integrated",
@@ -56,7 +56,7 @@ SERVICES = [
       ("Kablo gerektirmeyen kurulum ve hızlı devreye alma", "Wireless installation and rapid commissioning", "Беспроводной монтаж и быстрый ввод"),
       ("Acil çıkış ve yangın standartlarına uyum", "Compliance with emergency exit and fire standards", "Соответствие нормам эвакуации и пожарной безопасности"),
     ],
-    "tags": ("SALTO · Honeywell", "Otel · Resort", "SALTO · Honeywell", "Hotels · Resorts", "SALTO · Honeywell", "Отели · Курорты"),
+    "tags": ("Honeywell · SALTO", "Otel · Resort", "Honeywell · SALTO", "Hotels · Resorts", "Honeywell · SALTO", "Отели · Курорты"),
   },
   {
     "id": "pa", "href": "audio-visual-systems.html#genel-anons", "num": "05", "quote": "integrated",
@@ -69,7 +69,7 @@ SERVICES = [
       ("Mikser, amfi ve hoparlör sistemleri", "Mixer, amplifier and speaker systems", "Микшеры, усилители и акустика"),
       ("EN 54 ve ilgili standartlara uygun tasarım", "Design compliant with EN 54 and relevant standards", "Проектирование по EN 54 и нормам"),
     ],
-    "tags": ("Honeywell · Bosch", "AVM · Havalimanı · Stadyum", "Honeywell · Bosch", "Malls · Airports · Stadiums", "Honeywell · Bosch", "ТРЦ · Аэропорты · Стадионы"),
+    "tags": ("Honeywell", "AVM · Havalimanı · Stadyum", "Honeywell", "Malls · Airports · Stadiums", "Honeywell", "ТРЦ · Аэропорты · Стадионы"),
   },
   {
     "id": "mechanical", "href": "automation-systems.html#mekanik", "num": "06", "quote": "integrated",
@@ -82,7 +82,7 @@ SERVICES = [
       ("Asansör ve yürüyen merdiven arayüzleri", "Lift and escalator interfaces", "Интерфейсы лифтов и эскалаторов"),
       ("Alarm, trend ve raporlama yetenekleri", "Alarm, trending and reporting capabilities", "Тревоги, тренды и отчётность"),
     ],
-    "tags": ("Honeywell · KNX", "Gökdelen · Hastane", "Honeywell · KNX", "Skyscrapers · Hospitals", "Honeywell · KNX", "Небоскрёбы · Больницы"),
+    "tags": ("Honeywell", "Gökdelen · Hastane", "Honeywell", "Skyscrapers · Hospitals", "Honeywell", "Небоскрёбы · Больницы"),
   },
   {
     "id": "phone", "href": "data-communications.html#telefon-voip", "num": "07", "quote": "data",
@@ -95,7 +95,7 @@ SERVICES = [
       ("Sesli mesaj, IVR ve çağrı yönlendirme", "Voicemail, IVR and call routing", "Голосовая почта, IVR и маршрутизация"),
       ("Mevcut altyapı ile uyumlu migrasyon", "Migration compatible with existing infrastructure", "Миграция с совместимостью с существующей инфраструктурой"),
     ],
-    "tags": ("Cisco · Yealink", "Ofis · Otel · Call Center", "Cisco · Yealink", "Offices · Hotels · Call centres", "Cisco · Yealink", "Офисы · Отели · Колл-центры"),
+    "tags": ("Cisco", "Ofis · Otel · Call Center", "Cisco", "Offices · Hotels · Call centres", "Cisco", "Офисы · Отели · Колл-центры"),
   },
   {
     "id": "intercom", "href": "tv-video-systems.html#intercom", "num": "08", "quote": "tv",
@@ -108,7 +108,7 @@ SERVICES = [
       ("Çok daireli site ve rezidans çözümleri", "Multi-unit residential and site solutions", "Решения для многоквартирных домов и посёлков"),
       ("Erişim kontrol ve CCTV entegrasyonu", "Access control and CCTV integration", "Интеграция с контролем доступа и CCTV"),
     ],
-    "tags": ("2N · Hikvision", "Site · Rezidans · Ofis", "2N · Hikvision", "Sites · Residences · Offices", "2N · Hikvision", "Посёлки · Резиденции · Офисы"),
+    "tags": ("Honeywell", "Site · Rezidans · Ofis", "Honeywell", "Sites · Residences · Offices", "Honeywell", "Посёлки · Резиденции · Офисы"),
   },
   {
     "id": "cctv", "href": "security-systems.html#cctv", "num": "09", "quote": "security",
@@ -121,20 +121,20 @@ SERVICES = [
       ("Gece görüşü ve akıllı video analitik", "Night vision and intelligent video analytics", "Ночное видение и видеоаналитика"),
       ("Erişim kontrol ve alarm entegrasyonu", "Access control and alarm integration", "Интеграция с контролем доступа и сигнализацией"),
     ],
-    "tags": ("Hikvision · Honeywell", "AVM · Banka · Endüstri", "Hikvision · Honeywell", "Malls · Banks · Industry", "Hikvision · Honeywell", "ТРЦ · Банки · Промышленность"),
+    "tags": ("Honeywell · SALTO", "AVM · Banka · Endüstri", "Honeywell · SALTO", "Malls · Banks · Industry", "Honeywell · SALTO", "ТРЦ · Банки · Промышленность"),
   },
   {
     "id": "lighting", "href": "automation-systems.html#aydinlatma", "num": "10", "quote": "integrated",
     "title": ("Bina ve Aydınlatma Otomasyonu", "Building & Lighting Automation", "Автоматизация зданий и освещения"),
     "desc": ("Aydınlatma, HVAC ve enerji yönetimini tek BMS platformundan kontrol edin.", "Manage building services such as lighting, HVAC and energy from a single platform.", "Управление освещением, HVAC и энергией с единой платформы BMS."),
-    "lead": ("KNX ve BMS tabanlı aydınlatma otomasyonu ile enerji tüketimini azaltıyor, konfor ve güvenliği artırıyoruz — panjur, iklimlendirme ve senaryo kontrolü dahil.", "KNX and BMS-based lighting automation reduces energy consumption while improving comfort and safety — including blinds, HVAC and scene control.", "Автоматизация освещения на KNX и BMS снижает энергопотребление и повышает комфорт — шторы, HVAC и сценарии."),
+    "lead": ("Honeywell BMS tabanlı aydınlatma otomasyonu ile enerji tüketimini azaltıyor, konfor ve güvenliği artırıyoruz — panjur, iklimlendirme ve senaryo kontrolü dahil.", "Honeywell BMS-based lighting automation reduces energy consumption while improving comfort and safety — including blinds, HVAC and scene control.", "Автоматизация освещения на базе Honeywell BMS снижает энергопотребление и повышает комфорт — шторы, HVAC и сценарии."),
     "points": [
-      ("KNX aydınlatma ve perde/panjur kontrolü", "KNX lighting and blind/curtain control", "KNX-освещение и управление шторами"),
+      ("Honeywell aydınlatma ve perde/panjur kontrolü", "Honeywell lighting and blind/curtain control", "Управление освещением и шторами Honeywell"),
       ("Varlık sensörleri ile akıllı aydınlatma", "Smart lighting with occupancy sensors", "Умное освещение с датчиками присутствия"),
       ("Enerji izleme ve raporlama", "Energy monitoring and reporting", "Мониторинг и отчётность по энергии"),
       ("Merkezi görselleştirme ve uzaktan erişim", "Central visualisation and remote access", "Центральная визуализация и удалённый доступ"),
     ],
-    "tags": ("KNX · Honeywell · Interra", "Ofis · Otel · Konut", "KNX · Honeywell · Interra", "Offices · Hotels · Residential", "KNX · Honeywell · Interra", "Офисы · Отели · Жильё"),
+    "tags": ("Honeywell", "Ofis · Otel · Konut", "Honeywell", "Offices · Hotels · Residential", "Honeywell", "Офисы · Отели · Жильё"),
   },
   {
     "id": "nurse", "href": "automation-systems.html#hemsire", "num": "11", "quote": "integrated",
@@ -147,7 +147,7 @@ SERVICES = [
       ("Mavi kod ve acil müdahale butonları", "Code blue and emergency call buttons", "Кнопки Code Blue и экстренного вызова"),
       ("Personel performans kaydı ve raporlama", "Staff response logging and reporting", "Учёт времени реагирования и отчётность"),
     ],
-    "tags": ("Honeywell · ALCAD · Ackermann", "Hastane · Klinik", "Honeywell · ALCAD · Ackermann", "Hospitals · Clinics", "Honeywell · ALCAD · Ackermann", "Больницы · Клиники"),
+    "tags": ("Honeywell", "Hastane · Klinik", "Honeywell", "Hospitals · Clinics", "Honeywell", "Больницы · Клиники"),
   },
   {
     "id": "iptv", "href": "tv-video-systems.html#smatv", "num": "12", "quote": "tv",
@@ -160,7 +160,7 @@ SERVICES = [
       ("Otel bilgi kanalları ve interaktif menüler", "Hotel information channels and interactive menus", "Информационные каналы и интерактивные меню"),
       ("Merkezi yönetim ve içerik güncelleme", "Central management and content updates", "Центральное управление и обновление контента"),
     ],
-    "tags": ("Honeywell · Triax", "Otel · Rezidans", "Honeywell · Triax", "Hotels · Residences", "Honeywell · Triax", "Отели · Резиденции"),
+    "tags": ("Honeywell", "Otel · Rezidans", "Honeywell", "Hotels · Residences", "Honeywell", "Отели · Резиденции"),
   },
 ]
 
@@ -302,7 +302,7 @@ PRODUCTS = '''    <div class="prod-showcase">
       <div class="prod-brands-strip rv d2">
         <span class="prod-brands-label"><span data-lang="tr">Tedarik ettiğimiz markalar</span><span data-lang="en">Brands we supply</span><span data-lang="ru">Поставляемые бренды</span></span>
         <div class="prod-brands-list">
-          <span>Honeywell</span><span>Fike</span><span>Esser</span><span>SALTO</span><span>Hikvision</span><span>Cisco</span>
+          <span>Honeywell</span><span>Fike</span><span>Esser</span><span>SALTO</span><span>Cisco</span>
         </div>
       </div>
 
