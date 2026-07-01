@@ -263,7 +263,7 @@ a { text-decoration: none; color: inherit; }
 .services-inner { max-width: 1200px; margin: 0 auto; padding: 100px 56px; }
 .services-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 60px; }
 .services-top-right { font-size: .88rem; line-height: 1.8; color: var(--ink-3); max-width: 320px; text-align: right; }
-.sg { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; background: var(--cream-3); }
+.sg { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; background: var(--cream-3); }
 .sc-card {
   background: var(--white); padding: 44px 36px;
   position: relative; overflow: hidden; cursor: pointer;
