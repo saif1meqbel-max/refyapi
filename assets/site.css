@@ -141,10 +141,18 @@ a { text-decoration: none; color: inherit; }
 .hero { position: relative; height: 100vh; min-height: 680px; display: flex; align-items: center; overflow: hidden; }
 .hero-bg {
   position: absolute; inset: 0;
-  background: linear-gradient(100deg, rgba(15,11,6,.82) 0%, rgba(15,11,6,.55) 55%, rgba(168,114,42,.15) 100%),
-    url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=80') center/cover no-repeat;
+  background-size: cover;
+  background-position: center 42%;
+  background-repeat: no-repeat;
   transform: scale(1.05);
 }
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(15,11,6,.82) 0%, rgba(15,11,6,.55) 55%, rgba(168,114,42,.15) 100%);
+}
+/* Revert hero image: change background-image on #heroBg in index.html to:
+   url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=80') */
 
 /* Diagonal accent stripe */
 .hero::after {
@@ -672,7 +680,6 @@ footer { background: var(--ink); }
 .ft-bottom { max-width: 1200px; margin: 0 auto; padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .75rem; color: rgba(255,255,255,.22); }
 .ft-legal-link { color: rgba(255,255,255,.38); text-decoration: none; transition: color .22s; }
 .ft-legal-link:hover { color: var(--gold-2); }
-.ft-bottom .ft-legal-link span { display: inline; }
 
 /* Legal / privacy policy page */
 .legal-page { background: var(--cream); padding: 64px 0 100px; }
