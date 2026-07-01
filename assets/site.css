@@ -687,6 +687,11 @@ footer { background: var(--ink); }
 .legal-list li::before { content: ''; position: absolute; left: 0; top: .6em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
 .legal-contact { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border); font-size: .88rem; color: var(--ink-3); }
 .legal-contact a { color: var(--gold); }
+.legal-h3 { font-family: var(--f-display); font-size: 1.15rem; font-weight: 600; color: var(--ink); margin: 24px 0 10px; }
+.legal-links a { color: var(--gold); text-decoration: none; }
+.legal-links a:hover { text-decoration: underline; }
+.ft-legal-links { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ft-legal-sep { color: rgba(255,255,255,.18); user-select: none; }
 
 /* ─── MOBILE CONTACT SHEET ───────────────────────── */
 .contact-sheet {

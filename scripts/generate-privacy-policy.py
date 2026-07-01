@@ -324,7 +324,7 @@ html = f'''<!DOCTYPE html>
 <section class="legal-page">
   <div class="legal-page-inner">
     <p class="legal-updated">{L("Güncellenme tarihi: 01.07.2026", "Last updated: 1 July 2026", "Дата обновления: 01.07.2026")}</p>
-{sections}    <p class="legal-contact">{L("Gizlilik ile ilgili talepleriniz için ", "For privacy-related requests, contact ", "По вопросам конфиденциальности: ")}<a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a></p>
+{sections}    <p class="legal-contact">{L("İlgili diğer belgeler: ", "Related documents: ", "Связанные документы: ")}<a href="cookie-policy.html">{L("Çerez Politikası", "Cookie Policy", "Политика cookie")}</a> · {L("Gizlilik talepleri: ", "Privacy requests: ", "Запросы по конфиденциальности: ")}<a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a></p>
   </div>
 </section>
 
