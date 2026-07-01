@@ -148,6 +148,50 @@ const SERVICE_OPTIONS = [
   { v: 'general', tr: 'Genel / Diğer', en: 'General / Other', ru: 'Общий / Другое' },
 ];
 
+const COUNTRY_CODES = (
+  'AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ ' +
+  'CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR ' +
+  'GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP ' +
+  'KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT ' +
+  'MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW ' +
+  'SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG ' +
+  'UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW'
+).split(' ');
+
+const COUNTRY_PRIORITY = ['TR', 'UZ', 'GB'];
+const countryNameEn = new Intl.DisplayNames(['en'], { type: 'region' });
+
+function countryOptionsHtml() {
+  const lang = document.documentElement.lang || 'tr';
+  const locale = lang === 'ru' ? 'ru' : lang === 'tr' ? 'tr' : 'en';
+  let dn;
+  try {
+    dn = new Intl.DisplayNames([locale], { type: 'region' });
+  } catch {
+    dn = countryNameEn;
+  }
+
+  const all = COUNTRY_CODES
+    .map(code => ({ code, label: dn.of(code) || countryNameEn.of(code) || code }))
+    .filter(c => c.label)
+    .sort((a, b) => a.label.localeCompare(b.label, locale));
+
+  const pinned = COUNTRY_PRIORITY.map(code => all.find(c => c.code === code)).filter(Boolean);
+  const rest = all.filter(c => !COUNTRY_PRIORITY.includes(c.code));
+  const placeholder = locale === 'tr' ? 'Ülke seçin' : locale === 'ru' ? 'Выберите страну' : 'Select country';
+
+  let html = `<option value="" disabled selected>${placeholder}</option>`;
+  pinned.forEach(c => { html += `<option value="${c.code}">${c.label}</option>`; });
+  html += '<option disabled>──────────</option>';
+  rest.forEach(c => { html += `<option value="${c.code}">${c.label}</option>`; });
+  return html;
+}
+
+function countryLabel(code) {
+  if (!code) return '—';
+  return countryNameEn.of(code) || code;
+}
+
 function serviceOptionsHtml() {
   const lang = document.documentElement.lang || 'tr';
   const key = lang === 'en' ? 'en' : lang === 'ru' ? 'ru' : 'tr';
@@ -206,10 +250,7 @@ function initQuoteModal() {
           <div class="quote-field">
             <label class="quote-label" for="quoteCountry"><span data-lang="tr">Ülke</span><span data-lang="en">Country</span><span data-lang="ru">Страна</span></label>
             <select class="quote-select" id="quoteCountry" name="country">
-              <option value="Turkey">Turkey</option>
-              <option value="Uzbekistan">Uzbekistan</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="Other">Other</option>
+              ${countryOptionsHtml()}
             </select>
           </div>
           <div class="quote-field">
@@ -266,6 +307,8 @@ function openQuoteModal(presetService) {
     const sel = modal.querySelector('#quoteService');
     if (sel) sel.value = presetService;
   }
+  const countrySel = modal.querySelector('#quoteCountry');
+  if (countrySel) countrySel.value = 'TR';
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
@@ -302,7 +345,7 @@ async function submitQuoteForm(e) {
     `Company: ${payload.company || '—'}`,
     `Email: ${payload.email}`,
     `Phone: ${payload.phone || '—'}`,
-    `Country: ${payload.country}`,
+    `Country: ${countryLabel(payload.country)}`,
     `Service: ${serviceLabel ? serviceLabel[sk] : payload.service}`,
     `Project size: ${payload.project_size}`,
     '',
@@ -318,7 +361,7 @@ async function submitQuoteForm(e) {
         email: payload.email,
         company: payload.company,
         phone: payload.phone,
-        country: payload.country,
+        country: countryLabel(payload.country),
         service: serviceLabel ? serviceLabel.en : payload.service,
         project_size: payload.project_size,
         message: payload.message,
