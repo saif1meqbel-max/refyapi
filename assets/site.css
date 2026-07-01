@@ -561,6 +561,10 @@ footer { background: var(--ink); }
 .ft-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
 .ft-links a { font-size: .83rem; color: rgba(255,255,255,.48); transition: color .22s; }
 .ft-links a:hover { color: var(--gold-2); }
+.ft-qr { margin-top: 22px; }
+.ft-qr-img { display: block; width: 108px; height: 108px; background: #fff; padding: 6px; border-radius: 4px; }
+.ft-qr-label { margin-top: 12px; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.ft-qr-hint { margin-top: 5px; font-size: .72rem; color: rgba(255,255,255,.28); line-height: 1.45; max-width: 140px; }
 .ft-bottom { max-width: 1200px; margin: 0 auto; padding: 24px 56px; display: flex; align-items: center; justify-content: space-between; font-size: .75rem; color: rgba(255,255,255,.22); }
 
 /* ─── MOBILE CONTACT SHEET ───────────────────────── */
