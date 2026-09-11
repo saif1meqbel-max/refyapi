@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <script>try{var l=localStorage.getItem('fnv-lang');if(l==='en'||l==='ru')document.documentElement.classList.add('lang-'+l);}catch(e){}</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/logo-mark.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo-mark.png" />
+  <title>Teknik Kitaplık — FNV Elektronik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=48" />
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img class="logo-light" src="assets/logo-white.png?v=2" alt="FNV Elektronik">
+    <img class="logo-dark" src="assets/logo-mark.png" alt="FNV Elektronik">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
+    <li>
+      <a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Our Products</span><span data-lang="ru">Продукты</span><span class="dd-arrow">▾</span></a>
+      <ul class="dd">
+        <li><a href="integrated-building-systems.html"><span data-lang="tr">Honeywell · Entegre Bina Sistemleri</span><span data-lang="en">Honeywell · Integrated Building Systems</span><span data-lang="ru">Honeywell · Интегрированные системы</span></a></li>
+        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
+        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim Sistemleri</span><span data-lang="en">Data &amp; Communications</span><span data-lang="ru">Связь и данные</span></a></li>
+        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü Sistemleri</span><span data-lang="en">TV &amp; Video Systems</span><span data-lang="ru">ТВ и видео</span></a></li>
+      </ul>
+    </li>
+    <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
+    <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
+        <li class="nav-offices">
+      <a href="index.html#iletisim"><span data-lang="tr">Ofisler</span><span data-lang="en">Offices</span><span data-lang="ru">Офисы</span><span class="dd-arrow">▾</span></a>
+      <ul class="dd">
+        <li><a href="istanbul.html"><span data-lang="tr">İstanbul Ofisi</span><span data-lang="en">Istanbul Office</span><span data-lang="ru">Офис в Стамбуле</span></a></li>
+        <li><a href="london.html"><span data-lang="tr">Londra Ofisi</span><span data-lang="en">London Office</span><span data-lang="ru">Офис в Лондоне</span></a></li>
+        <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya Ofisi</span><span data-lang="en">Middle East &amp; Asia Office</span><span data-lang="ru">Офис на Ближнем Востоке и в Азии</span></a></li>
+      </ul>
+    </li>
+
+    <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <button type="button" class="btn-nav-quote quote-trigger">
+      <span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span>
+    </button>
+    <button class="lbtn on" onclick="setLang('tr')">TR</button>
+    <button class="lbtn" onclick="setLang('en')">EN</button>
+    <button class="lbtn" onclick="setLang('ru')">RU</button>
+    <button class="hbg" aria-label="Menü"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="svc-hero">
+  <div class="svc-hero-bg" style="background-image:url('assets/istanbul-skyline.png')"></div>
+  <div class="svc-hero-content">
+    <div class="crumb">
+      <a href="index.html"><span data-lang="tr">Ana Sayfa</span><span data-lang="en">Home</span><span data-lang="ru">Главная</span></a>
+      <span class="sep">/</span>
+      <span class="cur"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Technical Library</span><span data-lang="ru">Техническая библиотека</span></span>
+    </div>
+    <div class="svc-hero-eyebrow"><span data-lang="tr">Belgeler</span><span data-lang="en">Documents</span><span data-lang="ru">Документы</span></div>
+    <h1 class="svc-hero-title">
+      <span data-lang="tr">Sertifikalar ve<br>Referanslar</span>
+      <span data-lang="en">Certificates &amp;<br>References</span>
+      <span data-lang="ru">Сертификаты и<br>референции</span>
+    </h1>
+  </div>
+</section>
+
+<section class="lib-main">
+  <div class="lib-main-inner">
+
+    <div class="lib-filters">
+      <button type="button" class="lib-filter on" data-filter="all"><span data-lang="tr">Tümü</span><span data-lang="en">All</span><span data-lang="ru">Все</span></button>
+      <button type="button" class="lib-filter" data-filter="reference"><span data-lang="tr">Referanslar</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></button>
+      <button type="button" class="lib-filter" data-filter="authorization"><span data-lang="tr">Yetkilendirme</span><span data-lang="en">Authorization</span><span data-lang="ru">Авторизация</span></button>
+      <button type="button" class="lib-filter" data-filter="iso"><span data-lang="tr">ISO</span><span data-lang="en">ISO</span><span data-lang="ru">ISO</span></button>
+      <button type="button" class="lib-filter" data-filter="certificate"><span data-lang="tr">Sertifikalar</span><span data-lang="en">Certificates</span><span data-lang="ru">Сертификаты</span></button>
+    </div>
+
+    <div class="lib-viewer" id="libViewer">
+      <div class="lib-viewer-head">
+        <div class="lib-viewer-title"></div>
+        <div class="lib-viewer-meta">
+          <span class="lib-viewer-counter">1 / 16</span>
+        </div>
+      </div>
+      <div class="lib-viewer-stage">
+        <button type="button" class="lib-nav-btn lib-nav-prev" aria-label="Previous">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <img class="lib-viewer-img" src="assets/certificates/cert-01-anadolu-saglik.png?v=2" alt="" />
+        <button type="button" class="lib-nav-btn lib-nav-next" aria-label="Next">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="lib-viewer-tools">
+        <span class="lib-tools-label"><span data-lang="tr">Görüntüle</span><span data-lang="en">View</span><span data-lang="ru">Просмотр</span></span>
+        <button type="button" class="lib-tool-btn lib-zoom-out" aria-label="Zoom out">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" class="lib-tool-btn lib-zoom-reset" aria-label="Reset zoom">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <button type="button" class="lib-tool-btn lib-zoom-in" aria-label="Zoom in">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" class="lib-tool-btn lib-fullscreen" aria-label="Fullscreen">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="lib-grid" id="libGrid">
+
+      <article class="lib-card" id="cert-1" data-category="reference" data-src="assets/certificates/cert-01-anadolu-saglik.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-01-anadolu-saglik.png?v=2" alt="Anadolu Sağlık Merkezi referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Anadolu Sağlık Merkezi — Referans Mektubu</span><span data-lang="en">Anadolu Medical Center — Reference Letter</span><span data-lang="ru">Anadolu Medical Center — рекомендательное письмо</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans · 2008</span><span data-lang="en">Reference · 2008</span><span data-lang="ru">Референция · 2008</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-2" data-category="authorization" data-src="assets/certificates/cert-02-fnv-yetki-tr.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-02-fnv-yetki-tr.png?v=2" alt="FNV Elektronik FNV Elektronik yetkilendirme belgesi" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">FNV Elektronik — FNV Elektronik Yetkilendirme (TR)</span><span data-lang="en">FNV Elektronik — FNV Elektronik Authorization (TR)</span><span data-lang="ru">FNV Elektronik — авторизация FNV Elektronik (TR)</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Yetkilendirme · Honeywell</span><span data-lang="en">Authorization · Honeywell</span><span data-lang="ru">Авторизация · Honeywell</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-3" data-category="iso" data-src="assets/certificates/cert-03-iso9001-fnv.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-03-iso9001-fnv.png?v=2" alt="ISO 9001:2015 FNV Elektronik sertifikası" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 9001:2015 — FNV Elektronik</span><span data-lang="en">ISO 9001:2015 — FNV Elektronik</span><span data-lang="ru">ISO 9001:2015 — FNV Elektronik</span></div>
+          <div class="lib-card-cat">ISO 9001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-4" data-category="reference" data-src="assets/certificates/cert-04-anel-referans.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-04-anel-referans.png?v=2" alt="Anel Group referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Anel Group — Referans Mektubu</span><span data-lang="en">Anel Group — Reference Letter</span><span data-lang="ru">Anel Group — рекомендательное письмо</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans · 2020</span><span data-lang="en">Reference · 2020</span><span data-lang="ru">Референция · 2020</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-5" data-category="certificate" data-src="assets/certificates/cert-05-fnv-marka-tescil.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-05-fnv-marka-tescil.png?v=2" alt="FNV Elektronik marka tescil belgesi" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">FNV Elektronik — Marka Tescil Belgesi</span><span data-lang="en">FNV Elektronik — Trademark Certificate</span><span data-lang="ru">FNV Elektronik — свидетельство о товарном знаке</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Marka · 2016</span><span data-lang="en">Trademark · 2016</span><span data-lang="ru">Товарный знак · 2016</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-6" data-category="reference" data-src="assets/certificates/cert-06-thy-technic.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-06-thy-technic.png?v=2" alt="Turkish Technic THY HABOM referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Turkish Technic — THY HABOM Referans</span><span data-lang="en">Turkish Technic — THY HABOM Reference</span><span data-lang="ru">Turkish Technic — референция THY HABOM</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans · 2020</span><span data-lang="en">Reference · 2020</span><span data-lang="ru">Референция · 2020</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-7" data-category="authorization" data-src="assets/certificates/cert-07-fnv-yetki-en.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-07-fnv-yetki-en.png?v=2" alt="FNV Elektronik FNV Elektronik authorization letter" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">FNV Elektronik — FNV Elektronik Yetkilendirme (EN)</span><span data-lang="en">FNV Elektronik — FNV Elektronik Authorization (EN)</span><span data-lang="ru">FNV Elektronik — авторизация FNV Elektronik (EN)</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Yetkilendirme · Honeywell</span><span data-lang="en">Authorization · Honeywell</span><span data-lang="ru">Авторизация · Honeywell</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-8" data-category="authorization" data-src="assets/certificates/cert-08-honeywell-gold.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-08-honeywell-gold.png?v=2" alt="Honeywell Platinum Channel Partner sertifikası" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Honeywell Platinum Channel Partner</span><span data-lang="en">Honeywell Platinum Channel Partner</span><span data-lang="ru">Honeywell Platinum Channel Partner</span></div>
+          <div class="lib-card-cat">2018–2019</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-9" data-category="reference" data-src="assets/certificates/cert-09-regnum-carya.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-09-regnum-carya.png?v=2" alt="Regnum Carya referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Regnum Carya — Referans Mektubu</span><span data-lang="en">Regnum Carya — Reference Letter</span><span data-lang="ru">Regnum Carya — рекомендательное письмо</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans</span><span data-lang="en">Reference</span><span data-lang="ru">Референция</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-10" data-category="reference" data-src="assets/certificates/cert-10-thy-technic-2.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-10-thy-technic-2.png?v=2" alt="Turkish Technic referans mektubu" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Turkish Technic — Referans Mektubu</span><span data-lang="en">Turkish Technic — Reference Letter</span><span data-lang="ru">Turkish Technic — рекомендательное письмо</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Referans · 2020</span><span data-lang="en">Reference · 2020</span><span data-lang="ru">Референция · 2020</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-11" data-category="certificate" data-src="assets/certificates/cert-11-sshy-fnv.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-11-sshy-fnv.png?v=2" alt="Satış sonrası hizmet yeterlilik belgesi" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Satış Sonrası Hizmet Yeterlilik Belgesi</span><span data-lang="en">After-Sales Service Qualification Certificate</span><span data-lang="ru">Сертификат квалификации послепродажного обслуживания</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Ticaret Bakanlığı · 2020</span><span data-lang="en">Ministry of Trade · 2020</span><span data-lang="ru">Минторг · 2020</span></div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-12" data-category="iso" data-src="assets/certificates/cert-12-iso9001-ref-tr.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-12-iso9001-ref-tr.png?v=2" alt="ISO 9001 FNV Elektronik sertifikası Türkçe" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 9001:2015 — FNV Elektronik (TR)</span><span data-lang="en">ISO 9001:2015 — FNV Elektronik (TR)</span><span data-lang="ru">ISO 9001:2015 — FNV Elektronik (TR)</span></div>
+          <div class="lib-card-cat">ISO 9001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-13" data-category="iso" data-src="assets/certificates/cert-13-iso45001-ref-en.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-13-iso45001-ref-en.png?v=2" alt="ISO 45001 FNV Elektronik certificate English" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 45001:2018 — FNV Elektronik (EN)</span><span data-lang="en">ISO 45001:2018 — FNV Elektronik (EN)</span><span data-lang="ru">ISO 45001:2018 — FNV Elektronik (EN)</span></div>
+          <div class="lib-card-cat">ISO 45001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-14" data-category="iso" data-src="assets/certificates/cert-14-iso45001-ref-tr.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-14-iso45001-ref-tr.png?v=2" alt="ISO 45001 FNV Elektronik sertifikası Türkçe" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 45001:2018 — FNV Elektronik (TR)</span><span data-lang="en">ISO 45001:2018 — FNV Elektronik (TR)</span><span data-lang="ru">ISO 45001:2018 — FNV Elektronik (TR)</span></div>
+          <div class="lib-card-cat">ISO 45001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-15" data-category="iso" data-src="assets/certificates/cert-15-iso9001-ref-en.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-15-iso9001-ref-en.png?v=2" alt="ISO 9001 FNV Elektronik certificate English" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">ISO 9001:2015 — FNV Elektronik (EN)</span><span data-lang="en">ISO 9001:2015 — FNV Elektronik (EN)</span><span data-lang="ru">ISO 9001:2015 — FNV Elektronik (EN)</span></div>
+          <div class="lib-card-cat">ISO 9001</div>
+        </div>
+      </article>
+
+      <article class="lib-card" id="cert-16" data-category="certificate" data-src="assets/certificates/cert-16-sshy-2019.png?v=2">
+        <div class="lib-card-thumb"><img src="assets/certificates/cert-16-sshy-2019.png?v=2" alt="Satış sonrası hizmet yeterlilik belgesi 2019" loading="lazy" /></div>
+        <div class="lib-card-body">
+          <div class="lib-card-title"><span data-lang="tr">Satış Sonrası Hizmet Yeterlilik Belgesi</span><span data-lang="en">After-Sales Service Qualification Certificate</span><span data-lang="ru">Сертификат квалификации послепродажного обслуживания</span></div>
+          <div class="lib-card-cat"><span data-lang="tr">Ticaret Bakanlığı · 2019</span><span data-lang="en">Ministry of Trade · 2019</span><span data-lang="ru">Минторг · 2019</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div>
+      <img class="ft-brand-logo" src="assets/logo-white.png?v=2" alt="FNV Elektronik">
+      <p class="ft-brand-sub">
+        <span data-lang="tr">Elektrik Zayıf Akım Sistemleri alanında güvenilir çözüm ortağınız. 2005'ten bu yana hizmetinizdeyiz.</span>
+        <span data-lang="en">Your trusted partner for low-current systems. Serving you since 2005.</span>
+        <span data-lang="ru">Надёжный партнёр в слаботочных системах. Работаем с 2005 года.</span>
+      </p>
+    </div>
+    <div class="ft-col-services">
+      <p class="ft-col-head"><span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></p>
+      <ul class="ft-links ft-links--2col">
+        <li><a href="fire-detection.html"><span data-lang="tr">Yangın Alarm Sistemleri</span><span data-lang="en">Fire Alarm Systems</span><span data-lang="ru">Пожарная сигнализация</span></a></li>
+        <li><a href="security-systems.html#kartli-gecis"><span data-lang="tr">Erişim Kontrol</span><span data-lang="en">Access Control</span><span data-lang="ru">Контроль доступа</span></a></li>
+        <li><a href="data-communications.html"><span data-lang="tr">Data ve Altyapı</span><span data-lang="en">Data & Infrastructure</span><span data-lang="ru">Data и инфраструктура</span></a></li>
+        <li><a href="automation-systems.html#otel-kapi"><span data-lang="tr">Otel Kapı Sistemleri</span><span data-lang="en">Hotel Door Systems</span><span data-lang="ru">Дверные системы для отелей</span></a></li>
+        <li><a href="audio-visual-systems.html#genel-anons"><span data-lang="tr">Genel Anons ve Sesli Alarm</span><span data-lang="en">Public Announcement</span><span data-lang="ru">Оповещение</span></a></li>
+        <li><a href="automation-systems.html#mekanik"><span data-lang="tr">Mekanik Otomasyon</span><span data-lang="en">Mechanical Automation</span><span data-lang="ru">Механическая автоматизация</span></a></li>
+        <li><a href="data-communications.html#telefon-voip"><span data-lang="tr">Telefon Sistemleri</span><span data-lang="en">Phone Systems</span><span data-lang="ru">Телефонные системы</span></a></li>
+        <li><a href="tv-video-systems.html#intercom"><span data-lang="tr">IP İntercom</span><span data-lang="en">IP Intercom</span><span data-lang="ru">IP-домофон</span></a></li>
+        <li><a href="security-systems.html#cctv"><span data-lang="tr">CCTV</span><span data-lang="en">CCTV</span><span data-lang="ru">Видеонаблюдение</span></a></li>
+        <li><a href="automation-systems.html#aydinlatma"><span data-lang="tr">Bina ve Aydınlatma Otomasyonu</span><span data-lang="en">Building & Lighting Automation</span><span data-lang="ru">Автоматизация зданий</span></a></li>
+        <li><a href="automation-systems.html#hemsire"><span data-lang="tr">Hemşire Çağrı ve Mavi Kod</span><span data-lang="en">Nurse Call & Code Blue</span><span data-lang="ru">Вызов медсестры</span></a></li>
+        <li><a href="tv-video-systems.html#smatv"><span data-lang="tr">IPTV Sistemleri</span><span data-lang="en">IPTV Systems</span><span data-lang="ru">IPTV-системы</span></a></li>
+      </ul>
+      <p class="ft-col-head ft-col-head--sub"><span data-lang="tr">Ürün Kategorileri</span><span data-lang="en">Product Categories</span><span data-lang="ru">Категории продуктов</span></p>
+      <ul class="ft-links">
+        <li><a href="integrated-building-systems.html"><span data-lang="tr">Entegre Bina Sistemleri</span><span data-lang="en">Integrated Building Systems</span><span data-lang="ru">Интегрированные системы</span></a></li>
+        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
+        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim</span><span data-lang="en">Data &amp; Comms</span><span data-lang="ru">Связь и данные</span></a></li>
+        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü</span><span data-lang="en">TV &amp; Video</span><span data-lang="ru">ТВ и видео</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-col-head"><span data-lang="tr">Şirket</span><span data-lang="en">Company</span><span data-lang="ru">Компания</span></p>
+      <ul class="ft-links">
+        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
+        <li><a href="index.html#hizmetler"><span data-lang="tr">Hizmetlerimiz</span><span data-lang="en">Our Services</span><span data-lang="ru">Услуги</span></a></li>
+        <li><a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Products</span><span data-lang="ru">Продукция</span></a></li>
+        <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
+        <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
+        <li><a href="istanbul.html"><span data-lang="tr">İstanbul Ofisi</span><span data-lang="en">Istanbul Office</span><span data-lang="ru">Офис в Стамбуле</span></a></li>
+        <li><a href="london.html"><span data-lang="tr">Londra Ofisi</span><span data-lang="en">London Office</span><span data-lang="ru">Офис в Лондоне</span></a></li>
+        <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya Ofisi</span><span data-lang="en">Middle East &amp; Asia Office</span><span data-lang="ru">Офис на Ближнем Востоке и в Азии</span></a></li>
+
+        <li><a href="privacy-policy.html"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a></li>
+        <li><a href="cookie-policy.html"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a></li>
+        <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-col-head"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></p>
+      <ul class="ft-links">
+        <li><a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a></li>
+        <li><a href="https://www.fnvelektronik.com" target="_blank">www.fnvelektronik.com</a></li>
+      </ul>
+      <div class="ft-social">
+        <a href="https://www.instagram.com/fnvelektronik/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/p/FNV-Elektronik-100063649779411/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 3H10c-2.761 0-5 2.239-5 5v3H3.5a.5.5 0 0 0-.5.5V14c0 .276.224.5.5.5H5v7.5a.5.5 0 0 0 .5.5H9a.5.5 0 0 0 .5-.5V14.5h3.05a.5.5 0 0 0 .496-.438l.45-3.5a.5.5 0 0 0-.494-.562H9.5V8c0-.827.673-1.5 1.5-1.5h3a.5.5 0 0 0 .5-.5V3.5a.5.5 0 0 0-.5-.5z"/></svg>
+        </a>
+      </div>
+      <div class="ft-qr">
+        <img class="ft-qr-img" src="assets/digital-business-card-qr.png?v=2" alt="FNV Elektronik digital business card QR code" width="108" height="108" loading="lazy" />
+        <p class="ft-qr-label"><span data-lang="tr">Dijital Kartvizit</span><span data-lang="en">Digital Business Card</span><span data-lang="ru">Цифровая визитка</span></p>
+        <p class="ft-qr-hint"><span data-lang="tr">Okutmak için telefonunuzla tarayın</span><span data-lang="en">Scan with your phone to view</span><span data-lang="ru">Отсканируйте телефоном</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>© 2026 FNV Elektronik · <span data-lang="tr">Tüm Hakları Saklıdır</span><span data-lang="en">All Rights Reserved</span><span data-lang="ru">Все права защищены</span></span>
+    <span class="ft-legal-links">
+      <a href="privacy-policy.html" class="ft-legal-link"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a>
+      <span class="ft-legal-sep">·</span>
+      <a href="cookie-policy.html" class="ft-legal-link"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a>
+    </span>
+    <span>İstanbul · London · <span data-lang="tr">Orta Doğu/Asya</span><span data-lang="en">Middle East/Asia</span><span data-lang="ru">Ближний Восток/Азия</span></span>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=45"></script>
+<script src="assets/lib-viewer.js?v=14"></script>
+</body>
+</html>
