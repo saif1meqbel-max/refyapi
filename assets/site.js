@@ -525,7 +525,6 @@ const REF_COUNTRY_LABELS = {
   'equatorial-guinea': { tr: 'Ekvator Ginesi', en: 'Equatorial Guinea', ru: 'Экваториальная Гвинея' },
   curacao: { tr: 'Curaçao', en: 'Curaçao', ru: 'Кюрасао' },
   nigeria: { tr: 'Nijerya', en: 'Nigeria', ru: 'Нигерия' },
-  fiji: { tr: 'Fiji', en: 'Fiji', ru: 'Фиджи' },
   kyrgyzstan: { tr: 'Kırgızistan', en: 'Kyrgyzstan', ru: 'Киргизия' },
   tajikistan: { tr: 'Tacikistan', en: 'Tajikistan', ru: 'Таджикистан' },
   uzbekistan: { tr: 'Özbekistan', en: 'Uzbekistan', ru: 'Узбекистан' },
