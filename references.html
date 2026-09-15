@@ -1,83 +1,94 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <script>try{var l=localStorage.getItem('fnv-lang');if(l==='en'||l==='ru')document.documentElement.classList.add('lang-'+l);}catch(e){}</script>
+  <script>try{var l=localStorage.getItem('refyapi-lang');if(l==='en'||l==='ru')document.documentElement.classList.add('lang-'+l);}catch(e){}</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="assets/logo-mark.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/logo-mark.png" />
-  <title>Referanslarımız — FNV Elektronik</title>
+  <link rel="icon" href="assets/logo-icon.png?v=3" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo-icon.png?v=3" />
+  <title>Referanslarımız — REF YAPI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=48" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=67" />
 </head>
 <body>
 
-<nav class="nav" id="mainNav">
+<nav class="nav solid" id="mainNav">
   <a href="index.html" class="nav-logo">
-    <img class="logo-light" src="assets/logo-white.png?v=2" alt="FNV Elektronik">
-    <img class="logo-dark" src="assets/logo-mark.png" alt="FNV Elektronik">
+    <img class="logo-light" src="assets/logo-white.png?v=3" alt="REF YAPI">
+    <img class="logo-dark" src="assets/logo-mark.png?v=3" alt="REF YAPI">
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
-    <li>
-      <a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Our Products</span><span data-lang="ru">Продукты</span><span class="dd-arrow">▾</span></a>
-      <ul class="dd">
-        <li><a href="integrated-building-systems.html"><span data-lang="tr">Honeywell · Entegre Bina Sistemleri</span><span data-lang="en">Honeywell · Integrated Building Systems</span><span data-lang="ru">Honeywell · Интегрированные системы</span></a></li>
-        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim Sistemleri</span><span data-lang="en">Data &amp; Communications</span><span data-lang="ru">Связь и данные</span></a></li>
-        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü Sistemleri</span><span data-lang="en">TV &amp; Video Systems</span><span data-lang="ru">ТВ и видео</span></a></li>
-      </ul>
-    </li>
-    <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
-    <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
-        <li class="nav-offices">
-      <a href="index.html#iletisim"><span data-lang="tr">Ofisler</span><span data-lang="en">Offices</span><span data-lang="ru">Офисы</span><span class="dd-arrow">▾</span></a>
-      <ul class="dd">
-        <li><a href="istanbul.html"><span data-lang="tr">İstanbul Ofisi</span><span data-lang="en">Istanbul Office</span><span data-lang="ru">Офис в Стамбуле</span></a></li>
-        <li><a href="london.html"><span data-lang="tr">Londra Ofisi</span><span data-lang="en">London Office</span><span data-lang="ru">Офис в Лондоне</span></a></li>
-        <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya Ofisi</span><span data-lang="en">Middle East &amp; Asia Office</span><span data-lang="ru">Офис на Ближнем Востоке и в Азии</span></a></li>
-      </ul>
-    </li>
-
-    <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
-  </ul>
-  <div class="nav-right">
-    <button type="button" class="btn-nav-quote quote-trigger">
-      <span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span>
-    </button>
-    <button class="lbtn on" onclick="setLang('tr')">TR</button>
-    <button class="lbtn" onclick="setLang('en')">EN</button>
-    <button class="lbtn" onclick="setLang('ru')">RU</button>
-    <button class="hbg" aria-label="Menü"><span></span><span></span><span></span></button>
+  <button class="hbg" aria-label="Menü" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-panel">
+    <ul class="nav-links">
+      <li>
+        <a href="index.html#hakkimizda">
+          <span data-lang="tr">Hakkımızda</span>
+          <span data-lang="en">About</span>
+          <span data-lang="ru">О нас</span>
+        </a>
+      </li>
+      <li>
+        <a href="references.html">
+          <span data-lang="tr">Referanslar</span>
+          <span data-lang="en">Projects</span>
+          <span data-lang="ru">Проекты</span>
+        </a>
+      </li>
+      <li>
+        <a href="documents.html">
+          <span data-lang="tr">Belgeler</span>
+          <span data-lang="en">Documents</span>
+          <span data-lang="ru">Документы</span>
+        </a>
+      </li>
+      <li class="nav-offices">
+        <a href="index.html#iletisim">
+          <span data-lang="tr">Ofisler</span>
+          <span data-lang="en">Offices</span>
+          <span data-lang="ru">Офисы</span>
+        </a>
+        <ul class="dd">
+          <li><a href="istanbul.html"><span data-lang="tr">İstanbul</span><span data-lang="en">Istanbul</span><span data-lang="ru">Стамбул</span></a></li>
+          <li><a href="london.html"><span data-lang="tr">Londra</span><span data-lang="en">London</span><span data-lang="ru">Лондон</span></a></li>
+          <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya</span><span data-lang="en">Middle East &amp; Asia</span><span data-lang="ru">Ближний Восток и Азия</span></a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-panel-foot">
+      <button type="button" class="btn-nav-quote quote-trigger">
+        <span data-lang="tr">Teklif Al</span><span data-lang="en">Get a Quote</span><span data-lang="ru">Смета</span>
+      </button>
+      <div class="nav-langs">
+        <button class="lbtn on" onclick="setLang('tr')">TR</button>
+        <button class="lbtn" onclick="setLang('en')">EN</button>
+        <button class="lbtn" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
   </div>
 </nav>
 
-<section class="svc-hero">
-  <div class="svc-hero-bg" style="background-image:url('assets/istanbul-skyline.png')"></div>
-  <div class="svc-hero-content">
+<header class="page-head">
+  <div class="wrap">
     <div class="crumb">
       <a href="index.html"><span data-lang="tr">Ana Sayfa</span><span data-lang="en">Home</span><span data-lang="ru">Главная</span></a>
       <span class="sep">/</span>
-      <span class="cur"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></span>
+      <span class="cur"><span data-lang="tr">Referanslar</span><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></span>
     </div>
-    <span class="svc-hero-eyebrow"><span data-lang="tr">Projelerimiz</span><span data-lang="en">Our Projects</span><span data-lang="ru">Наши проекты</span></span>
-    <h1 class="svc-hero-title"><span data-lang="tr">Tamamlanan Projelerimiz</span><span data-lang="en">Completed Projects</span><span data-lang="ru">Завершённые проекты</span></h1>
+    <h1><span data-lang="tr">Tamamlanan projeler</span><span data-lang="en">Completed projects</span><span data-lang="ru">Завершённые проекты</span></h1>
+    <p class="lead">
+      <span data-lang="tr">2005’ten bu yana Türkiye, Türkmenistan, Rusya, Azerbaycan ve daha birçok ülkede teslim ettiğimiz işler.</span>
+      <span data-lang="en">Work delivered since 2005 across Turkey, Turkmenistan, Russia, Azerbaijan and beyond.</span>
+      <span data-lang="ru">Работы, сданные с 2005 года в Турции, Туркменистане, России, Азербайджане и других странах.</span>
+    </p>
   </div>
-</section>
+</header>
 
 <section class="refs">
   <div class="refs-inner">
-    <div class="refs-intro rv">
-      <span class="sec-eyebrow" style="justify-content:center"><span data-lang="tr">Referanslarımız</span><span data-lang="en">Our References</span><span data-lang="ru">Наши референции</span></span>
-      <p class="sec-p">
-        <span data-lang="tr">2005'ten bu yana Türkiye, Türkmenistan, Rusya, Azerbaycan ve daha birçok ülkede hayata geçirdiğimiz projeler.</span>
-        <span data-lang="en">Projects delivered since 2005 across Turkey, Turkmenistan, Russia, Azerbaijan and many more countries.</span>
-        <span data-lang="ru">Проекты, реализованные с 2005 года в Турции, Туркменистане, России, Азербайджане и многих других странах.</span>
-      </p>
-    </div>
-
     <div class="refs-filters rv">
       <div class="refs-sort">
         <span class="refs-sort-label"><span data-lang="tr">Sırala</span><span data-lang="en">Sort by</span><span data-lang="ru">Сортировать</span></span>
@@ -117,7 +128,6 @@
           <span class="ref-year">2007</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Acil Anons · CCTV · Kartlı Geçiş · TV</span><span data-lang="en">PA · CCTV · Access Control · TV</span><span data-lang="ru">Оповещение · CCTV · Контроль доступа · ТВ</span></div>
           <div class="ref-title"><span data-lang="tr">Bera Otel</span><span data-lang="en">Bera Hotel</span><span data-lang="ru">Отель Bera</span></div>
           <div class="ref-loc"><span data-lang="tr">Antalya, Türkiye</span><span data-lang="en">Antalya, Turkey</span><span data-lang="ru">Анталья, Турция</span></div>
         </div>
@@ -128,7 +138,6 @@
           <span class="ref-year">2008</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · CCTV</span><span data-lang="en">Fire Detection · CCTV</span><span data-lang="ru">Пожарная сигнализация · CCTV</span></div>
           <div class="ref-title"><span data-lang="tr">Devlet Sahil Evleri Tesisleri</span><span data-lang="en">State Coastal Residences</span><span data-lang="ru">Государственные прибрежные резиденции</span></div>
           <div class="ref-loc"><span data-lang="tr">Azerbaycan · 23.000 m²</span><span data-lang="en">Azerbaijan · 23,000 m²</span><span data-lang="ru">Азербайджан · 23 000 м²</span></div>
         </div>
@@ -139,7 +148,6 @@
           <span class="ref-year">2008</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">CCTV · Kartlı Geçiş</span><span data-lang="en">CCTV · Access Control</span><span data-lang="ru">CCTV · Контроль доступа</span></div>
           <div class="ref-title"><span data-lang="tr">Mega Rostov Alışveriş Merkezi</span><span data-lang="en">Mega Rostov Shopping Centre</span><span data-lang="ru">Торговый центр Mega Rostov</span></div>
           <div class="ref-loc"><span data-lang="tr">Rusya · 253.861 m²</span><span data-lang="en">Russia · 253,861 m²</span><span data-lang="ru">Россия · 253 861 м²</span></div>
         </div>
@@ -150,7 +158,6 @@
           <span class="ref-year">2011</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · Kartlı Geçiş</span><span data-lang="en">Fire Detection · PA · CCTV · Access Control</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · Контроль доступа</span></div>
           <div class="ref-title"><span data-lang="tr">Savunma Bakanlığı Olağanüstü Hal Bakanlığı</span><span data-lang="en">Ministry of Defence &amp; State of Emergency</span><span data-lang="ru">Министерство обороны и чрезвычайных ситуаций</span></div>
           <div class="ref-loc"><span data-lang="tr">Türkmenistan</span><span data-lang="en">Turkmenistan</span><span data-lang="ru">Туркменистан</span></div>
         </div>
@@ -161,7 +168,6 @@
           <span class="ref-year">2011</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama Sistemi</span><span data-lang="en">Fire Detection System</span><span data-lang="ru">Система пожарной сигнализации</span></div>
           <div class="ref-title"><span data-lang="tr">Buz Köşkü</span><span data-lang="en">Ice Palace</span><span data-lang="ru">Ледовый дворец</span></div>
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 72.400 m²</span><span data-lang="en">Turkmenistan · 72,400 m²</span><span data-lang="ru">Туркменистан · 72 400 м²</span></div>
         </div>
@@ -172,7 +178,6 @@
           <span class="ref-year">2011</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama Sistemi</span><span data-lang="en">Fire Detection System</span><span data-lang="ru">Система пожарной сигнализации</span></div>
           <div class="ref-title"><span data-lang="tr">Pamukyağı Fabrikası</span><span data-lang="en">Cottonseed Oil Factory</span><span data-lang="ru">Завод хлопкового масла</span></div>
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 22.000 m²</span><span data-lang="en">Turkmenistan · 22,000 m²</span><span data-lang="ru">Туркменистан · 22 000 м²</span></div>
         </div>
@@ -183,7 +188,6 @@
           <span class="ref-year">2011</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · SMATV</span><span data-lang="en">Fire Detection · PA · CCTV · SMATV</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · SMATV</span></div>
           <div class="ref-title"><span data-lang="tr">Deskty Mir Alışveriş Merkezi</span><span data-lang="en">Deskty Mir Shopping Centre</span><span data-lang="ru">Торговый центр Deskty Mir</span></div>
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 9.841 m²</span><span data-lang="en">Turkmenistan · 9,841 m²</span><span data-lang="ru">Туркменистан · 9 841 м²</span></div>
         </div>
@@ -194,7 +198,6 @@
           <span class="ref-year">2012</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · Kartlı Geçiş · TV</span><span data-lang="en">Fire Detection · PA · CCTV · Access Control · TV</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · Контроль доступа · ТВ</span></div>
           <div class="ref-title"><span data-lang="tr">Uluslararası Petrol ve Gaz Üniversitesi</span><span data-lang="en">International Oil &amp; Gas University</span><span data-lang="ru">Международный нефтегазовый университет</span></div>
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 109.368 m²</span><span data-lang="en">Turkmenistan · 109,368 m²</span><span data-lang="ru">Туркменистан · 109 368 м²</span></div>
         </div>
@@ -205,7 +208,6 @@
           <span class="ref-year">2012</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · Kartlı Geçiş · İntercom</span><span data-lang="en">Fire Detection · PA · CCTV · Access Control · Intercom</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · Контроль доступа · Домофон</span></div>
           <div class="ref-title"><span data-lang="tr">Türkmenistan Polis Akademisi</span><span data-lang="en">Turkmenistan Police Academy</span><span data-lang="ru">Полицейская академия Туркменистана</span></div>
           <div class="ref-loc"><span data-lang="tr">Türkmenistan · 117.325 m²</span><span data-lang="en">Turkmenistan · 117,325 m²</span><span data-lang="ru">Туркменистан · 117 325 м²</span></div>
         </div>
@@ -216,7 +218,6 @@
           <span class="ref-year">2013</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · TV · Kartlı Geçiş · CCTV</span><span data-lang="en">Fire Detection · TV · Access Control · CCTV</span><span data-lang="ru">Пожарная сигнализация · ТВ · Контроль доступа · CCTV</span></div>
           <div class="ref-title"><span data-lang="tr">Prezident Otel</span><span data-lang="en">President Hotel</span><span data-lang="ru">Отель President</span></div>
           <div class="ref-loc"><span data-lang="tr">Beyaz Rusya · 40.000 m²</span><span data-lang="en">Belarus · 40,000 m²</span><span data-lang="ru">Беларусь · 40 000 м²</span></div>
         </div>
@@ -227,7 +228,6 @@
           <span class="ref-year">2013</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">CCTV</span><span data-lang="en">CCTV</span><span data-lang="ru">CCTV</span></div>
           <div class="ref-title"><span data-lang="tr">Oyala Hükümet Konağı</span><span data-lang="en">Oyala Government Building</span><span data-lang="ru">Правительственное здание Oyala</span></div>
           <div class="ref-loc"><span data-lang="tr">Ekvator Ginesi · 23.750 m²</span><span data-lang="en">Equatorial Guinea · 23,750 m²</span><span data-lang="ru">Экваториальная Гвинея · 23 750 м²</span></div>
         </div>
@@ -238,7 +238,6 @@
           <span class="ref-year">2013</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama Sistemi</span><span data-lang="en">Fire Detection System</span><span data-lang="ru">Система пожарной сигнализации</span></div>
           <div class="ref-title"><span data-lang="tr">Rixos Downtown Otel</span><span data-lang="en">Rixos Downtown Hotel</span><span data-lang="ru">Отель Rixos Downtown</span></div>
           <div class="ref-loc"><span data-lang="tr">Antalya, Türkiye</span><span data-lang="en">Antalya, Turkey</span><span data-lang="ru">Анталья, Турция</span></div>
         </div>
@@ -250,7 +249,6 @@
           <span class="ref-year">2017</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Sprinkler · Otopark</span><span data-lang="en">Fire Detection · Sprinkler · Parking</span><span data-lang="ru">Пожарная сигнализация · Sprinkler · Парковка</span></div>
           <div class="ref-title"><span data-lang="tr">Akasya Apartmanı</span><span data-lang="en">Akasya Apartment</span><span data-lang="ru">Жилой дом Akasya</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 3.320 m²</span><span data-lang="en">Istanbul, Turkey · 3,320 m²</span><span data-lang="ru">Стамбул, Турция · 3 320 м²</span></div>
         </div>
@@ -261,7 +259,6 @@
           <span class="ref-year">2016</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · SMATV · Kartlı Geçiş</span><span data-lang="en">Fire Detection · PA · CCTV · SMATV · Access Control</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · SMATV · Контроль доступа</span></div>
           <div class="ref-title"><span data-lang="tr">Marmermer Plaza</span><span data-lang="en">Marmermer Plaza</span><span data-lang="ru">Marmermer Plaza</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
@@ -272,7 +269,6 @@
           <span class="ref-year">2017</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Sprinkler · Otopark</span><span data-lang="en">Fire Detection · Sprinkler · Parking</span><span data-lang="ru">Пожарная сигнализация · Sprinkler · Парковка</span></div>
           <div class="ref-title"><span data-lang="tr">Arı Apartmanı</span><span data-lang="en">Arı Apartment</span><span data-lang="ru">Жилой дом Arı</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 1.750 m²</span><span data-lang="en">Istanbul, Turkey · 1,750 m²</span><span data-lang="ru">Стамбул, Турция · 1 750 м²</span></div>
         </div>
@@ -283,7 +279,6 @@
           <span class="ref-year">2018</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · Kartlı Geçiş · Hemşire Çağırma</span><span data-lang="en">Fire Detection · PA · Access Control · Nurse Call</span><span data-lang="ru">Пожарная сигнализация · Оповещение · Контроль доступа · Вызов медсестры</span></div>
           <div class="ref-title"><span data-lang="tr">Ege Üniversitesi Hastanesi</span><span data-lang="en">Ege University Hospital</span><span data-lang="ru">Больница университета Ege</span></div>
           <div class="ref-loc"><span data-lang="tr">İzmir, Türkiye</span><span data-lang="en">Izmir, Turkey</span><span data-lang="ru">Измир, Турция</span></div>
         </div>
@@ -294,7 +289,6 @@
           <span class="ref-year">2017</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Sprinkler · Otopark</span><span data-lang="en">Fire Detection · Sprinkler · Parking</span><span data-lang="ru">Пожарная сигнализация · Sprinkler · Парковка</span></div>
           <div class="ref-title"><span data-lang="tr">Koru Apartmanı</span><span data-lang="en">Koru Apartment</span><span data-lang="ru">Жилой дом Koru</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
@@ -305,7 +299,6 @@
           <span class="ref-year">2017</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Sprinkler · Otopark</span><span data-lang="en">Fire Detection · Sprinkler · Parking</span><span data-lang="ru">Пожарная сигнализация · Sprinkler · Парковка</span></div>
           <div class="ref-title"><span data-lang="tr">Güven Apartmanı</span><span data-lang="en">Güven Apartment</span><span data-lang="ru">Жилой дом Güven</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
@@ -316,7 +309,6 @@
           <span class="ref-year">2017</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama Sistemi</span><span data-lang="en">Fire Detection System</span><span data-lang="ru">Система пожарной сигнализации</span></div>
           <div class="ref-title"><span data-lang="tr">THY Bakım Onarım ve Modifikasyon Merkezi</span><span data-lang="en">Turkish Airlines MRO Centre</span><span data-lang="ru">Центр ТО Turkish Airlines</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 372.000 m²</span><span data-lang="en">Istanbul, Turkey · 372,000 m²</span><span data-lang="ru">Стамбул, Турция · 372 000 м²</span></div>
         </div>
@@ -327,7 +319,6 @@
           <span class="ref-year">2017</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · TV</span><span data-lang="en">Fire Detection · PA · CCTV · TV</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · ТВ</span></div>
           <div class="ref-title"><span data-lang="tr">Kempinski Residences Barbaros Reserve Bodrum</span><span data-lang="en">Kempinski Residences Barbaros Reserve Bodrum</span><span data-lang="ru">Kempinski Residences Barbaros Reserve Bodrum</span></div>
           <div class="ref-loc"><span data-lang="tr">Bodrum, Türkiye · 11.000 m²</span><span data-lang="en">Bodrum, Turkey · 11,000 m²</span><span data-lang="ru">Бодрум, Турция · 11 000 м²</span></div>
         </div>
@@ -338,7 +329,6 @@
           <span class="ref-year">2020</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · Hemşire Çağırma · Kartlı Geçiş · İntercom</span><span data-lang="en">Fire Detection · PA · CCTV · Nurse Call · Access Control · Intercom</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · Вызов медсестры · Контроль доступа · Домофон</span></div>
           <div class="ref-title"><span data-lang="tr">Curaçao Tıp Merkezi</span><span data-lang="en">Curaçao Medical Center</span><span data-lang="ru">Медицинский центр Кюрасао</span></div>
           <div class="ref-loc"><span data-lang="tr">Willemstad, Curaçao</span><span data-lang="en">Willemstad, Curaçao</span><span data-lang="ru">Willemstad, Кюрасао</span></div>
         </div>
@@ -350,7 +340,6 @@
           <span class="ref-year">2016</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Sprinkler · Otopark · Yüz Tanıma</span><span data-lang="en">Fire Detection · Sprinkler · Parking · Face Recognition</span><span data-lang="ru">Пожарная сигнализация · Sprinkler · Парковка · Распознавание лиц</span></div>
           <div class="ref-title"><span data-lang="tr">Ref Plaza</span><span data-lang="en">Ref Plaza</span><span data-lang="ru">Ref Plaza</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 4.073 m²</span><span data-lang="en">Istanbul, Turkey · 4,073 m²</span><span data-lang="ru">Стамбул, Турция · 4 073 м²</span></div>
         </div>
@@ -361,7 +350,6 @@
           <span class="ref-year">2015</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · IPTV · Kartlı Geçiş · CCTV</span><span data-lang="en">Fire Detection · PA · IPTV · Access Control · CCTV</span><span data-lang="ru">Пожарная сигнализация · Оповещение · IPTV · Контроль доступа · CCTV</span></div>
           <div class="ref-title"><span data-lang="tr">Ikot Ekpene Otel</span><span data-lang="en">Ikot Ekpene Hotel</span><span data-lang="ru">Отель Ikot Ekpene</span></div>
           <div class="ref-loc"><span data-lang="tr">Nijerya</span><span data-lang="en">Nigeria</span><span data-lang="ru">Нигерия</span></div>
         </div>
@@ -372,7 +360,6 @@
           <span class="ref-year">2015</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · SMATV · Kartlı Geçiş</span><span data-lang="en">Fire Detection · PA · CCTV · SMATV · Access Control</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · SMATV · Контроль доступа</span></div>
           <div class="ref-title"><span data-lang="tr">Kuriş Kule</span><span data-lang="en">Kuriş Tower</span><span data-lang="ru">Башня Kuriş</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye · 60.000 m²</span><span data-lang="en">Istanbul, Turkey · 60,000 m²</span><span data-lang="ru">Стамбул, Турция · 60 000 м²</span></div>
         </div>
@@ -383,7 +370,6 @@
           <span class="ref-year">2015</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama Sistemi</span><span data-lang="en">Fire Detection System</span><span data-lang="ru">Система пожарной сигнализации</span></div>
           <div class="ref-title"><span data-lang="tr">Park Inn by Radisson İstanbul Atatürk Havalimanı</span><span data-lang="en">Park Inn by Radisson Istanbul Atatürk Airport</span><span data-lang="ru">Park Inn by Radisson — аэропорт Ататюрка, Стамбул</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
@@ -395,18 +381,17 @@
           <span class="ref-year">2005</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Kartlı Geçiş</span><span data-lang="en">Fire Detection · Access Control</span><span data-lang="ru">Пожарная сигнализация · Контроль доступа</span></div>
           <div class="ref-title"><span data-lang="tr">Anadolu Sağlık Merkezi</span><span data-lang="en">Anadolu Medical Center</span><span data-lang="ru">Медицинский центр Anadolu</span></div>
           <div class="ref-loc"><span data-lang="tr">Gebze, Türkiye · 50.000 m²</span><span data-lang="en">Gebze, Turkey · 50,000 m²</span><span data-lang="ru">Гебзе, Турция · 50 000 м²</span></div>
         </div>
       </div>
+
       <div class="ref-card rv d1" data-country="kyrgyzstan">
         <div class="ref-imgwrap">
           <img class="ref-img" src="assets/projects/ref28-bishkek-vefa-center.jpg?v=2" alt="Bişkek Vefa Center AVM" loading="lazy" />
           <span class="ref-year">2020</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">TV</span><span data-lang="en">TV</span><span data-lang="ru">ТВ</span></div>
           <div class="ref-title"><span data-lang="tr">Bişkek Vefa Center AVM</span><span data-lang="en">Bishkek Vefa Center Mall</span><span data-lang="ru">ТЦ Vefa Center, Бишкек</span></div>
           <div class="ref-loc"><span data-lang="tr">Bişkek, Kırgızistan</span><span data-lang="en">Bishkek, Kyrgyzstan</span><span data-lang="ru">Бишкек, Киргизия</span></div>
         </div>
@@ -418,7 +403,6 @@
           <span class="ref-year">2020</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · TV</span><span data-lang="en">Fire Detection · PA · TV</span><span data-lang="ru">Пожарная сигнализация · Оповещение · ТВ</span></div>
           <div class="ref-title"><span data-lang="tr">Duşanbe Vefa Center AVM</span><span data-lang="en">Dushanbe Vefa Center Mall</span><span data-lang="ru">ТЦ Vefa Center, Душанбе</span></div>
           <div class="ref-loc"><span data-lang="tr">Duşanbe, Tacikistan</span><span data-lang="en">Dushanbe, Tajikistan</span><span data-lang="ru">Душанбе, Таджикистан</span></div>
         </div>
@@ -430,7 +414,6 @@
           <span class="ref-year">2020</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Trafo Merkezi</span><span data-lang="en">Transformer Substation</span><span data-lang="ru">Трансформаторная подстанция</span></div>
           <div class="ref-title"><span data-lang="tr">Rönesans Mobilizasyon</span><span data-lang="en">Renaissance Mobilization</span><span data-lang="ru">Rönesans Mobilizasyon</span></div>
           <div class="ref-loc"><span data-lang="tr">Özbekistan</span><span data-lang="en">Uzbekistan</span><span data-lang="ru">Узбекистан</span></div>
         </div>
@@ -438,11 +421,10 @@
 
       <div class="ref-card rv d1" data-country="uzbekistan">
         <div class="ref-imgwrap">
-          <img class="ref-img ref-img--contain" src="assets/projects/ref31-ronesans-mobilizasyon-yangin.png?v=2" alt="Rönesans Mobilizasyon — Morley-IAS yangın algılama sistemi" loading="lazy" />
+          <img class="ref-img ref-img--contain" src="assets/projects/ref31-ronesans-mobilizasyon-yangin.png?v=2" alt="Rönesans Mobilizasyon" loading="lazy" />
           <span class="ref-year">2020</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama Sistemi</span><span data-lang="en">Fire Detection System</span><span data-lang="ru">Система пожарной сигнализации</span></div>
           <div class="ref-title"><span data-lang="tr">Rönesans Mobilizasyon</span><span data-lang="en">Renaissance Mobilization</span><span data-lang="ru">Rönesans Mobilizasyon</span></div>
           <div class="ref-loc"><span data-lang="tr">Özbekistan</span><span data-lang="en">Uzbekistan</span><span data-lang="ru">Узбекистан</span></div>
         </div>
@@ -454,7 +436,6 @@
           <span class="ref-year">2025</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">CCTV · Yangın Algılama</span><span data-lang="en">CCTV · Fire Detection</span><span data-lang="ru">CCTV · Пожарная сигнализация</span></div>
           <div class="ref-title"><span data-lang="tr">Halkbank Genel Müdürlük</span><span data-lang="en">Halkbank Headquarters</span><span data-lang="ru">Штаб-квартира Halkbank</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
@@ -466,7 +447,6 @@
           <span class="ref-year">2020</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · CCTV</span><span data-lang="en">Fire Detection · CCTV</span><span data-lang="ru">Пожарная сигнализация · CCTV</span></div>
           <div class="ref-title"><span data-lang="tr">Rixos Pera Otel</span><span data-lang="en">Rixos Pera Hotel</span><span data-lang="ru">Отель Rixos Pera</span></div>
           <div class="ref-loc"><span data-lang="tr">İstanbul, Türkiye</span><span data-lang="en">Istanbul, Turkey</span><span data-lang="ru">Стамбул, Турция</span></div>
         </div>
@@ -478,7 +458,6 @@
           <span class="ref-year">2023</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama Sistemleri · Montaj</span><span data-lang="en">Fire Detection Systems · Installation</span><span data-lang="ru">Системы пожарной сигнализации · Монтаж</span></div>
           <div class="ref-title"><span data-lang="tr">Regnum Carya Golf ve Spa Resort</span><span data-lang="en">Regnum Carya Golf &amp; Spa Resort</span><span data-lang="ru">Regnum Carya Golf &amp; Spa Resort</span></div>
           <div class="ref-loc"><span data-lang="tr">Antalya, Türkiye</span><span data-lang="en">Antalya, Turkey</span><span data-lang="ru">Анталья, Турция</span></div>
         </div>
@@ -490,7 +469,6 @@
           <span class="ref-year">2014</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · Kartlı Geçiş</span><span data-lang="en">Fire Detection · PA · CCTV · Access Control</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · Контроль доступа</span></div>
           <div class="ref-title"><span data-lang="tr">Ziraat Bankası Maltepe Merkez Binası</span><span data-lang="en">Ziraat Bank Maltepe Headquarters</span><span data-lang="ru">Главное здание Ziraat Bank, Maltepe</span></div>
           <div class="ref-loc"><span data-lang="tr">Maltepe, İstanbul, Türkiye</span><span data-lang="en">Maltepe, Istanbul, Turkey</span><span data-lang="ru">Maltepe, Стамбул, Турция</span></div>
         </div>
@@ -502,7 +480,6 @@
           <span class="ref-year">2024</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons</span><span data-lang="en">Fire Detection · PA</span><span data-lang="ru">Пожарная сигнализация · Оповещение</span></div>
           <div class="ref-title"><span data-lang="tr">Mersin Şişecam Fabrikası</span><span data-lang="en">Mersin Şişecam Factory</span><span data-lang="ru">Завод Şişecam, Мерсин</span></div>
           <div class="ref-loc"><span data-lang="tr">Mersin, Türkiye</span><span data-lang="en">Mersin, Turkey</span><span data-lang="ru">Мерсин, Турция</span></div>
         </div>
@@ -514,7 +491,6 @@
           <span class="ref-year">2019</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · SMATV</span><span data-lang="en">Fire Detection · PA · CCTV · SMATV</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · SMATV</span></div>
           <div class="ref-title"><span data-lang="tr">İstanbul Panorama Evleri</span><span data-lang="en">Istanbul Panorama Residences</span><span data-lang="ru">Жилой комплекс Panorama, Стамбул</span></div>
           <div class="ref-loc"><span data-lang="tr">Bağcılar, İstanbul, Türkiye · 95.000 m²</span><span data-lang="en">Bağcılar, Istanbul, Turkey · 95,000 m²</span><span data-lang="ru">Bağcılar, Стамбул, Турция · 95 000 м²</span></div>
         </div>
@@ -526,7 +502,6 @@
           <span class="ref-year">2019</span>
         </div>
         <div class="ref-body">
-          <div class="ref-tag"><span data-lang="tr">Yangın Algılama · Acil Anons · CCTV · Sprinkler</span><span data-lang="en">Fire Detection · PA · CCTV · Sprinkler</span><span data-lang="ru">Пожарная сигнализация · Оповещение · CCTV · Sprinkler</span></div>
           <div class="ref-title"><span data-lang="tr">Taşkent Uluslararası Havalimanı</span><span data-lang="en">Tashkent International Airport</span><span data-lang="ru">Международный аэропорт Ташкента</span></div>
           <div class="ref-loc"><span data-lang="tr">Taşkent, Özbekistan</span><span data-lang="en">Tashkent, Uzbekistan</span><span data-lang="ru">Ташкент, Узбекистан</span></div>
         </div>
@@ -534,108 +509,61 @@
     </div>
 
     <figure class="refs-map rv">
-      <img src="assets/references-global-map.jpg" alt="FNV Elektronik international project locations" loading="lazy" width="1024" height="772" />
+      <img src="assets/references-global-map.jpg" alt="REF YAPI international project locations" loading="lazy" width="1024" height="772" />
     </figure>
   </div>
 </section>
 
-<section class="catalog">
-  <div class="catalog-inner">
-    <div class="catalog-left rv">
-      <div class="catalog-tag"><span data-lang="tr">Projeniz mi Var?</span><span data-lang="en">Have a Project?</span><span data-lang="ru">Есть проект?</span></div>
-      <h2><span data-lang="tr">Sıradaki Referansımız Siz Olun</span><span data-lang="en">Become Our Next Reference</span><span data-lang="ru">Станьте нашим следующим проектом</span></h2>
-      <p><span data-lang="tr">Projeniz için ücretsiz keşif ve teklif talep edin.</span><span data-lang="en">Request a free site survey and quote for your project.</span><span data-lang="ru">Запросите бесплатный осмотр и смету для вашего проекта.</span></p>
+<section class="band">
+  <div class="band-inner">
+    <div>
+      <h2><span data-lang="tr">Sıradaki işiniz</span><span data-lang="en">Your next project</span><span data-lang="ru">Ваш следующий проект</span></h2>
+      <p><span data-lang="tr">Keşif ve teklif için yazın.</span><span data-lang="en">Write to us for a survey and quote.</span><span data-lang="ru">Напишите нам для осмотра и сметы.</span></p>
     </div>
-    <button type="button" class="btn-white rv d2 quote-trigger">
-      <span data-lang="tr">Teklif Formu</span><span data-lang="en">Quote Form</span><span data-lang="ru">Форма запроса</span>
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <button type="button" class="text-link quote-trigger">
+      <span data-lang="tr">Teklif al</span><span data-lang="en">Get a quote</span><span data-lang="ru">Запросить смету</span>
     </button>
   </div>
 </section>
 
 <footer>
-  <div class="ft-top">
+  <div class="wrap ft-top">
     <div>
-      <img class="ft-brand-logo" src="assets/logo-white.png?v=2" alt="FNV Elektronik">
+      <img class="ft-brand-logo" src="assets/logo-white.png?v=3" alt="REF YAPI">
       <p class="ft-brand-sub">
-        <span data-lang="tr">Elektrik Zayıf Akım Sistemleri alanında güvenilir çözüm ortağınız. 2005'ten bu yana hizmetinizdeyiz.</span>
-        <span data-lang="en">Your trusted partner for low-current systems. Serving you since 2005.</span>
-        <span data-lang="ru">Надёжный партнёр в слаботочных системах. Работаем с 2005 года.</span>
+        <span data-lang="tr">İnşaat ve yapı. 2005’ten beri.</span>
+        <span data-lang="en">Construction and building. Since 2005.</span>
+        <span data-lang="ru">Строительство. С 2005 года.</span>
       </p>
     </div>
-    <div class="ft-col-services">
-      <p class="ft-col-head"><span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></p>
-      <ul class="ft-links ft-links--2col">
-        <li><a href="fire-detection.html"><span data-lang="tr">Yangın Alarm Sistemleri</span><span data-lang="en">Fire Alarm Systems</span><span data-lang="ru">Пожарная сигнализация</span></a></li>
-        <li><a href="security-systems.html#kartli-gecis"><span data-lang="tr">Erişim Kontrol</span><span data-lang="en">Access Control</span><span data-lang="ru">Контроль доступа</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve Altyapı</span><span data-lang="en">Data & Infrastructure</span><span data-lang="ru">Data и инфраструктура</span></a></li>
-        <li><a href="automation-systems.html#otel-kapi"><span data-lang="tr">Otel Kapı Sistemleri</span><span data-lang="en">Hotel Door Systems</span><span data-lang="ru">Дверные системы для отелей</span></a></li>
-        <li><a href="audio-visual-systems.html#genel-anons"><span data-lang="tr">Genel Anons ve Sesli Alarm</span><span data-lang="en">Public Announcement</span><span data-lang="ru">Оповещение</span></a></li>
-        <li><a href="automation-systems.html#mekanik"><span data-lang="tr">Mekanik Otomasyon</span><span data-lang="en">Mechanical Automation</span><span data-lang="ru">Механическая автоматизация</span></a></li>
-        <li><a href="data-communications.html#telefon-voip"><span data-lang="tr">Telefon Sistemleri</span><span data-lang="en">Phone Systems</span><span data-lang="ru">Телефонные системы</span></a></li>
-        <li><a href="tv-video-systems.html#intercom"><span data-lang="tr">IP İntercom</span><span data-lang="en">IP Intercom</span><span data-lang="ru">IP-домофон</span></a></li>
-        <li><a href="security-systems.html#cctv"><span data-lang="tr">CCTV</span><span data-lang="en">CCTV</span><span data-lang="ru">Видеонаблюдение</span></a></li>
-        <li><a href="automation-systems.html#aydinlatma"><span data-lang="tr">Bina ve Aydınlatma Otomasyonu</span><span data-lang="en">Building & Lighting Automation</span><span data-lang="ru">Автоматизация зданий</span></a></li>
-        <li><a href="automation-systems.html#hemsire"><span data-lang="tr">Hemşire Çağrı ve Mavi Kod</span><span data-lang="en">Nurse Call & Code Blue</span><span data-lang="ru">Вызов медсестры</span></a></li>
-        <li><a href="tv-video-systems.html#smatv"><span data-lang="tr">IPTV Sistemleri</span><span data-lang="en">IPTV Systems</span><span data-lang="ru">IPTV-системы</span></a></li>
-      </ul>
-      <p class="ft-col-head ft-col-head--sub"><span data-lang="tr">Ürün Kategorileri</span><span data-lang="en">Product Categories</span><span data-lang="ru">Категории продуктов</span></p>
-      <ul class="ft-links">
-        <li><a href="integrated-building-systems.html"><span data-lang="tr">Entegre Bina Sistemleri</span><span data-lang="en">Integrated Building Systems</span><span data-lang="ru">Интегрированные системы</span></a></li>
-        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim</span><span data-lang="en">Data &amp; Comms</span><span data-lang="ru">Связь и данные</span></a></li>
-        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü</span><span data-lang="en">TV &amp; Video</span><span data-lang="ru">ТВ и видео</span></a></li>
-      </ul>
-    </div>
     <div>
-      <p class="ft-col-head"><span data-lang="tr">Şirket</span><span data-lang="en">Company</span><span data-lang="ru">Компания</span></p>
+      <p class="ft-col-head"><span data-lang="tr">Site</span><span data-lang="en">Site</span><span data-lang="ru">Сайт</span></p>
       <ul class="ft-links">
-        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
-        <li><a href="index.html#hizmetler"><span data-lang="tr">Hizmetlerimiz</span><span data-lang="en">Our Services</span><span data-lang="ru">Услуги</span></a></li>
-        <li><a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Products</span><span data-lang="ru">Продукция</span></a></li>
-        <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
-        <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
-        <li><a href="istanbul.html"><span data-lang="tr">İstanbul Ofisi</span><span data-lang="en">Istanbul Office</span><span data-lang="ru">Офис в Стамбуле</span></a></li>
-        <li><a href="london.html"><span data-lang="tr">Londra Ofisi</span><span data-lang="en">London Office</span><span data-lang="ru">Офис в Лондоне</span></a></li>
-        <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya Ofisi</span><span data-lang="en">Middle East &amp; Asia Office</span><span data-lang="ru">Офис на Ближнем Востоке и в Азии</span></a></li>
-
-        <li><a href="privacy-policy.html"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a></li>
-        <li><a href="cookie-policy.html"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a></li>
-        <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
+        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About</span><span data-lang="ru">О нас</span></a></li>
+        <li><a href="references.html"><span data-lang="tr">Referanslar</span><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></a></li>
+        <li><a href="documents.html"><span data-lang="tr">Belgeler</span><span data-lang="en">Documents</span><span data-lang="ru">Документы</span></a></li>
+        <li><a href="istanbul.html">İstanbul</a></li>
+        <li><a href="london.html">London</a></li>
+        <li><a href="middle-east-asia.html"><span data-lang="tr">Taşkent</span><span data-lang="en">Tashkent</span><span data-lang="ru">Ташкент</span></a></li>
       </ul>
     </div>
     <div>
       <p class="ft-col-head"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></p>
       <ul class="ft-links">
-        <li><a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a></li>
-        <li><a href="https://www.fnvelektronik.com" target="_blank">www.fnvelektronik.com</a></li>
+        <li><a href="mailto:info@refyapi.com">info@refyapi.com</a></li>
       </ul>
-      <div class="ft-social">
-        <a href="https://www.instagram.com/fnvelektronik/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://www.facebook.com/p/FNV-Elektronik-100063649779411/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 3H10c-2.761 0-5 2.239-5 5v3H3.5a.5.5 0 0 0-.5.5V14c0 .276.224.5.5.5H5v7.5a.5.5 0 0 0 .5.5H9a.5.5 0 0 0 .5-.5V14.5h3.05a.5.5 0 0 0 .496-.438l.45-3.5a.5.5 0 0 0-.494-.562H9.5V8c0-.827.673-1.5 1.5-1.5h3a.5.5 0 0 0 .5-.5V3.5a.5.5 0 0 0-.5-.5z"/></svg>
-        </a>
-      </div>
-      <div class="ft-qr">
-        <img class="ft-qr-img" src="assets/digital-business-card-qr.png?v=2" alt="FNV Elektronik digital business card QR code" width="108" height="108" loading="lazy" />
-        <p class="ft-qr-label"><span data-lang="tr">Dijital Kartvizit</span><span data-lang="en">Digital Business Card</span><span data-lang="ru">Цифровая визитка</span></p>
-        <p class="ft-qr-hint"><span data-lang="tr">Okutmak için telefonunuzla tarayın</span><span data-lang="en">Scan with your phone to view</span><span data-lang="ru">Отсканируйте телефоном</span></p>
-      </div>
     </div>
   </div>
-  <div class="ft-bottom">
-    <span>© 2026 FNV Elektronik · <span data-lang="tr">Tüm Hakları Saklıdır</span><span data-lang="en">All Rights Reserved</span><span data-lang="ru">Все права защищены</span></span>
+  <div class="wrap ft-bottom">
+    <span>© 2026 REF YAPI</span>
     <span class="ft-legal-links">
-      <a href="privacy-policy.html" class="ft-legal-link"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a>
+      <a href="privacy-policy.html" class="ft-legal-link"><span data-lang="tr">Gizlilik</span><span data-lang="en">Privacy</span><span data-lang="ru">Конфиденциальность</span></a>
       <span class="ft-legal-sep">·</span>
-      <a href="cookie-policy.html" class="ft-legal-link"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a>
+      <a href="cookie-policy.html" class="ft-legal-link"><span data-lang="tr">Çerezler</span><span data-lang="en">Cookies</span><span data-lang="ru">Cookie</span></a>
     </span>
-    <span>İstanbul · London · <span data-lang="tr">Orta Doğu/Asya</span><span data-lang="en">Middle East/Asia</span><span data-lang="ru">Ближний Восток/Азия</span></span>
   </div>
 </footer>
 
-<script src="assets/site.js?v=45"></script>
+<script src="assets/site.js?v=52"></script>
 </body>
 </html>

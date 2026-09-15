@@ -1,80 +1,94 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <script>try{var l=localStorage.getItem('fnv-lang');if(l==='en'||l==='ru')document.documentElement.classList.add('lang-'+l);}catch(e){}</script>
+  <script>try{var l=localStorage.getItem('refyapi-lang');if(l==='en'||l==='ru')document.documentElement.classList.add('lang-'+l);}catch(e){}</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="assets/logo-mark.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/logo-mark.png" />
-  <title>Gizlilik Politikası — FNV Elektronik</title>
+  <link rel="icon" href="assets/logo-icon.png?v=3" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo-icon.png?v=3" />
+  <title>Gizlilik Politikası — REF YAPI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=48" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=67" />
 </head>
 <body>
 
 <nav class="nav solid" id="mainNav">
   <a href="index.html" class="nav-logo">
-    <img class="logo-light" src="assets/logo-white.png?v=2" alt="FNV Elektronik">
-    <img class="logo-dark" src="assets/logo-mark.png" alt="FNV Elektronik">
+    <img class="logo-light" src="assets/logo-white.png?v=3" alt="REF YAPI">
+    <img class="logo-dark" src="assets/logo-mark.png?v=3" alt="REF YAPI">
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
-    <li>
-      <a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Our Products</span><span data-lang="ru">Продукты</span><span class="dd-arrow">▾</span></a>
-      <ul class="dd">
-        <li><a href="integrated-building-systems.html"><span data-lang="tr">Honeywell · Entegre Bina Sistemleri</span><span data-lang="en">Honeywell · Integrated Building Systems</span><span data-lang="ru">Honeywell · Интегрированные системы</span></a></li>
-        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim Sistemleri</span><span data-lang="en">Data &amp; Communications</span><span data-lang="ru">Связь и данные</span></a></li>
-        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü Sistemleri</span><span data-lang="en">TV &amp; Video Systems</span><span data-lang="ru">ТВ и видео</span></a></li>
-      </ul>
-    </li>
-    <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
-    <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
-        <li class="nav-offices">
-      <a href="index.html#iletisim"><span data-lang="tr">Ofisler</span><span data-lang="en">Offices</span><span data-lang="ru">Офисы</span><span class="dd-arrow">▾</span></a>
-      <ul class="dd">
-        <li><a href="istanbul.html"><span data-lang="tr">İstanbul Ofisi</span><span data-lang="en">Istanbul Office</span><span data-lang="ru">Офис в Стамбуле</span></a></li>
-        <li><a href="london.html"><span data-lang="tr">Londra Ofisi</span><span data-lang="en">London Office</span><span data-lang="ru">Офис в Лондоне</span></a></li>
-        <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya Ofisi</span><span data-lang="en">Middle East &amp; Asia Office</span><span data-lang="ru">Офис на Ближнем Востоке и в Азии</span></a></li>
-      </ul>
-    </li>
-
-    <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
-  </ul>
-  <div class="nav-right">
-    <button type="button" class="btn-nav-quote quote-trigger">
-      <span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span>
-    </button>
-    <button class="lbtn on" onclick="setLang('tr')">TR</button>
-    <button class="lbtn" onclick="setLang('en')">EN</button>
-    <button class="lbtn" onclick="setLang('ru')">RU</button>
-    <button class="hbg" aria-label="Menü"><span></span><span></span><span></span></button>
+  <button class="hbg" aria-label="Menü" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-panel">
+    <ul class="nav-links">
+      <li>
+        <a href="index.html#hakkimizda">
+          <span data-lang="tr">Hakkımızda</span>
+          <span data-lang="en">About</span>
+          <span data-lang="ru">О нас</span>
+        </a>
+      </li>
+      <li>
+        <a href="references.html">
+          <span data-lang="tr">Referanslar</span>
+          <span data-lang="en">Projects</span>
+          <span data-lang="ru">Проекты</span>
+        </a>
+      </li>
+      <li>
+        <a href="documents.html">
+          <span data-lang="tr">Belgeler</span>
+          <span data-lang="en">Documents</span>
+          <span data-lang="ru">Документы</span>
+        </a>
+      </li>
+      <li class="nav-offices">
+        <a href="index.html#iletisim">
+          <span data-lang="tr">Ofisler</span>
+          <span data-lang="en">Offices</span>
+          <span data-lang="ru">Офисы</span>
+        </a>
+        <ul class="dd">
+          <li><a href="istanbul.html"><span data-lang="tr">İstanbul</span><span data-lang="en">Istanbul</span><span data-lang="ru">Стамбул</span></a></li>
+          <li><a href="london.html"><span data-lang="tr">Londra</span><span data-lang="en">London</span><span data-lang="ru">Лондон</span></a></li>
+          <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya</span><span data-lang="en">Middle East &amp; Asia</span><span data-lang="ru">Ближний Восток и Азия</span></a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-panel-foot">
+      <button type="button" class="btn-nav-quote quote-trigger">
+        <span data-lang="tr">Teklif Al</span><span data-lang="en">Get a Quote</span><span data-lang="ru">Смета</span>
+      </button>
+      <div class="nav-langs">
+        <button class="lbtn on" onclick="setLang('tr')">TR</button>
+        <button class="lbtn" onclick="setLang('en')">EN</button>
+        <button class="lbtn" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
   </div>
-
 </nav>
 
-<section class="svc-hero">
-  <div class="svc-hero-bg" style="background-image:url('assets/istanbul-skyline.png')"></div>
-  <div class="svc-hero-content">
+<header class="page-head">
+  <div class="wrap">
     <div class="crumb">
       <a href="index.html"><span data-lang="tr">Ana Sayfa</span><span data-lang="en">Home</span><span data-lang="ru">Главная</span></a>
       <span class="sep">/</span>
-      <span class="cur"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></span>
+      <span class="cur"><span data-lang="tr">Gizlilik</span><span data-lang="en">Privacy</span><span data-lang="ru">Конфиденциальность</span></span>
     </div>
-    <span class="svc-hero-eyebrow"><span data-lang="tr">Yasal</span><span data-lang="en">Legal</span><span data-lang="ru">Правовая информация</span></span>
-    <h1 class="svc-hero-title"><span data-lang="tr">Gizlilik<br>Politikası</span><span data-lang="en">Privacy<br>Policy</span><span data-lang="ru">Политика<br>конфиденциальности</span></h1>
+    <h1><span data-lang="tr">Gizlilik politikası</span><span data-lang="en">Privacy policy</span><span data-lang="ru">Политика конфиденциальности</span></h1>
   </div>
-</section>
+</header>
 
 <section class="legal-page">
   <div class="legal-page-inner">
     <p class="legal-updated"><span data-lang="tr">Güncellenme tarihi: 01.07.2026</span><span data-lang="en">Last updated: 1 July 2026</span><span data-lang="ru">Дата обновления: 01.07.2026</span></p>
-      <div class="legal-block"><span data-lang="tr">Fnv Elektronik ve Bilgisayar Ltd. Şti.'nin ("FNV Elektronik") kullanıcıların ("Kullanıcı(lar)") arzusuna bağlı olarak web sitesi ("Web Sitesi") üzerinden elde ettiği kişisel verileri toplarken ve kullanırken izlediği prensipler bu Gizlilik Politikası'nda düzenlenmektedir.</span><span data-lang="en">This Privacy Policy sets out the principles followed by Fnv Elektronik ve Bilgisayar Ltd. Şti. ("FNV Elektronik") when collecting and using personal data obtained from users ("User(s)") through the website ("Website") at their discretion.</span><span data-lang="ru">Настоящая Политика конфиденциальности определяет принципы, которых придерживается Fnv Elektronik ve Bilgisayar Ltd. Şti. ("FNV Elektronik") при сборе и использовании персональных данных пользователей ("Пользователь(и)") через веб-сайт ("Веб-сайт") по их желанию.</span></div>
+      <div class="legal-block"><span data-lang="tr">REF YAPI'nin ("REF YAPI") kullanıcıların ("Kullanıcı(lar)") arzusuna bağlı olarak web sitesi ("Web Sitesi") üzerinden elde ettiği kişisel verileri toplarken ve kullanırken izlediği prensipler bu Gizlilik Politikası'nda düzenlenmektedir.</span><span data-lang="en">This Privacy Policy sets out the principles followed by REF YAPI ("REF YAPI") when collecting and using personal data obtained from users ("User(s)") through the website ("Website") at their discretion.</span><span data-lang="ru">Настоящая Политика конфиденциальности определяет принципы, которых придерживается REF YAPI ("REF YAPI") при сборе и использовании персональных данных пользователей ("Пользователь(и)") через веб-сайт ("Веб-сайт") по их желанию.</span></div>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">Toplanabilecek Kişisel Veriler</span><span data-lang="en">Personal Data That May Be Collected</span><span data-lang="ru">Собираемые персональные данные</span></h2>
-        <div class="legal-body"><div data-lang="tr">FNV Elektronik, Web Sitesi üzerinde, Kullanıcıların Web Sitesi'ne erişimi ve yapacakları işlemlere bağlı olarak Kullanıcı'nın;
+        <div class="legal-body"><div data-lang="tr">REF YAPI, Web Sitesi üzerinde, Kullanıcıların Web Sitesi'ne erişimi ve yapacakları işlemlere bağlı olarak Kullanıcı'nın;
 
 <ul class="legal-list">
 <li>Kimlik Bilgisini</li>
@@ -88,9 +102,9 @@
 <li>Kullanıcı İşlem Bilgisini</li>
 </ul>
 
-Web Sitesi'ne konu hizmetlerin ifa edilmesi için gerekli olabilecek ve Kişisel Verilerin Korunması Kanunu ve ilgili tüm mevzuat uyarınca kişisel veri sayılan sair bilgileri toplayabilecektir. Kullanıcı, kendi arzusu doğrultusunda FNV Elektronik ile paylaşabileceği verilerin işbu Gizlilik Politikası'nda belirtilen kapsamda, belirtilen amaçlarla işlenmesine açıkça muvafakat etmektedir.
+Web Sitesi'ne konu hizmetlerin ifa edilmesi için gerekli olabilecek ve Kişisel Verilerin Korunması Kanunu ve ilgili tüm mevzuat uyarınca kişisel veri sayılan sair bilgileri toplayabilecektir. Kullanıcı, kendi arzusu doğrultusunda REF YAPI ile paylaşabileceği verilerin işbu Gizlilik Politikası'nda belirtilen kapsamda, belirtilen amaçlarla işlenmesine açıkça muvafakat etmektedir.
 
-<p>Kişisel Verilerin Korunması Kanunu'nun 3 ve 7. maddesi uyarınca, geri döndürülemeyecek şekilde anonim hale getirilen veriler, anılan kanun hükümleri uyarınca kişisel veri olarak kabul edilmeyecek ve bu verilere ilişkin işleme faaliyetleri işbu Gizlilik Politikası hükümleri ile bağlı olmaksızın gerçekleştirilecektir.</p></div><div data-lang="en">On the Website, depending on Users' access and transactions, FNV Elektronik may collect the User's:
+<p>Kişisel Verilerin Korunması Kanunu'nun 3 ve 7. maddesi uyarınca, geri döndürülemeyecek şekilde anonim hale getirilen veriler, anılan kanun hükümleri uyarınca kişisel veri olarak kabul edilmeyecek ve bu verilere ilişkin işleme faaliyetleri işbu Gizlilik Politikası hükümleri ile bağlı olmaksızın gerçekleştirilecektir.</p></div><div data-lang="en">On the Website, depending on Users' access and transactions, REF YAPI may collect the User's:
 
 <ul class="legal-list">
 <li>Identity information</li>
@@ -104,9 +118,9 @@ Web Sitesi'ne konu hizmetlerin ifa edilmesi için gerekli olabilecek ve Kişisel
 <li>User transaction information</li>
 </ul>
 
-and other data that may be required to provide Website services and that qualify as personal data under the Personal Data Protection Law and related legislation. The User expressly consents to the processing of data they may share with FNV Elektronik at their discretion within the scope and for the purposes set out in this Privacy Policy.
+and other data that may be required to provide Website services and that qualify as personal data under the Personal Data Protection Law and related legislation. The User expressly consents to the processing of data they may share with REF YAPI at their discretion within the scope and for the purposes set out in this Privacy Policy.
 
-<p>Pursuant to Articles 3 and 7 of the Personal Data Protection Law, data irreversibly anonymised shall not be regarded as personal data, and processing of such data may be carried out without being bound by this Privacy Policy.</p></div><div data-lang="ru">На Веб-сайте, в зависимости от доступа и действий Пользователей, FNV Elektronik может собирать:
+<p>Pursuant to Articles 3 and 7 of the Personal Data Protection Law, data irreversibly anonymised shall not be regarded as personal data, and processing of such data may be carried out without being bound by this Privacy Policy.</p></div><div data-lang="ru">На Веб-сайте, в зависимости от доступа и действий Пользователей, REF YAPI может собирать:
 
 <ul class="legal-list">
 <li>Идентификационные данные</li>
@@ -126,45 +140,45 @@ and other data that may be required to provide Website services and that qualify
       </section>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">"Cookie" Kullanımı</span><span data-lang="en">Use of Cookies</span><span data-lang="ru">Использование cookie</span></h2>
-        <div class="legal-body"><div data-lang="tr">FNV Elektronik tarafından, Kullanıcılar'ın Web Sitesi'ndeki dolaşımları sırasında ziyaret edilen bölümler, tıklanan alanlar gibi veriler otomatik olarak toplanmaktadır. "Cookie" adlı teknoloji kullanılarak elde edilen bu veriler istatistiksel bilgilerdir. Bu teknoloji ile amaçlanan, Kullanıcılar'ın ziyaret ettikleri bölümlere ait içeriği, siteye ilk ziyaretlerinden itibaren Kullanıcı için daha kolay ulaşılır kılmaktır. Tarayıcıların pek çoğu başta teknik iletişim dosyası olan bu "cookie"leri kabul eder biçimde tasarlanmıştır, ancak Kullanıcılar dilerlerse teknik iletişim dosyasının gelmemesi veya teknik iletişim dosyasının gönderildiğinde ikaz verilmesini sağlayacak biçimde tarayıcı ayarlarını her zaman için değiştirebilirler.
+        <div class="legal-body"><div data-lang="tr">REF YAPI tarafından, Kullanıcılar'ın Web Sitesi'ndeki dolaşımları sırasında ziyaret edilen bölümler, tıklanan alanlar gibi veriler otomatik olarak toplanmaktadır. "Cookie" adlı teknoloji kullanılarak elde edilen bu veriler istatistiksel bilgilerdir. Bu teknoloji ile amaçlanan, Kullanıcılar'ın ziyaret ettikleri bölümlere ait içeriği, siteye ilk ziyaretlerinden itibaren Kullanıcı için daha kolay ulaşılır kılmaktır. Tarayıcıların pek çoğu başta teknik iletişim dosyası olan bu "cookie"leri kabul eder biçimde tasarlanmıştır, ancak Kullanıcılar dilerlerse teknik iletişim dosyasının gelmemesi veya teknik iletişim dosyasının gönderildiğinde ikaz verilmesini sağlayacak biçimde tarayıcı ayarlarını her zaman için değiştirebilirler.
 
-<p>FNV Elektronik, online davranışsal reklamcılık ve pazarlama yapılabilmesi amacıyla Kullanıcılar'ın Web Sitesi'ndeki davranışlarını tarayıcıda bulunan bir "cookie" ile ilişkilendirme ve görüntülenen sayfa sayısı, ziyaret süresi ve hedef tamamlama sayısı gibi metrikleri temel alan yeniden pazarlama listeleri tanımlama hakkını haizdir. Sonrasında Kullanıcı'ya Web Sitesi'nde ya da görüntülü reklam ağındaki diğer sitelerde ilgi alanlarına göre hedefe yönelik reklam içeriği gösterilebilir.</p></div><div data-lang="en">During Users' navigation on the Website, data such as sections visited and areas clicked are collected automatically by FNV Elektronik using "cookie" technology. This data is statistical. The purpose is to make content in visited sections more accessible from the User's first visit. Most browsers accept cookies by default; Users may change browser settings to block cookies or receive warnings when cookies are sent.
+<p>REF YAPI, online davranışsal reklamcılık ve pazarlama yapılabilmesi amacıyla Kullanıcılar'ın Web Sitesi'ndeki davranışlarını tarayıcıda bulunan bir "cookie" ile ilişkilendirme ve görüntülenen sayfa sayısı, ziyaret süresi ve hedef tamamlama sayısı gibi metrikleri temel alan yeniden pazarlama listeleri tanımlama hakkını haizdir. Sonrasında Kullanıcı'ya Web Sitesi'nde ya da görüntülü reklam ağındaki diğer sitelerde ilgi alanlarına göre hedefe yönelik reklam içeriği gösterilebilir.</p></div><div data-lang="en">During Users' navigation on the Website, data such as sections visited and areas clicked are collected automatically by REF YAPI using "cookie" technology. This data is statistical. The purpose is to make content in visited sections more accessible from the User's first visit. Most browsers accept cookies by default; Users may change browser settings to block cookies or receive warnings when cookies are sent.
 
-<p>FNV Elektronik may associate Users' Website behaviour with browser cookies and define remarketing lists based on metrics such as pages viewed, visit duration and goal completions for online behavioural advertising and marketing. Targeted advertising may then be shown on the Website or other sites in display networks according to interests.</p></div><div data-lang="ru">При навигации по Веб-сайту FNV Elektronik автоматически собирает данные о посещённых разделах и кликах с помощью технологии «cookie». Эти статистические данные делают контент более доступным с первого визита. Браузеры обычно принимают cookies по умолчанию; Пользователь может изменить настройки для блокировки или предупреждений.
+<p>REF YAPI may associate Users' Website behaviour with browser cookies and define remarketing lists based on metrics such as pages viewed, visit duration and goal completions for online behavioural advertising and marketing. Targeted advertising may then be shown on the Website or other sites in display networks according to interests.</p></div><div data-lang="ru">При навигации по Веб-сайту REF YAPI автоматически собирает данные о посещённых разделах и кликах с помощью технологии «cookie». Эти статистические данные делают контент более доступным с первого визита. Браузеры обычно принимают cookies по умолчанию; Пользователь может изменить настройки для блокировки или предупреждений.
 
-<p>FNV Elektronik вправе связывать поведение на Веб-сайте с cookie и формировать списки ремаркетинга для поведенческой рекламы. Пользователю могут показываться таргетированные объявления на Веб-сайте или других площадках.</p></div></div>
+<p>REF YAPI вправе связывать поведение на Веб-сайте с cookie и формировать списки ремаркетинга для поведенческой рекламы. Пользователю могут показываться таргетированные объявления на Веб-сайте или других площадках.</p></div></div>
       </section>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">Verilerin Kullanılma Amacı</span><span data-lang="en">Purpose of Use of Data</span><span data-lang="ru">Цели использования данных</span></h2>
-        <div class="legal-body"><div data-lang="tr">FNV Elektronik, toplanan kişisel verileri Kullanıcı'nın Web Sitesi'nden faydalanabilmesi, Web Sitesi'ne üyelik söz konusu ise üyelik kaydının gerçekleştirilmesi, sunduğu hizmetlerin iyileştirilmesi, hizmetin geliştirilmesi, yeni hizmetlerin tanıtımı ve bilgilendirilmesi, bu kapsamda Kullanıcı'ya gerekli bilgilendirilmelerin yapılması, Kullanıcı ile temas kurulması ve sunduğu hizmetlerin doğasından kaynaklanan yükümlülüklerin yerine getirilmesi için işleyebilir.
+        <div class="legal-body"><div data-lang="tr">REF YAPI, toplanan kişisel verileri Kullanıcı'nın Web Sitesi'nden faydalanabilmesi, Web Sitesi'ne üyelik söz konusu ise üyelik kaydının gerçekleştirilmesi, sunduğu hizmetlerin iyileştirilmesi, hizmetin geliştirilmesi, yeni hizmetlerin tanıtımı ve bilgilendirilmesi, bu kapsamda Kullanıcı'ya gerekli bilgilendirilmelerin yapılması, Kullanıcı ile temas kurulması ve sunduğu hizmetlerin doğasından kaynaklanan yükümlülüklerin yerine getirilmesi için işleyebilir.
 
-<p>Söz konusu kişisel veriler FNV Elektronik raporlama ve iş geliştirme faaliyetleri kapsamında işlenebilecek, Kullanıcı'nın kimliği ifşa edilmeden çeşitli istatistiksel değerlendirmeler yapma, veri tabanı oluşturma ve pazar araştırmalarında bulunma amacıyla da kullanılabilecektir. Kullanıcı'nın ayrıca onay vermesi halinde söz konusu bilgiler FNV Elektronik ve işbirliğinde olduğu kişiler tarafından doğrudan pazarlama yapmak amacıyla işlenebilecek, saklanabilecek, üçüncü kişilere iletilebilecek ve söz konusu bilgiler üzerinden çeşitli uygulama, ürün ve hizmetlerin tanıtımı, bakım ve destek faaliyetlerine ilişkin bildirimlerde bulunma amacıyla Kullanıcı ile iletişime geçilebilecektir.</p>
+<p>Söz konusu kişisel veriler REF YAPI raporlama ve iş geliştirme faaliyetleri kapsamında işlenebilecek, Kullanıcı'nın kimliği ifşa edilmeden çeşitli istatistiksel değerlendirmeler yapma, veri tabanı oluşturma ve pazar araştırmalarında bulunma amacıyla da kullanılabilecektir. Kullanıcı'nın ayrıca onay vermesi halinde söz konusu bilgiler REF YAPI ve işbirliğinde olduğu kişiler tarafından doğrudan pazarlama yapmak amacıyla işlenebilecek, saklanabilecek, üçüncü kişilere iletilebilecek ve söz konusu bilgiler üzerinden çeşitli uygulama, ürün ve hizmetlerin tanıtımı, bakım ve destek faaliyetlerine ilişkin bildirimlerde bulunma amacıyla Kullanıcı ile iletişime geçilebilecektir.</p>
 
-<p>FNV Elektronik ayrıca, Kişisel Verilerin Korunması Kanunu'nun 5 ve 8. maddeleri uyarınca ve/veya ilgili mevzuattaki istisnaların varlığı halinde kişisel verileri Kullanıcı'nın ayrıca rızasını almaksızın işleyebilecek ve üçüncü kişilerle paylaşabilecektir. Bu durumların başlıcaları aşağıda belirtilmiştir:</p>
+<p>REF YAPI ayrıca, Kişisel Verilerin Korunması Kanunu'nun 5 ve 8. maddeleri uyarınca ve/veya ilgili mevzuattaki istisnaların varlığı halinde kişisel verileri Kullanıcı'nın ayrıca rızasını almaksızın işleyebilecek ve üçüncü kişilerle paylaşabilecektir. Bu durumların başlıcaları aşağıda belirtilmiştir:</p>
 
 <ul class="legal-list">
 <li>Kanunlarda açıkça öngörülmesi</li>
 <li>Fiili imkansızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması</li>
-<li>Kullanıcı ile FNV Elektronik arasında herhangi bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, kişisel verilerin işlenmesinin gerekli olması</li>
+<li>Kullanıcı ile REF YAPI arasında herhangi bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, kişisel verilerin işlenmesinin gerekli olması</li>
 <li>Hukuki yükümlülüklerin yerine getirilebilmesi için zorunlu olması</li>
 <li>Kullanıcı'nın kendisi tarafından alenileştirilmiş olması</li>
 <li>Bir hakkın tesisi, kullanılması veya korunması için veri işlemenin zorunlu olması</li>
-<li>Kullanıcı'nın temel hak ve özgürlüklerine zarar vermemek kaydıyla, FNV Elektronik'in meşru menfaatleri için veri işlenmesinin zorunlu olması</li>
-</ul></div><div data-lang="en">FNV Elektronik may process collected personal data so that the User can benefit from the Website, complete membership registration where applicable, improve and develop services, promote new services, provide necessary information, contact the User and fulfil obligations arising from the nature of its services.
+<li>Kullanıcı'nın temel hak ve özgürlüklerine zarar vermemek kaydıyla, REF YAPI'nin meşru menfaatleri için veri işlenmesinin zorunlu olması</li>
+</ul></div><div data-lang="en">REF YAPI may process collected personal data so that the User can benefit from the Website, complete membership registration where applicable, improve and develop services, promote new services, provide necessary information, contact the User and fulfil obligations arising from the nature of its services.
 
 <p>Such data may also be processed for reporting and business development, statistical evaluation without disclosing identity, database creation and market research. With additional User consent, information may be processed, stored, transferred to third parties and used for direct marketing and notifications regarding products, maintenance and support.</p>
 
-<p>Under Articles 5 and 8 of the Personal Data Protection Law and applicable exceptions, FNV Elektronik may process and share personal data without separate consent, including where:</p>
+<p>Under Articles 5 and 8 of the Personal Data Protection Law and applicable exceptions, REF YAPI may process and share personal data without separate consent, including where:</p>
 
 <ul class="legal-list">
 <li>Explicitly required by law</li>
 <li>Necessary to protect life or physical integrity where consent cannot be given</li>
-<li>Necessary for establishment or performance of a contract between User and FNV Elektronik</li>
+<li>Necessary for establishment or performance of a contract between User and REF YAPI</li>
 <li>Necessary to fulfil legal obligations</li>
 <li>Data has been made public by the User</li>
 <li>Necessary to establish, exercise or defend a legal right</li>
-<li>Necessary for legitimate interests of FNV Elektronik without harming fundamental rights and freedoms</li>
-</ul></div><div data-lang="ru">FNV Elektronik обрабатывает персональные данные для использования Веб-сайта, регистрации (если применимо), улучшения услуг, информирования, связи с Пользователем и выполнения обязательств.
+<li>Necessary for legitimate interests of REF YAPI without harming fundamental rights and freedoms</li>
+</ul></div><div data-lang="ru">REF YAPI обрабатывает персональные данные для использования Веб-сайта, регистрации (если применимо), улучшения услуг, информирования, связи с Пользователем и выполнения обязательств.
 
 <p>Данные могут использоваться для отчётности, статистики без раскрытия личности, баз данных и маркетинговых исследований. При дополнительном согласии — для прямого маркетинга и уведомлений о продуктах и поддержке.</p>
 
@@ -177,22 +191,22 @@ and other data that may be required to provide Website services and that qualify
 <li>необходимо для исполнения юридических обязанностей</li>
 <li>данные обнародованы Пользователем</li>
 <li>необходимо для установления или защиты прав</li>
-<li>необходимо для законных интересов FNV Elektronik</li>
+<li>необходимо для законных интересов REF YAPI</li>
 </ul></div></div>
       </section>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">Verilerin Paylaşımı</span><span data-lang="en">Sharing of Data</span><span data-lang="ru">Передача данных</span></h2>
-        <div class="legal-body"><div data-lang="tr">FNV Elektronik, Kullanıcılar'a ait kişisel verileri ve bu kişisel verileri kullanarak elde ettiği yeni verileri Web Sitesi kapsamında Kullanıcı'ya sunulan hizmetlerin ifası amacıyla hizmetlerinden faydalandığı üçüncü kişilere, söz konusu hizmetlerin temini amacıyla sınırlı olmak üzere aktarabilecektir. Bu kapsamda FNV Elektronik, Kullanıcı deneyiminin geliştirilmesi (iyileştirme ve kişiselleştirme dahil), Kullanıcı'nın güvenliğini sağlamak, hileli ya da izinsiz kullanımları tespit etmek, operasyonel değerlendirme araştırılması, Web Sitesi veya FNV Elektronik hizmetlerine ilişkin hataların giderilmesi ve işbu Gizlilik Politikası'nda veya Kullanıcı'ya sunulan sair gizlilik metinlerinde yer alan amaçlardan herhangi birisini gerçekleştirebilmek için Kullanıcı verilerini dış kaynak hizmet sağlayıcıları, barındırma hizmet sağlayıcıları ("hosting" servisleri), hukuk büroları, araştırma şirketleri, çağrı merkezleri gibi üçüncü kişiler ile paylaşabilecektir.
+        <div class="legal-body"><div data-lang="tr">REF YAPI, Kullanıcılar'a ait kişisel verileri ve bu kişisel verileri kullanarak elde ettiği yeni verileri Web Sitesi kapsamında Kullanıcı'ya sunulan hizmetlerin ifası amacıyla hizmetlerinden faydalandığı üçüncü kişilere, söz konusu hizmetlerin temini amacıyla sınırlı olmak üzere aktarabilecektir. Bu kapsamda REF YAPI, Kullanıcı deneyiminin geliştirilmesi (iyileştirme ve kişiselleştirme dahil), Kullanıcı'nın güvenliğini sağlamak, hileli ya da izinsiz kullanımları tespit etmek, operasyonel değerlendirme araştırılması, Web Sitesi veya REF YAPI hizmetlerine ilişkin hataların giderilmesi ve işbu Gizlilik Politikası'nda veya Kullanıcı'ya sunulan sair gizlilik metinlerinde yer alan amaçlardan herhangi birisini gerçekleştirebilmek için Kullanıcı verilerini dış kaynak hizmet sağlayıcıları, barındırma hizmet sağlayıcıları ("hosting" servisleri), hukuk büroları, araştırma şirketleri, çağrı merkezleri gibi üçüncü kişiler ile paylaşabilecektir.
 
-<p>Kullanıcı, yukarıda belirtilen amaçlarla sınırlı olmak kaydı ile bahsi geçen üçüncü tarafların Kullanıcı'nın kişisel verilerini dünyanın herhangi bir yerinde bulunan sunucularında saklayabileceğini, bu hususa peşinen muvafakat ettiğini kabul eder.</p></div><div data-lang="en">FNV Elektronik may transfer Users' personal data and derived data to third parties from whom it receives services, limited to providing Website services. Data may be shared with external service providers, hosting services, law firms, research companies and call centres to improve User experience, ensure security, detect fraud, conduct operational research, fix errors and fulfil purposes in this Privacy Policy or other privacy texts.
+<p>Kullanıcı, yukarıda belirtilen amaçlarla sınırlı olmak kaydı ile bahsi geçen üçüncü tarafların Kullanıcı'nın kişisel verilerini dünyanın herhangi bir yerinde bulunan sunucularında saklayabileceğini, bu hususa peşinen muvafakat ettiğini kabul eder.</p></div><div data-lang="en">REF YAPI may transfer Users' personal data and derived data to third parties from whom it receives services, limited to providing Website services. Data may be shared with external service providers, hosting services, law firms, research companies and call centres to improve User experience, ensure security, detect fraud, conduct operational research, fix errors and fulfil purposes in this Privacy Policy or other privacy texts.
 
-<p>The User accepts that such third parties may store personal data on servers anywhere in the world for the purposes stated above.</p></div><div data-lang="ru">FNV Elektronik может передавать персональные данные третьим лицам, оказывающим услуги, в объёме, необходимом для работы Веб-сайта — провайдерам, хостингу, юридическим и исследовательским компаниям, колл-центрам для улучшения опыта, безопасности, выявления мошенничества и иных целей Политики.
+<p>The User accepts that such third parties may store personal data on servers anywhere in the world for the purposes stated above.</p></div><div data-lang="ru">REF YAPI может передавать персональные данные третьим лицам, оказывающим услуги, в объёме, необходимом для работы Веб-сайта — провайдерам, хостингу, юридическим и исследовательским компаниям, колл-центрам для улучшения опыта, безопасности, выявления мошенничества и иных целей Политики.
 
 <p>Пользователь соглашается, что такие третьи лица могут хранить данные на серверах в любой точке мира в указанных целях.</p></div></div>
       </section>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">Kullanıcı'nın Verilere Erişim Hakkı ve Düzeltme Talepleri</span><span data-lang="en">User Access Rights and Correction Requests</span><span data-lang="ru">Права доступа и исправления</span></h2>
-        <div class="legal-body"><div data-lang="tr">Kullanıcı, FNV Elektronik'e başvurarak kendisiyle ilgili:
+        <div class="legal-body"><div data-lang="tr">Kullanıcı, REF YAPI'e başvurarak kendisiyle ilgili:
 
 <ul class="legal-list">
 <li>Kişisel veri işlenip işlenmediğini öğrenme</li>
@@ -208,11 +222,11 @@ and other data that may be required to provide Website services and that qualify
 
 <p>haklarına sahiptir.</p>
 
-<p>FNV Elektronik, yukarıda yer alan talepler uyarınca, gerekçeli olumlu/olumsuz yanıtını, yazılı veya dijital ortamdan gerçekleştirebilir. Taleplere ilişkin gerekli işlemler için ücret alınmaması esastır. Bununla birlikte, işlemlerin bir maliyet gerektirmesi halinde, Kişisel Verilerin Korunması Kurulu tarafından, Kişisel Verilerin Korunması Kanunu'nun 13. maddesine göre belirlenen tarife üzerinden ücret talep edilmesi mümkündür.</p>
+<p>REF YAPI, yukarıda yer alan talepler uyarınca, gerekçeli olumlu/olumsuz yanıtını, yazılı veya dijital ortamdan gerçekleştirebilir. Taleplere ilişkin gerekli işlemler için ücret alınmaması esastır. Bununla birlikte, işlemlerin bir maliyet gerektirmesi halinde, Kişisel Verilerin Korunması Kurulu tarafından, Kişisel Verilerin Korunması Kanunu'nun 13. maddesine göre belirlenen tarife üzerinden ücret talep edilmesi mümkündür.</p>
 
-<p>Kullanıcı, FNV Elektronik'e kendisi tarafından sağlanmış olan, işbu Gizlilik Politikası'na konu bilgilerin tam, doğru ve güncel olduğunu, bu bilgilerde herhangi bir değişiklik olması halinde bunları derhal güncelleyeceğini taahhüt eder. Kullanıcı'nın güncel bilgileri sağlamamış olması halinde FNV Elektronik'in herhangi bir sorumluluğu olmayacaktır.</p>
+<p>Kullanıcı, REF YAPI'e kendisi tarafından sağlanmış olan, işbu Gizlilik Politikası'na konu bilgilerin tam, doğru ve güncel olduğunu, bu bilgilerde herhangi bir değişiklik olması halinde bunları derhal güncelleyeceğini taahhüt eder. Kullanıcı'nın güncel bilgileri sağlamamış olması halinde REF YAPI'nin herhangi bir sorumluluğu olmayacaktır.</p>
 
-<p>Kullanıcı, herhangi bir kişisel verisinin FNV Elektronik tarafından kullanılamaması ile sonuçlanacak bir talepte bulunması halinde FNV Elektronik'in kendisine taahhüt ettiği hizmetlerden tam olarak faydalanamayabileceğini, bu kapsamda doğacak her türlü sorumluluğun kendisine ait olacağını kabul ve beyan eder.</p></div><div data-lang="en">The User may apply to FNV Elektronik to:
+<p>Kullanıcı, herhangi bir kişisel verisinin REF YAPI tarafından kullanılamaması ile sonuçlanacak bir talepte bulunması halinde REF YAPI'nin kendisine taahhüt ettiği hizmetlerden tam olarak faydalanamayabileceğini, bu kapsamda doğacak her türlü sorumluluğun kendisine ait olacağını kabul ve beyan eder.</p></div><div data-lang="en">The User may apply to REF YAPI to:
 
 <ul class="legal-list">
 <li>Learn whether personal data is processed</li>
@@ -226,11 +240,11 @@ and other data that may be required to provide Website services and that qualify
 <li>Claim compensation for damage from unlawful processing</li>
 </ul>
 
-<p>FNV Elektronik may respond in writing or digitally with reasoned approval or rejection. Fees are generally not charged; where costs arise, fees may be requested per the tariff under Article 13 of the Personal Data Protection Law.</p>
+<p>REF YAPI may respond in writing or digitally with reasoned approval or rejection. Fees are generally not charged; where costs arise, fees may be requested per the tariff under Article 13 of the Personal Data Protection Law.</p>
 
-<p>The User undertakes that information provided is complete, accurate and current and will update changes promptly. FNV Elektronik bears no liability if current information is not provided.</p>
+<p>The User undertakes that information provided is complete, accurate and current and will update changes promptly. REF YAPI bears no liability if current information is not provided.</p>
 
-<p>If a request results in data no longer being usable, the User accepts they may not fully benefit from promised services and bears resulting responsibility.</p></div><div data-lang="ru">Пользователь вправе обратиться в FNV Elektronik чтобы:
+<p>If a request results in data no longer being usable, the User accepts they may not fully benefit from promised services and bears resulting responsibility.</p></div><div data-lang="ru">Пользователь вправе обратиться в REF YAPI чтобы:
 
 <ul class="legal-list">
 <li>узнать, обрабатываются ли персональные данные</li>
@@ -244,25 +258,25 @@ and other data that may be required to provide Website services and that qualify
 <li>требовать возмещения ущерба от незаконной обработки</li>
 </ul>
 
-<p>FNV Elektronik отвечает письменно или в цифровом виде. Плата обычно не взимается; при необходимости — по тарифу ст. 13 Закона.</p>
+<p>REF YAPI отвечает письменно или в цифровом виде. Плата обычно не взимается; при необходимости — по тарифу ст. 13 Закона.</p>
 
-<p>Пользователь обязуется предоставлять полные и актуальные данные и обновлять их. FNV Elektronik не несёт ответственности при неактуальных данных.</p>
+<p>Пользователь обязуется предоставлять полные и актуальные данные и обновлять их. REF YAPI не несёт ответственности при неактуальных данных.</p>
 
 <p>Если запрос делает использование данных невозможным, Пользователь принимает ограничение услуг и ответственность за последствия.</p></div></div>
       </section>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">Kişisel Verilerin Saklama Süresi</span><span data-lang="en">Retention Period of Personal Data</span><span data-lang="ru">Срок хранения персональных данных</span></h2>
-        <div class="legal-body"><div data-lang="tr">FNV Elektronik, Kullanıcı tarafından sağlanan kişisel verileri, sunduğu hizmetlerin mahiyetinden kaynaklanan yükümlülüklerin yerine getirilmesi amacıyla, hizmetlerin sağlandığı süre boyunca saklayacaktır.
+        <div class="legal-body"><div data-lang="tr">REF YAPI, Kullanıcı tarafından sağlanan kişisel verileri, sunduğu hizmetlerin mahiyetinden kaynaklanan yükümlülüklerin yerine getirilmesi amacıyla, hizmetlerin sağlandığı süre boyunca saklayacaktır.
 
-<p>Buna ek olarak, FNV Elektronik, Kullanıcı ile arasında doğabilecek herhangi bir uyuşmazlık durumunda, uyuşmazlık kapsamında gerekli savunmaların gerçekleştirilebilmesi amacıyla sınırlı olmak üzere ve ilgili mevzuat uyarınca belirlenen zamanaşımı süreleri boyunca kişisel verileri saklayabilecektir.</p></div><div data-lang="en">FNV Elektronik will retain personal data provided by the User for the duration of services to fulfil obligations arising from the nature of those services.
+<p>Buna ek olarak, REF YAPI, Kullanıcı ile arasında doğabilecek herhangi bir uyuşmazlık durumunda, uyuşmazlık kapsamında gerekli savunmaların gerçekleştirilebilmesi amacıyla sınırlı olmak üzere ve ilgili mevzuat uyarınca belirlenen zamanaşımı süreleri boyunca kişisel verileri saklayabilecektir.</p></div><div data-lang="en">REF YAPI will retain personal data provided by the User for the duration of services to fulfil obligations arising from the nature of those services.
 
-<p>Additionally, in the event of disputes, data may be retained for limitation periods under applicable law to enable necessary defences.</p></div><div data-lang="ru">FNV Elektronik хранит персональные данные в течение срока оказания услуг для выполнения связанных обязательств.
+<p>Additionally, in the event of disputes, data may be retained for limitation periods under applicable law to enable necessary defences.</p></div><div data-lang="ru">REF YAPI хранит персональные данные в течение срока оказания услуг для выполнения связанных обязательств.
 
 <p>Дополнительно при спорах данные могут храниться в пределах сроков исковой давности по закону.</p></div></div>
       </section>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">Veri Güvenliğine İlişkin Önlemler, Taahhütler ve Sorumluluk</span><span data-lang="en">Data Security Measures, Commitments and Liability</span><span data-lang="ru">Меры безопасности и ответственность</span></h2>
-        <div class="legal-body"><div data-lang="tr">FNV Elektronik, ilgili mevzuatta belirlenen veya işbu Gizlilik Politikası'nda ifade edilen şartlarda:
+        <div class="legal-body"><div data-lang="tr">REF YAPI, ilgili mevzuatta belirlenen veya işbu Gizlilik Politikası'nda ifade edilen şartlarda:
 
 <ul class="legal-list">
 <li>kişisel verilerin hukuka aykırı olarak işlenmemesini,</li>
@@ -272,110 +286,64 @@ and other data that may be required to provide Website services and that qualify
 
 <p>sağlamak amacıyla uygun güvenlik düzeyini temin etmeye yönelik gerekli teknik ve idari tedbirleri almayı, gerekli denetimleri yaptırmayı taahhüt eder.</p>
 
-<p>Site üzerinde başka uygulamalara link verilmesi halinde, FNV Elektronik uygulamaların gizlilik politikaları ve içeriklerine yönelik bünyesinde herhangi bir sorumluluk taşımamaktadır.</p>
+<p>Site üzerinde başka uygulamalara link verilmesi halinde, REF YAPI uygulamaların gizlilik politikaları ve içeriklerine yönelik bünyesinde herhangi bir sorumluluk taşımamaktadır.</p>
 
-<p>FNV Elektronik kişisel verilerin yukarıdaki şartlar çerçevesinde kullanılması sonucu meydana gelebilecek zararlardan dolayı sorumluluk kabul etmez.</p></div><div data-lang="en">FNV Elektronik undertakes to take necessary technical and administrative measures and conduct audits to ensure appropriate security so that personal data is not processed unlawfully, accessed unlawfully, or lost, under applicable law and this Privacy Policy.
+<p>REF YAPI kişisel verilerin yukarıdaki şartlar çerçevesinde kullanılması sonucu meydana gelebilecek zararlardan dolayı sorumluluk kabul etmez.</p></div><div data-lang="en">REF YAPI undertakes to take necessary technical and administrative measures and conduct audits to ensure appropriate security so that personal data is not processed unlawfully, accessed unlawfully, or lost, under applicable law and this Privacy Policy.
 
-<p>Where the Site links to other applications, FNV Elektronik accepts no responsibility for their privacy policies or content.</p>
+<p>Where the Site links to other applications, REF YAPI accepts no responsibility for their privacy policies or content.</p>
 
-<p>FNV Elektronik accepts no liability for damages that may arise from use of personal data within the above framework.</p></div><div data-lang="ru">FNV Elektronik обязуется принимать технические и организационные меры и проводить проверки для обеспечения надлежащей защиты персональных данных от незаконной обработки, доступа и утраты.
+<p>REF YAPI accepts no liability for damages that may arise from use of personal data within the above framework.</p></div><div data-lang="ru">REF YAPI обязуется принимать технические и организационные меры и проводить проверки для обеспечения надлежащей защиты персональных данных от незаконной обработки, доступа и утраты.
 
-<p>На ссылки на другие приложения FNV Elektronik не несёт ответственности за их политики и контент.</p>
+<p>На ссылки на другие приложения REF YAPI не несёт ответственности за их политики и контент.</p>
 
-<p>FNV Elektronik не несёт ответственности за ущерб от использования данных в указанных рамках.</p></div></div>
+<p>REF YAPI не несёт ответственности за ущерб от использования данных в указанных рамках.</p></div></div>
       </section>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">Gizlilik Politikası'ndaki Değişiklikler</span><span data-lang="en">Changes to the Privacy Policy</span><span data-lang="ru">Изменения Политики конфиденциальности</span></h2>
-        <div class="legal-body"><div data-lang="tr">Web Sitesi'nde sunulan hizmetlerden yararlananlar bütün bu şartları okumuş ve kabul etmiş sayılırlar. FNV Elektronik, Gizlilik Politikası hükümlerini önceden haber vermeksizin değiştirme hakkını saklı tutar. Güncel Gizlilik Politikası, Kullanıcı'ya herhangi bir yöntemle sunulduğu tarihte yürürlük kazanır.</div><div data-lang="en">Those who use services on the Website are deemed to have read and accepted all these terms. FNV Elektronik reserves the right to change this Privacy Policy without prior notice. The updated Privacy Policy takes effect on the date it is made available to the User by any means.</div><div data-lang="ru">Пользователи услуг Веб-сайта считаются прочитавшими и принявшими все условия. FNV Elektronik вправе изменять Политику без предварительного уведомления. Обновлённая Политика вступает в силу с даты её предоставления Пользователю любым способом.</div></div>
+        <div class="legal-body"><div data-lang="tr">Web Sitesi'nde sunulan hizmetlerden yararlananlar bütün bu şartları okumuş ve kabul etmiş sayılırlar. REF YAPI, Gizlilik Politikası hükümlerini önceden haber vermeksizin değiştirme hakkını saklı tutar. Güncel Gizlilik Politikası, Kullanıcı'ya herhangi bir yöntemle sunulduğu tarihte yürürlük kazanır.</div><div data-lang="en">Those who use services on the Website are deemed to have read and accepted all these terms. REF YAPI reserves the right to change this Privacy Policy without prior notice. The updated Privacy Policy takes effect on the date it is made available to the User by any means.</div><div data-lang="ru">Пользователи услуг Веб-сайта считаются прочитавшими и принявшими все условия. REF YAPI вправе изменять Политику без предварительного уведомления. Обновлённая Политика вступает в силу с даты её предоставления Пользователю любым способом.</div></div>
       </section>
-    <p class="legal-contact"><span data-lang="tr">İlgili diğer belgeler: </span><span data-lang="en">Related documents: </span><span data-lang="ru">Связанные документы: </span><a href="cookie-policy.html"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a> · <span data-lang="tr">Gizlilik talepleri: </span><span data-lang="en">Privacy requests: </span><span data-lang="ru">Запросы: </span><a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a></p>
+    <p class="legal-contact"><span data-lang="tr">İlgili diğer belgeler: </span><span data-lang="en">Related documents: </span><span data-lang="ru">Связанные документы: </span><a href="cookie-policy.html"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a> · <span data-lang="tr">Gizlilik talepleri: </span><span data-lang="en">Privacy requests: </span><span data-lang="ru">Запросы: </span><a href="mailto:info@refyapi.com">info@refyapi.com</a></p>
   </div>
 </section>
 
 <footer>
-  <div class="ft-top">
+  <div class="wrap ft-top">
     <div>
-      <img class="ft-brand-logo" src="assets/logo-white.png?v=2" alt="FNV Elektronik">
+      <img class="ft-brand-logo" src="assets/logo-white.png?v=3" alt="REF YAPI">
       <p class="ft-brand-sub">
-        <span data-lang="tr">Elektrik Zayıf Akım Sistemleri alanında güvenilir çözüm ortağınız. 2005'ten bu yana hizmetinizdeyiz.</span>
-        <span data-lang="en">Your trusted partner for low-current systems. Serving you since 2005.</span>
-        <span data-lang="ru">Надёжный партнёр в слаботочных системах. Работаем с 2005 года.</span>
+        <span data-lang="tr">İnşaat ve yapı. 2005’ten beri.</span>
+        <span data-lang="en">Construction and building. Since 2005.</span>
+        <span data-lang="ru">Строительство. С 2005 года.</span>
       </p>
     </div>
-    <div class="ft-col-services">
-      <p class="ft-col-head"><span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></p>
-      <ul class="ft-links ft-links--2col">
-        <li><a href="fire-detection.html"><span data-lang="tr">Yangın Alarm Sistemleri</span><span data-lang="en">Fire Alarm Systems</span><span data-lang="ru">Пожарная сигнализация</span></a></li>
-        <li><a href="security-systems.html#kartli-gecis"><span data-lang="tr">Erişim Kontrol</span><span data-lang="en">Access Control</span><span data-lang="ru">Контроль доступа</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve Altyapı</span><span data-lang="en">Data & Infrastructure</span><span data-lang="ru">Data и инфраструктура</span></a></li>
-        <li><a href="automation-systems.html#otel-kapi"><span data-lang="tr">Otel Kapı Sistemleri</span><span data-lang="en">Hotel Door Systems</span><span data-lang="ru">Дверные системы для отелей</span></a></li>
-        <li><a href="audio-visual-systems.html#genel-anons"><span data-lang="tr">Genel Anons ve Sesli Alarm</span><span data-lang="en">Public Announcement</span><span data-lang="ru">Оповещение</span></a></li>
-        <li><a href="automation-systems.html#mekanik"><span data-lang="tr">Mekanik Otomasyon</span><span data-lang="en">Mechanical Automation</span><span data-lang="ru">Механическая автоматизация</span></a></li>
-        <li><a href="data-communications.html#telefon-voip"><span data-lang="tr">Telefon Sistemleri</span><span data-lang="en">Phone Systems</span><span data-lang="ru">Телефонные системы</span></a></li>
-        <li><a href="tv-video-systems.html#intercom"><span data-lang="tr">IP İntercom</span><span data-lang="en">IP Intercom</span><span data-lang="ru">IP-домофон</span></a></li>
-        <li><a href="security-systems.html#cctv"><span data-lang="tr">CCTV</span><span data-lang="en">CCTV</span><span data-lang="ru">Видеонаблюдение</span></a></li>
-        <li><a href="automation-systems.html#aydinlatma"><span data-lang="tr">Bina ve Aydınlatma Otomasyonu</span><span data-lang="en">Building & Lighting Automation</span><span data-lang="ru">Автоматизация зданий</span></a></li>
-        <li><a href="automation-systems.html#hemsire"><span data-lang="tr">Hemşire Çağrı ve Mavi Kod</span><span data-lang="en">Nurse Call & Code Blue</span><span data-lang="ru">Вызов медсестры</span></a></li>
-        <li><a href="tv-video-systems.html#smatv"><span data-lang="tr">IPTV Sistemleri</span><span data-lang="en">IPTV Systems</span><span data-lang="ru">IPTV-системы</span></a></li>
-      </ul>
-      <p class="ft-col-head ft-col-head--sub"><span data-lang="tr">Ürün Kategorileri</span><span data-lang="en">Product Categories</span><span data-lang="ru">Категории продуктов</span></p>
-      <ul class="ft-links">
-        <li><a href="integrated-building-systems.html"><span data-lang="tr">Entegre Bina Sistemleri</span><span data-lang="en">Integrated Building Systems</span><span data-lang="ru">Интегрированные системы</span></a></li>
-        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim</span><span data-lang="en">Data &amp; Comms</span><span data-lang="ru">Связь и данные</span></a></li>
-        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü</span><span data-lang="en">TV &amp; Video</span><span data-lang="ru">ТВ и видео</span></a></li>
-      </ul>
-    </div>
     <div>
-      <p class="ft-col-head"><span data-lang="tr">Şirket</span><span data-lang="en">Company</span><span data-lang="ru">Компания</span></p>
+      <p class="ft-col-head"><span data-lang="tr">Site</span><span data-lang="en">Site</span><span data-lang="ru">Сайт</span></p>
       <ul class="ft-links">
-        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
-        <li><a href="index.html#hizmetler"><span data-lang="tr">Hizmetlerimiz</span><span data-lang="en">Our Services</span><span data-lang="ru">Услуги</span></a></li>
-        <li><a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Products</span><span data-lang="ru">Продукция</span></a></li>
-        <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
-        <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
-        <li><a href="istanbul.html"><span data-lang="tr">İstanbul Ofisi</span><span data-lang="en">Istanbul Office</span><span data-lang="ru">Офис в Стамбуле</span></a></li>
-        <li><a href="london.html"><span data-lang="tr">Londra Ofisi</span><span data-lang="en">London Office</span><span data-lang="ru">Офис в Лондоне</span></a></li>
-        <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya Ofisi</span><span data-lang="en">Middle East &amp; Asia Office</span><span data-lang="ru">Офис на Ближнем Востоке и в Азии</span></a></li>
-
-        <li><a href="privacy-policy.html"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a></li>
-        <li><a href="cookie-policy.html"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a></li>
-        <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
+        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About</span><span data-lang="ru">О нас</span></a></li>
+        <li><a href="references.html"><span data-lang="tr">Referanslar</span><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></a></li>
+        <li><a href="documents.html"><span data-lang="tr">Belgeler</span><span data-lang="en">Documents</span><span data-lang="ru">Документы</span></a></li>
+        <li><a href="istanbul.html">İstanbul</a></li>
+        <li><a href="london.html">London</a></li>
+        <li><a href="middle-east-asia.html"><span data-lang="tr">Taşkent</span><span data-lang="en">Tashkent</span><span data-lang="ru">Ташкент</span></a></li>
       </ul>
     </div>
     <div>
       <p class="ft-col-head"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></p>
       <ul class="ft-links">
-        <li><a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a></li>
-        <li><a href="https://www.fnvelektronik.com" target="_blank">www.fnvelektronik.com</a></li>
+        <li><a href="mailto:info@refyapi.com">info@refyapi.com</a></li>
       </ul>
-      <div class="ft-social">
-        <a href="https://www.instagram.com/fnvelektronik/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://www.facebook.com/p/FNV-Elektronik-100063649779411/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 3H10c-2.761 0-5 2.239-5 5v3H3.5a.5.5 0 0 0-.5.5V14c0 .276.224.5.5.5H5v7.5a.5.5 0 0 0 .5.5H9a.5.5 0 0 0 .5-.5V14.5h3.05a.5.5 0 0 0 .496-.438l.45-3.5a.5.5 0 0 0-.494-.562H9.5V8c0-.827.673-1.5 1.5-1.5h3a.5.5 0 0 0 .5-.5V3.5a.5.5 0 0 0-.5-.5z"/></svg>
-        </a>
-      </div>
-      <div class="ft-qr">
-        <img class="ft-qr-img" src="assets/digital-business-card-qr.png?v=2" alt="FNV Elektronik digital business card QR code" width="108" height="108" loading="lazy" />
-        <p class="ft-qr-label"><span data-lang="tr">Dijital Kartvizit</span><span data-lang="en">Digital Business Card</span><span data-lang="ru">Цифровая визитка</span></p>
-        <p class="ft-qr-hint"><span data-lang="tr">Okutmak için telefonunuzla tarayın</span><span data-lang="en">Scan with your phone to view</span><span data-lang="ru">Отсканируйте телефоном</span></p>
-      </div>
     </div>
   </div>
-  <div class="ft-bottom">
-    <span>© 2026 FNV Elektronik · <span data-lang="tr">Tüm Hakları Saklıdır</span><span data-lang="en">All Rights Reserved</span><span data-lang="ru">Все права защищены</span></span>
+  <div class="wrap ft-bottom">
+    <span>© 2026 REF YAPI</span>
     <span class="ft-legal-links">
-      <a href="privacy-policy.html" class="ft-legal-link"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a>
+      <a href="privacy-policy.html" class="ft-legal-link"><span data-lang="tr">Gizlilik</span><span data-lang="en">Privacy</span><span data-lang="ru">Конфиденциальность</span></a>
       <span class="ft-legal-sep">·</span>
-      <a href="cookie-policy.html" class="ft-legal-link"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a>
+      <a href="cookie-policy.html" class="ft-legal-link"><span data-lang="tr">Çerezler</span><span data-lang="en">Cookies</span><span data-lang="ru">Cookie</span></a>
     </span>
-    <span>İstanbul · London · <span data-lang="tr">Orta Doğu/Asya</span><span data-lang="en">Middle East/Asia</span><span data-lang="ru">Ближний Восток/Азия</span></span>
   </div>
-
 </footer>
 
-<script src="assets/site.js?v=45"></script>
+<script src="assets/site.js?v=52"></script>
 </body>
 </html>

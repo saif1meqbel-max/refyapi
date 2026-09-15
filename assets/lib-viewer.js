@@ -49,7 +49,7 @@
     setZoom(Math.max(fit, ZOOM_MIN), { isBase: true });
   }
 
-  function show(i) {
+  function show(i, { scroll } = {}) {
     const list = visibleSlides();
     if (!list.length) return;
     index = ((i % list.length) + list.length) % list.length;
@@ -65,16 +65,18 @@
     counterEl.textContent = `${index + 1} / ${list.length}`;
 
     slides.forEach(s => s.classList.toggle('active', s === slide));
-    slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    if (scroll !== false) {
+      slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
   }
 
-  function applyFilter(cat, startIdx) {
+  function applyFilter(cat, startIdx, { scroll } = {}) {
     filtered = slides.filter(s => cat === 'all' || s.dataset.category === cat);
     slides.forEach(s => {
       s.hidden = cat !== 'all' && s.dataset.category !== cat;
     });
     filterBtns.forEach(b => b.classList.toggle('on', b.dataset.filter === cat));
-    show(startIdx !== undefined ? startIdx : 0);
+    show(startIdx !== undefined ? startIdx : 0, { scroll });
   }
 
   filterBtns.forEach(b => {
@@ -138,5 +140,5 @@
   const hash = location.hash.replace('#', '');
   const startSlide = hash ? slides.find(s => s.id === hash) : null;
   const startIdx = startSlide ? visibleSlides().indexOf(startSlide) : 0;
-  applyFilter('all', startIdx >= 0 ? startIdx : 0);
+  applyFilter('all', startIdx >= 0 ? startIdx : 0, { scroll: false });
 })();

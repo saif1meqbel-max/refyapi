@@ -1,83 +1,97 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <script>try{var l=localStorage.getItem('fnv-lang');if(l==='en'||l==='ru')document.documentElement.classList.add('lang-'+l);}catch(e){}</script>
+  <script>try{var l=localStorage.getItem('refyapi-lang');if(l==='en'||l==='ru')document.documentElement.classList.add('lang-'+l);}catch(e){}</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="assets/logo-mark.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/logo-mark.png" />
-  <title>Çerez Politikası — FNV Elektronik</title>
+  <link rel="icon" href="assets/logo-icon.png?v=3" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo-icon.png?v=3" />
+  <title>Çerez Politikası — REF YAPI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/site.css?v=48" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=67" />
 </head>
 <body>
 
 <nav class="nav solid" id="mainNav">
   <a href="index.html" class="nav-logo">
-    <img class="logo-light" src="assets/logo-white.png?v=2" alt="FNV Elektronik">
-    <img class="logo-dark" src="assets/logo-mark.png" alt="FNV Elektronik">
+    <img class="logo-light" src="assets/logo-white.png?v=3" alt="REF YAPI">
+    <img class="logo-dark" src="assets/logo-mark.png?v=3" alt="REF YAPI">
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
-    <li>
-      <a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Our Products</span><span data-lang="ru">Продукты</span><span class="dd-arrow">▾</span></a>
-      <ul class="dd">
-        <li><a href="integrated-building-systems.html"><span data-lang="tr">Honeywell · Entegre Bina Sistemleri</span><span data-lang="en">Honeywell · Integrated Building Systems</span><span data-lang="ru">Honeywell · Интегрированные системы</span></a></li>
-        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim Sistemleri</span><span data-lang="en">Data &amp; Communications</span><span data-lang="ru">Связь и данные</span></a></li>
-        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü Sistemleri</span><span data-lang="en">TV &amp; Video Systems</span><span data-lang="ru">ТВ и видео</span></a></li>
-      </ul>
-    </li>
-    <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
-    <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
-        <li class="nav-offices">
-      <a href="index.html#iletisim"><span data-lang="tr">Ofisler</span><span data-lang="en">Offices</span><span data-lang="ru">Офисы</span><span class="dd-arrow">▾</span></a>
-      <ul class="dd">
-        <li><a href="istanbul.html"><span data-lang="tr">İstanbul Ofisi</span><span data-lang="en">Istanbul Office</span><span data-lang="ru">Офис в Стамбуле</span></a></li>
-        <li><a href="london.html"><span data-lang="tr">Londra Ofisi</span><span data-lang="en">London Office</span><span data-lang="ru">Офис в Лондоне</span></a></li>
-        <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya Ofisi</span><span data-lang="en">Middle East &amp; Asia Office</span><span data-lang="ru">Офис на Ближнем Востоке и в Азии</span></a></li>
-      </ul>
-    </li>
-
-    <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
-  </ul>
-  <div class="nav-right">
-    <button type="button" class="btn-nav-quote quote-trigger">
-      <span data-lang="tr">Teklif Al</span><span data-lang="en">Get Quote</span><span data-lang="ru">Смета</span>
-    </button>
-    <button class="lbtn on" onclick="setLang('tr')">TR</button>
-    <button class="lbtn" onclick="setLang('en')">EN</button>
-    <button class="lbtn" onclick="setLang('ru')">RU</button>
-    <button class="hbg" aria-label="Menü"><span></span><span></span><span></span></button>
+  <button class="hbg" aria-label="Menü" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-panel">
+    <ul class="nav-links">
+      <li>
+        <a href="index.html#hakkimizda">
+          <span data-lang="tr">Hakkımızda</span>
+          <span data-lang="en">About</span>
+          <span data-lang="ru">О нас</span>
+        </a>
+      </li>
+      <li>
+        <a href="references.html">
+          <span data-lang="tr">Referanslar</span>
+          <span data-lang="en">Projects</span>
+          <span data-lang="ru">Проекты</span>
+        </a>
+      </li>
+      <li>
+        <a href="documents.html">
+          <span data-lang="tr">Belgeler</span>
+          <span data-lang="en">Documents</span>
+          <span data-lang="ru">Документы</span>
+        </a>
+      </li>
+      <li class="nav-offices">
+        <a href="index.html#iletisim">
+          <span data-lang="tr">Ofisler</span>
+          <span data-lang="en">Offices</span>
+          <span data-lang="ru">Офисы</span>
+        </a>
+        <ul class="dd">
+          <li><a href="istanbul.html"><span data-lang="tr">İstanbul</span><span data-lang="en">Istanbul</span><span data-lang="ru">Стамбул</span></a></li>
+          <li><a href="london.html"><span data-lang="tr">Londra</span><span data-lang="en">London</span><span data-lang="ru">Лондон</span></a></li>
+          <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya</span><span data-lang="en">Middle East &amp; Asia</span><span data-lang="ru">Ближний Восток и Азия</span></a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-panel-foot">
+      <button type="button" class="btn-nav-quote quote-trigger">
+        <span data-lang="tr">Teklif Al</span><span data-lang="en">Get a Quote</span><span data-lang="ru">Смета</span>
+      </button>
+      <div class="nav-langs">
+        <button class="lbtn on" onclick="setLang('tr')">TR</button>
+        <button class="lbtn" onclick="setLang('en')">EN</button>
+        <button class="lbtn" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
   </div>
-
 </nav>
 
-<section class="svc-hero">
-  <div class="svc-hero-bg" style="background-image:url('assets/istanbul-skyline.png')"></div>
-  <div class="svc-hero-content">
+<header class="page-head">
+  <div class="wrap">
     <div class="crumb">
       <a href="index.html"><span data-lang="tr">Ana Sayfa</span><span data-lang="en">Home</span><span data-lang="ru">Главная</span></a>
       <span class="sep">/</span>
-      <span class="cur"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></span>
+      <span class="cur"><span data-lang="tr">Çerezler</span><span data-lang="en">Cookies</span><span data-lang="ru">Cookie</span></span>
     </div>
-    <span class="svc-hero-eyebrow"><span data-lang="tr">Yasal</span><span data-lang="en">Legal</span><span data-lang="ru">Правовая информация</span></span>
-    <h1 class="svc-hero-title"><span data-lang="tr">Çerez<br>Politikası</span><span data-lang="en">Cookie<br>Policy</span><span data-lang="ru">Политика<br>cookie</span></h1>
+    <h1><span data-lang="tr">Çerez politikası</span><span data-lang="en">Cookie policy</span><span data-lang="ru">Политика cookie</span></h1>
   </div>
-</section>
+</header>
 
 <section class="legal-page">
   <div class="legal-page-inner">
     <p class="legal-updated"><span data-lang="tr">Güncellenme tarihi: 01.07.2026</span><span data-lang="en">Last updated: 1 July 2026</span><span data-lang="ru">Дата обновления: 01.07.2026</span></p>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">1. Giriş</span><span data-lang="en">1. Introduction</span><span data-lang="ru">1. Введение</span></h2>
-        <div class="legal-body"><div data-lang="tr">İnternet sitemizin (www.fnvelektronik.com) düzgün çalışmasını sağlamak, ziyaretçi ve üyelerimize ("kullanıcı(lar)" veya "siz") en alakalı hizmetleri sunmak amacıyla birtakım çerezler kullanmaktayız.
+        <div class="legal-body"><div data-lang="tr">İnternet sitemizin (www.refyapi.com) düzgün çalışmasını sağlamak, ziyaretçi ve üyelerimize ("kullanıcı(lar)" veya "siz") en alakalı hizmetleri sunmak amacıyla birtakım çerezler kullanmaktayız.
 
-<p>İşbu Çerez Politikası, size çerezler ve çerezlerin nasıl kontrol edileceği hakkında bilgi vermek amacıyla hazırlanmıştır.</p></div><div data-lang="en">We use certain cookies to ensure our website (www.fnvelektronik.com) works properly and to offer visitors and members ("user(s)" or "you") the most relevant services.
+<p>İşbu Çerez Politikası, size çerezler ve çerezlerin nasıl kontrol edileceği hakkında bilgi vermek amacıyla hazırlanmıştır.</p></div><div data-lang="en">We use certain cookies to ensure our website (www.refyapi.com) works properly and to offer visitors and members ("user(s)" or "you") the most relevant services.
 
-<p>This Cookie Policy is prepared to inform you about cookies and how to control them.</p></div><div data-lang="ru">Мы используем файлы cookie для корректной работы нашего сайта (www.fnvelektronik.com) и предоставления посетителям и пользователям («пользователь(и)» или «вы») наиболее релевантных услуг.
+<p>This Cookie Policy is prepared to inform you about cookies and how to control them.</p></div><div data-lang="ru">Мы используем файлы cookie для корректной работы нашего сайта (www.refyapi.com) и предоставления посетителям и пользователям («пользователь(и)» или «вы») наиболее релевантных услуг.
 
 <p>Настоящая Политика cookie подготовлена для информирования о cookie и способах их управления.</p></div></div>
       </section>
@@ -218,102 +232,56 @@
       </section>
       <section class="legal-block">
         <h2 class="legal-h2"><span data-lang="tr">8. Bize ulaşın</span><span data-lang="en">8. Contact us</span><span data-lang="ru">8. Связаться с нами</span></h2>
-        <div class="legal-body"><div data-lang="tr">FNV Elektronik, Çerez Politikası'nın hükümlerini dilediği zaman değiştirebilecektir. Çerez Politikasında yaptığımız değişikliklerden veya güncellemelerden haberdar olabilmek için aralıklı olarak bu sayfayı kontrol edebilirsiniz.
+        <div class="legal-body"><div data-lang="tr">REF YAPI, Çerez Politikası'nın hükümlerini dilediği zaman değiştirebilecektir. Çerez Politikasında yaptığımız değişikliklerden veya güncellemelerden haberdar olabilmek için aralıklı olarak bu sayfayı kontrol edebilirsiniz.
 
-<p>Çerez Politikası veya internet sitemizdeki çerez kullanımı hakkında soru, görüş ve önerileriniz için bizimle <a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a> adresi üzerinden iletişime geçebilirsiniz.</p></div><div data-lang="en">FNV Elektronik may change the provisions of this Cookie Policy at any time. You may check this page periodically to stay informed of changes or updates.
+<p>Çerez Politikası veya internet sitemizdeki çerez kullanımı hakkında soru, görüş ve önerileriniz için bizimle <a href="mailto:info@refyapi.com">info@refyapi.com</a> adresi üzerinden iletişime geçebilirsiniz.</p></div><div data-lang="en">REF YAPI may change the provisions of this Cookie Policy at any time. You may check this page periodically to stay informed of changes or updates.
 
-<p>For questions, comments or suggestions about this Cookie Policy or cookie use on our website, contact us at <a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a>.</p></div><div data-lang="ru">FNV Elektronik вправе изменять настоящую Политику cookie в любое время. Периодически проверяйте эту страницу для актуальной информации.
+<p>For questions, comments or suggestions about this Cookie Policy or cookie use on our website, contact us at <a href="mailto:info@refyapi.com">info@refyapi.com</a>.</p></div><div data-lang="ru">REF YAPI вправе изменять настоящую Политику cookie в любое время. Периодически проверяйте эту страницу для актуальной информации.
 
-<p>По вопросам использования cookie на сайте: <a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a>.</p></div></div>
+<p>По вопросам использования cookie на сайте: <a href="mailto:info@refyapi.com">info@refyapi.com</a>.</p></div></div>
       </section>
     <p class="legal-contact"><span data-lang="tr">İlgili diğer belgeler: </span><span data-lang="en">Related documents: </span><span data-lang="ru">Связанные документы: </span><a href="privacy-policy.html"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a></p>
   </div>
 </section>
 
 <footer>
-  <div class="ft-top">
+  <div class="wrap ft-top">
     <div>
-      <img class="ft-brand-logo" src="assets/logo-white.png?v=2" alt="FNV Elektronik">
+      <img class="ft-brand-logo" src="assets/logo-white.png?v=3" alt="REF YAPI">
       <p class="ft-brand-sub">
-        <span data-lang="tr">Elektrik Zayıf Akım Sistemleri alanında güvenilir çözüm ortağınız. 2005'ten bu yana hizmetinizdeyiz.</span>
-        <span data-lang="en">Your trusted partner for low-current systems. Serving you since 2005.</span>
-        <span data-lang="ru">Надёжный партнёр в слаботочных системах. Работаем с 2005 года.</span>
+        <span data-lang="tr">İnşaat ve yapı. 2005’ten beri.</span>
+        <span data-lang="en">Construction and building. Since 2005.</span>
+        <span data-lang="ru">Строительство. С 2005 года.</span>
       </p>
     </div>
-    <div class="ft-col-services">
-      <p class="ft-col-head"><span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span></p>
-      <ul class="ft-links ft-links--2col">
-        <li><a href="fire-detection.html"><span data-lang="tr">Yangın Alarm Sistemleri</span><span data-lang="en">Fire Alarm Systems</span><span data-lang="ru">Пожарная сигнализация</span></a></li>
-        <li><a href="security-systems.html#kartli-gecis"><span data-lang="tr">Erişim Kontrol</span><span data-lang="en">Access Control</span><span data-lang="ru">Контроль доступа</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve Altyapı</span><span data-lang="en">Data & Infrastructure</span><span data-lang="ru">Data и инфраструктура</span></a></li>
-        <li><a href="automation-systems.html#otel-kapi"><span data-lang="tr">Otel Kapı Sistemleri</span><span data-lang="en">Hotel Door Systems</span><span data-lang="ru">Дверные системы для отелей</span></a></li>
-        <li><a href="audio-visual-systems.html#genel-anons"><span data-lang="tr">Genel Anons ve Sesli Alarm</span><span data-lang="en">Public Announcement</span><span data-lang="ru">Оповещение</span></a></li>
-        <li><a href="automation-systems.html#mekanik"><span data-lang="tr">Mekanik Otomasyon</span><span data-lang="en">Mechanical Automation</span><span data-lang="ru">Механическая автоматизация</span></a></li>
-        <li><a href="data-communications.html#telefon-voip"><span data-lang="tr">Telefon Sistemleri</span><span data-lang="en">Phone Systems</span><span data-lang="ru">Телефонные системы</span></a></li>
-        <li><a href="tv-video-systems.html#intercom"><span data-lang="tr">IP İntercom</span><span data-lang="en">IP Intercom</span><span data-lang="ru">IP-домофон</span></a></li>
-        <li><a href="security-systems.html#cctv"><span data-lang="tr">CCTV</span><span data-lang="en">CCTV</span><span data-lang="ru">Видеонаблюдение</span></a></li>
-        <li><a href="automation-systems.html#aydinlatma"><span data-lang="tr">Bina ve Aydınlatma Otomasyonu</span><span data-lang="en">Building & Lighting Automation</span><span data-lang="ru">Автоматизация зданий</span></a></li>
-        <li><a href="automation-systems.html#hemsire"><span data-lang="tr">Hemşire Çağrı ve Mavi Kod</span><span data-lang="en">Nurse Call & Code Blue</span><span data-lang="ru">Вызов медсестры</span></a></li>
-        <li><a href="tv-video-systems.html#smatv"><span data-lang="tr">IPTV Sistemleri</span><span data-lang="en">IPTV Systems</span><span data-lang="ru">IPTV-системы</span></a></li>
-      </ul>
-      <p class="ft-col-head ft-col-head--sub"><span data-lang="tr">Ürün Kategorileri</span><span data-lang="en">Product Categories</span><span data-lang="ru">Категории продуктов</span></p>
-      <ul class="ft-links">
-        <li><a href="integrated-building-systems.html"><span data-lang="tr">Entegre Bina Sistemleri</span><span data-lang="en">Integrated Building Systems</span><span data-lang="ru">Интегрированные системы</span></a></li>
-        <li><a href="security-systems.html"><span data-lang="tr">Güvenlik Sistemleri</span><span data-lang="en">Security Systems</span><span data-lang="ru">Системы безопасности</span></a></li>
-        <li><a href="data-communications.html"><span data-lang="tr">Data ve İletişim</span><span data-lang="en">Data &amp; Comms</span><span data-lang="ru">Связь и данные</span></a></li>
-        <li><a href="tv-video-systems.html"><span data-lang="tr">TV ve Görüntü</span><span data-lang="en">TV &amp; Video</span><span data-lang="ru">ТВ и видео</span></a></li>
-      </ul>
-    </div>
     <div>
-      <p class="ft-col-head"><span data-lang="tr">Şirket</span><span data-lang="en">Company</span><span data-lang="ru">Компания</span></p>
+      <p class="ft-col-head"><span data-lang="tr">Site</span><span data-lang="en">Site</span><span data-lang="ru">Сайт</span></p>
       <ul class="ft-links">
-        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About Us</span><span data-lang="ru">О нас</span></a></li>
-        <li><a href="index.html#hizmetler"><span data-lang="tr">Hizmetlerimiz</span><span data-lang="en">Our Services</span><span data-lang="ru">Услуги</span></a></li>
-        <li><a href="index.html#urunlerimiz"><span data-lang="tr">Ürünlerimiz</span><span data-lang="en">Products</span><span data-lang="ru">Продукция</span></a></li>
-        <li><a href="references.html"><span data-lang="tr">Referanslarımız</span><span data-lang="en">References</span><span data-lang="ru">Референции</span></a></li>
-        <li><a href="documents.html"><span data-lang="tr">Teknik Kitaplık</span><span data-lang="en">Tech Library</span><span data-lang="ru">Библиотека</span></a></li>
-        <li><a href="istanbul.html"><span data-lang="tr">İstanbul Ofisi</span><span data-lang="en">Istanbul Office</span><span data-lang="ru">Офис в Стамбуле</span></a></li>
-        <li><a href="london.html"><span data-lang="tr">Londra Ofisi</span><span data-lang="en">London Office</span><span data-lang="ru">Офис в Лондоне</span></a></li>
-        <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya Ofisi</span><span data-lang="en">Middle East &amp; Asia Office</span><span data-lang="ru">Офис на Ближнем Востоке и в Азии</span></a></li>
-
-        <li><a href="privacy-policy.html"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a></li>
-        <li><a href="cookie-policy.html"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a></li>
-        <li><a href="index.html#iletisim"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></a></li>
+        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About</span><span data-lang="ru">О нас</span></a></li>
+        <li><a href="references.html"><span data-lang="tr">Referanslar</span><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></a></li>
+        <li><a href="documents.html"><span data-lang="tr">Belgeler</span><span data-lang="en">Documents</span><span data-lang="ru">Документы</span></a></li>
+        <li><a href="istanbul.html">İstanbul</a></li>
+        <li><a href="london.html">London</a></li>
+        <li><a href="middle-east-asia.html"><span data-lang="tr">Taşkent</span><span data-lang="en">Tashkent</span><span data-lang="ru">Ташкент</span></a></li>
       </ul>
     </div>
     <div>
       <p class="ft-col-head"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></p>
       <ul class="ft-links">
-        <li><a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a></li>
-        <li><a href="https://www.fnvelektronik.com" target="_blank">www.fnvelektronik.com</a></li>
+        <li><a href="mailto:info@refyapi.com">info@refyapi.com</a></li>
       </ul>
-      <div class="ft-social">
-        <a href="https://www.instagram.com/fnvelektronik/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://www.facebook.com/p/FNV-Elektronik-100063649779411/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 3H10c-2.761 0-5 2.239-5 5v3H3.5a.5.5 0 0 0-.5.5V14c0 .276.224.5.5.5H5v7.5a.5.5 0 0 0 .5.5H9a.5.5 0 0 0 .5-.5V14.5h3.05a.5.5 0 0 0 .496-.438l.45-3.5a.5.5 0 0 0-.494-.562H9.5V8c0-.827.673-1.5 1.5-1.5h3a.5.5 0 0 0 .5-.5V3.5a.5.5 0 0 0-.5-.5z"/></svg>
-        </a>
-      </div>
-      <div class="ft-qr">
-        <img class="ft-qr-img" src="assets/digital-business-card-qr.png?v=2" alt="FNV Elektronik digital business card QR code" width="108" height="108" loading="lazy" />
-        <p class="ft-qr-label"><span data-lang="tr">Dijital Kartvizit</span><span data-lang="en">Digital Business Card</span><span data-lang="ru">Цифровая визитка</span></p>
-        <p class="ft-qr-hint"><span data-lang="tr">Okutmak için telefonunuzla tarayın</span><span data-lang="en">Scan with your phone to view</span><span data-lang="ru">Отсканируйте телефоном</span></p>
-      </div>
     </div>
   </div>
-  <div class="ft-bottom">
-    <span>© 2026 FNV Elektronik · <span data-lang="tr">Tüm Hakları Saklıdır</span><span data-lang="en">All Rights Reserved</span><span data-lang="ru">Все права защищены</span></span>
+  <div class="wrap ft-bottom">
+    <span>© 2026 REF YAPI</span>
     <span class="ft-legal-links">
-      <a href="privacy-policy.html" class="ft-legal-link"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span><span data-lang="ru">Политика конфиденциальности</span></a>
+      <a href="privacy-policy.html" class="ft-legal-link"><span data-lang="tr">Gizlilik</span><span data-lang="en">Privacy</span><span data-lang="ru">Конфиденциальность</span></a>
       <span class="ft-legal-sep">·</span>
-      <a href="cookie-policy.html" class="ft-legal-link"><span data-lang="tr">Çerez Politikası</span><span data-lang="en">Cookie Policy</span><span data-lang="ru">Политика cookie</span></a>
+      <a href="cookie-policy.html" class="ft-legal-link"><span data-lang="tr">Çerezler</span><span data-lang="en">Cookies</span><span data-lang="ru">Cookie</span></a>
     </span>
-    <span>İstanbul · London · <span data-lang="tr">Orta Doğu/Asya</span><span data-lang="en">Middle East/Asia</span><span data-lang="ru">Ближний Восток/Азия</span></span>
   </div>
-
 </footer>
 
-<script src="assets/site.js?v=45"></script>
+<script src="assets/site.js?v=52"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const LANG_KEY = 'fnv-lang';
+const LANG_KEY = 'refyapi-lang';
 const VALID_LANGS = new Set(['tr', 'en', 'ru']);
 
 function setLang(l) {
@@ -28,24 +28,31 @@ if (nav && !nav.classList.contains('solid')) {
 
 const hbg = document.querySelector('.hbg');
 if (nav && hbg) {
+  const scrim = document.createElement('div');
+  scrim.className = 'nav-scrim';
+  nav.insertBefore(scrim, nav.querySelector('.nav-panel'));
+
+  const setMenu = open => {
+    nav.classList.toggle('menu-open', open);
+    hbg.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
   hbg.addEventListener('click', e => {
     e.stopPropagation();
-    nav.classList.toggle('menu-open');
+    setMenu(!nav.classList.contains('menu-open'));
   });
-  nav.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => nav.classList.remove('menu-open'));
+  scrim.addEventListener('click', () => setMenu(false));
+  nav.querySelectorAll('.nav-panel a, .nav-panel .quote-trigger').forEach(el => {
+    el.addEventListener('click', () => setMenu(false));
   });
   document.addEventListener('click', e => {
-    if (nav.classList.contains('menu-open') && !nav.contains(e.target)) {
-      nav.classList.remove('menu-open');
-    }
+    if (nav.classList.contains('menu-open') && !nav.contains(e.target)) setMenu(false);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('menu-open')) setMenu(false);
   });
 }
 
-const bg = document.getElementById('heroBg');
-if (bg) {
-  window.addEventListener('scroll', () => { bg.style.transform = `scale(1.05) translateY(${scrollY * 0.28}px)`; }, { passive: true });
-}
 
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
@@ -68,7 +75,7 @@ const cObs = new IntersectionObserver(entries => {
 document.querySelectorAll('[data-target]').forEach(el => cObs.observe(el));
 
 const mobileMq = window.matchMedia('(max-width: 1024px)');
-const CONTACT_EMAIL = 'info@fnvelektronik.com';
+const CONTACT_EMAIL = 'info@refyapi.com';
 
 function initContactSheet() {
   let sheet = document.getElementById('contactSheet');
@@ -128,25 +135,7 @@ document.querySelectorAll('.contact-sheet-trigger').forEach(btn => {
   });
 });
 
-const QUOTE_EMAIL = 'info@fnvelektronik.com';
-const SERVICE_OPTIONS = [
-  { v: 'fire', tr: 'Yangın Alarm Sistemleri', en: 'Fire Alarm Systems', ru: 'Пожарная сигнализация' },
-  { v: 'access', tr: 'Erişim Kontrol ve Personel Takip', en: 'Access Control & Staff Tracking', ru: 'Контроль доступа' },
-  { v: 'data', tr: 'Data ve Altyapı Sistemleri', en: 'Data & Infrastructure', ru: 'Data и инфраструктура' },
-  { v: 'hotel-door', tr: 'Otel Kapı Sistemleri', en: 'Hotel Door Systems', ru: 'Дверные системы для отелей' },
-  { v: 'pa', tr: 'Genel Anons ve Sesli Alarm', en: 'Public Announcement & Voice Alarm', ru: 'Оповещение и сигнализация' },
-  { v: 'mechanical', tr: 'Mekanik Otomasyon', en: 'Mechanical Automation', ru: 'Механическая автоматизация' },
-  { v: 'phone', tr: 'Telefon / VoIP Sistemleri', en: 'Phone / VoIP Systems', ru: 'Телефония / VoIP' },
-  { v: 'intercom', tr: 'IP İntercom Sistemleri', en: 'IP Intercom Systems', ru: 'IP-домофон' },
-  { v: 'cctv', tr: 'CCTV Sistemleri', en: 'CCTV Systems', ru: 'Видеонаблюдение' },
-  { v: 'lighting', tr: 'Bina ve Aydınlatma Otomasyonu', en: 'Building & Lighting Automation', ru: 'Автоматизация зданий' },
-  { v: 'nurse', tr: 'Hemşire Çağrı ve Mavi Kod', en: 'Nurse Call & Code Blue', ru: 'Вызов медсестры' },
-  { v: 'iptv', tr: 'IPTV Sistemleri', en: 'IPTV Systems', ru: 'IPTV' },
-  { v: 'integrated', tr: 'Honeywell · Entegre Bina Sistemleri', en: 'Honeywell · Integrated Building Systems', ru: 'Honeywell · Интегрированные системы' },
-  { v: 'security', tr: 'Güvenlik Sistemleri', en: 'Security Systems', ru: 'Системы безопасности' },
-  { v: 'tv', tr: 'TV ve Görüntü', en: 'TV & Video', ru: 'ТВ и видео' },
-  { v: 'general', tr: 'Genel / Diğer', en: 'General / Other', ru: 'Общий / Другое' },
-];
+const QUOTE_EMAIL = 'info@refyapi.com';
 
 const COUNTRY_CODES = (
   'AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ ' +
@@ -190,34 +179,6 @@ function countryOptionsHtml() {
 function countryLabel(code) {
   if (!code) return '—';
   return countryNameEn.of(code) || code;
-}
-
-function serviceCheckboxesHtml() {
-  const lang = document.documentElement.lang || 'tr';
-  const key = lang === 'en' ? 'en' : lang === 'ru' ? 'ru' : 'tr';
-  return SERVICE_OPTIONS.map(o => `
-      <label class="quote-service-check">
-        <input type="checkbox" name="service" value="${o.v}" />
-        <span>${o[key]}</span>
-      </label>`).join('');
-}
-
-function serviceLabelsFor(values, key = 'en') {
-  return values
-    .map(v => SERVICE_OPTIONS.find(s => s.v === v))
-    .filter(Boolean)
-    .map(s => s[key]);
-}
-
-function getSelectedServices(form) {
-  return [...form.querySelectorAll('input[name="service"]:checked')].map(el => el.value);
-}
-
-function setQuoteServices(form, values) {
-  const set = new Set(Array.isArray(values) ? values : values ? [values] : []);
-  form.querySelectorAll('input[name="service"]').forEach(el => {
-    el.checked = set.has(el.value);
-  });
 }
 
 function initQuoteModal() {
@@ -275,24 +236,6 @@ function initQuoteModal() {
           </select>
         </div>
         <div class="quote-field">
-          <span class="quote-label" id="quoteServicesLabel">
-            <span data-lang="tr">Hizmetler</span><span data-lang="en">Services</span><span data-lang="ru">Услуги</span>
-          </span>
-          <p class="quote-service-hint">
-            <span data-lang="tr">Birden fazla hizmet seçebilirsiniz.</span>
-            <span data-lang="en">You can select more than one service.</span>
-            <span data-lang="ru">Можно выбрать несколько услуг.</span>
-          </p>
-          <div class="quote-service-grid" id="quoteServices" role="group" aria-labelledby="quoteServicesLabel">
-            ${serviceCheckboxesHtml()}
-          </div>
-          <p class="quote-service-error" id="quoteServiceError" hidden>
-            <span data-lang="tr">Lütfen en az bir hizmet seçin.</span>
-            <span data-lang="en">Please select at least one service.</span>
-            <span data-lang="ru">Выберите хотя бы одну услугу.</span>
-          </p>
-        </div>
-        <div class="quote-field">
           <label class="quote-label" for="quoteSize"><span data-lang="tr">Proje Ölçeği</span><span data-lang="en">Project Size</span><span data-lang="ru">Масштаб проекта</span></label>
           <select class="quote-select" id="quoteSize" name="project_size">
             <option value="small">Small (&lt; 1,000 m²)</option>
@@ -324,29 +267,19 @@ function initQuoteModal() {
   modal.querySelector('.quote-modal-backdrop').addEventListener('click', closeQuoteModal);
   modal.querySelector('.quote-modal-close').addEventListener('click', closeQuoteModal);
   modal.querySelector('#quoteForm').addEventListener('submit', submitQuoteForm);
-  modal.querySelector('#quoteServices')?.addEventListener('change', () => {
-    const form = modal.querySelector('#quoteForm');
-    if (getSelectedServices(form).length) {
-      modal.querySelector('#quoteServices')?.classList.remove('is-error');
-      modal.querySelector('#quoteServiceError')?.setAttribute('hidden', '');
-    }
-  });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeQuoteModal();
   });
   return modal;
 }
 
-function openQuoteModal(presetService) {
+function openQuoteModal() {
   const modal = initQuoteModal();
   const form = modal.querySelector('#quoteForm');
   const success = modal.querySelector('#quoteSuccess');
   form.reset();
   form.style.display = '';
   success.classList.remove('on');
-  form.querySelector('#quoteServices')?.classList.remove('is-error');
-  form.querySelector('#quoteServiceError')?.setAttribute('hidden', '');
-  if (presetService) setQuoteServices(form, presetService);
   const countrySel = modal.querySelector('#quoteCountry');
   if (countrySel) countrySel.value = 'TR';
   modal.classList.add('open');
@@ -369,37 +302,20 @@ async function submitQuoteForm(e) {
   const form = e.target;
   const btn = form.querySelector('.quote-submit');
   const fd = new FormData(form);
-  const payload = Object.fromEntries([...fd.entries()].filter(([k]) => k !== 'service'));
-  const selectedServices = getSelectedServices(form);
+  const payload = Object.fromEntries(fd.entries());
   if (!payload.name?.trim() || !payload.email?.trim()) {
     form.querySelector('#quoteName').reportValidity();
     form.querySelector('#quoteEmail').reportValidity();
     return;
   }
 
-  const serviceGrid = form.querySelector('#quoteServices');
-  const serviceError = form.querySelector('#quoteServiceError');
-  if (!selectedServices.length) {
-    serviceGrid?.classList.add('is-error');
-    serviceError?.removeAttribute('hidden');
-    serviceGrid?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    return;
-  }
-  serviceGrid?.classList.remove('is-error');
-  serviceError?.setAttribute('hidden', '');
-
   btn.disabled = true;
-  const lang = document.documentElement.lang || 'tr';
-  const sk = lang === 'en' ? 'en' : lang === 'ru' ? 'ru' : 'tr';
-  const serviceText = serviceLabelsFor(selectedServices, sk).join(', ');
-  const serviceTextEn = serviceLabelsFor(selectedServices, 'en').join(', ');
   const bodyText = [
     `Name: ${payload.name}`,
     `Company: ${payload.company || '—'}`,
     `Email: ${payload.email}`,
     `Phone: ${payload.phone || '—'}`,
     `Country: ${countryLabel(payload.country)}`,
-    `Services: ${serviceText}`,
     `Project size: ${payload.project_size}`,
     '',
     payload.message || ''
@@ -415,10 +331,9 @@ async function submitQuoteForm(e) {
         company: payload.company,
         phone: payload.phone,
         country: countryLabel(payload.country),
-        service: serviceTextEn,
         project_size: payload.project_size,
         message: payload.message,
-        _subject: `FNV Quote Request — ${payload.name}`,
+        _subject: `REF YAPI Quote Request — ${payload.name}`,
         _template: 'table'
       })
     });
@@ -426,7 +341,7 @@ async function submitQuoteForm(e) {
     form.style.display = 'none';
     document.getElementById('quoteSuccess').classList.add('on');
   } catch (_) {
-    const subject = encodeURIComponent(`FNV Quote Request — ${payload.name}`);
+    const subject = encodeURIComponent(`REF YAPI Quote Request — ${payload.name}`);
     const body = encodeURIComponent(bodyText);
     window.location.href = `mailto:${QUOTE_EMAIL}?subject=${subject}&body=${body}`;
     closeQuoteModal();
@@ -439,66 +354,8 @@ document.addEventListener('click', e => {
   const trigger = e.target.closest('.quote-trigger');
   if (!trigger) return;
   e.preventDefault();
-  openQuoteModal(trigger.dataset.service || trigger.dataset.quoteService || '');
+  openQuoteModal();
 });
-
-function selectHomeService(id, scroll = true) {
-  const cards = document.querySelectorAll('.sg.sg-12 .sc-card[data-service]');
-  const panels = document.querySelectorAll('.svc-preview-panel[data-service]');
-  const preview = document.getElementById('svcPreview');
-  if (!cards.length || !panels.length) return;
-  cards.forEach(c => {
-    const on = c.dataset.service === id;
-    c.classList.toggle('is-active', on);
-    c.setAttribute('aria-pressed', on ? 'true' : 'false');
-  });
-  panels.forEach(p => p.classList.toggle('is-active', p.dataset.service === id));
-  if (scroll && preview) {
-    preview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-}
-
-function initHomeServices() {
-  const grid = document.querySelector('.sg.sg-12');
-  if (!grid) return;
-
-  grid.querySelectorAll('.sc-card[data-service]').forEach(card => {
-    card.addEventListener('click', () => selectHomeService(card.dataset.service));
-  });
-
-  document.querySelectorAll('.prod-svc-chip').forEach(chip => {
-    const num = chip.textContent.trim().padStart(2, '0');
-    const map = {
-      '01': 'fire', '02': 'access', '03': 'data', '04': 'hotel-door', '05': 'pa',
-      '06': 'mechanical', '07': 'phone', '08': 'intercom', '09': 'cctv',
-      '10': 'lighting', '11': 'nurse', '12': 'iptv'
-    };
-    const id = map[num];
-    if (!id) return;
-    chip.style.cursor = 'pointer';
-    chip.setAttribute('role', 'button');
-    chip.setAttribute('tabindex', '0');
-    chip.addEventListener('click', e => {
-      e.preventDefault();
-      e.stopPropagation();
-      document.getElementById('hizmetler')?.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => selectHomeService(id), 400);
-    });
-    chip.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        chip.click();
-      }
-    });
-  });
-
-  const hash = location.hash.replace('#', '');
-  if (hash.startsWith('svc-')) {
-    selectHomeService(hash.replace('svc-', ''), false);
-  }
-}
-
-initHomeServices();
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
@@ -652,11 +509,6 @@ if (refsGrid && sortBtns.length) {
 
   const items = navEl.querySelectorAll('.nav-links > li');
   const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  const SERVICE_PAGES = new Set([
-    'integrated-building-systems.html', 'fire-detection.html', 'security-systems.html',
-    'automation-systems.html', 'audio-visual-systems.html', 'data-communications.html',
-    'tv-video-systems.html',
-  ]);
   const OFFICE_PAGES = new Set(['istanbul.html', 'london.html', 'middle-east-asia.html']);
 
   const setActive = li => {
@@ -682,10 +534,6 @@ if (refsGrid && sortBtns.length) {
     setActive(liFor(a => hrefOf(a).endsWith('documents.html')));
     return;
   }
-  if (SERVICE_PAGES.has(page)) {
-    setActive(liFor(a => (a.getAttribute('href') || '').includes('urunlerimiz')));
-    return;
-  }
   if (OFFICE_PAGES.has(page)) {
     setActive(liFor((_, li) => li.classList.contains('nav-offices')));
     return;
@@ -696,12 +544,8 @@ if (refsGrid && sortBtns.length) {
 
   const sections = [
     { id: 'hakkimizda', match: a => (a.getAttribute('href') || '').includes('hakkimizda') },
-    { id: 'urunlerimiz', match: a => (a.getAttribute('href') || '').includes('urunlerimiz') },
-    { id: 'referanslar', match: a => hrefOf(a).endsWith('references.html') },
-    {
-      id: 'iletisim',
-      match: (a, li) => (a.getAttribute('href') || '').includes('iletisim') && !li.classList.contains('nav-offices'),
-    },
+    { id: 'secilen', match: a => hrefOf(a).endsWith('references.html') },
+    { id: 'iletisim', match: (_, li) => li.classList.contains('nav-offices') },
   ].map(s => ({ ...s, el: document.getElementById(s.id) })).filter(s => s.el);
 
   const update = () => {
@@ -715,4 +559,39 @@ if (refsGrid && sortBtns.length) {
 
   window.addEventListener('scroll', update, { passive: true });
   update();
+})();
+
+/* Link project cards to case-study pages (id derived from image filename) */
+(function () {
+  function idFrom(el) {
+    var img = el.querySelector('img[src*="assets/projects/"]');
+    if (!img) return null;
+    var m = (img.getAttribute('src') || '').match(/projects\/(ref\d+)/);
+    return m ? m[1] : null;
+  }
+  document.querySelectorAll('a.work-lead, a.work-item').forEach(function (a) {
+    var id = idFrom(a);
+    if (id) a.setAttribute('href', 'project.html?id=' + id);
+  });
+  // a11y attributes on reference cards
+  document.querySelectorAll('.ref-card').forEach(function (card) {
+    if (!idFrom(card)) return;
+    card.setAttribute('role', 'link');
+    card.setAttribute('tabindex', '0');
+    card.style.cursor = 'pointer';
+  });
+  // delegated navigation (survives any re-sort/re-render of the grid)
+  function go(card) {
+    var id = idFrom(card);
+    if (id) location.href = 'project.html?id=' + id;
+  }
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('.ref-card');
+    if (card) go(card);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var card = e.target.closest && e.target.closest('.ref-card');
+    if (card) { e.preventDefault(); go(card); }
+  });
 })();

@@ -19,13 +19,13 @@ BROWSER_LINKS = """
 
 SECTIONS = [
   ("intro", "1. Giriş", (
-    """İnternet sitemizin (www.fnvelektronik.com) düzgün çalışmasını sağlamak, ziyaretçi ve üyelerimize ("kullanıcı(lar)" veya "siz") en alakalı hizmetleri sunmak amacıyla birtakım çerezler kullanmaktayız.
+    """İnternet sitemizin (www.refyapi.com) düzgün çalışmasını sağlamak, ziyaretçi ve üyelerimize ("kullanıcı(lar)" veya "siz") en alakalı hizmetleri sunmak amacıyla birtakım çerezler kullanmaktayız.
 
 <p>İşbu Çerez Politikası, size çerezler ve çerezlerin nasıl kontrol edileceği hakkında bilgi vermek amacıyla hazırlanmıştır.</p>""",
-    """We use certain cookies to ensure our website (www.fnvelektronik.com) works properly and to offer visitors and members ("user(s)" or "you") the most relevant services.
+    """We use certain cookies to ensure our website (www.refyapi.com) works properly and to offer visitors and members ("user(s)" or "you") the most relevant services.
 
 <p>This Cookie Policy is prepared to inform you about cookies and how to control them.</p>""",
-    """Мы используем файлы cookie для корректной работы нашего сайта (www.fnvelektronik.com) и предоставления посетителям и пользователям («пользователь(и)» или «вы») наиболее релевантных услуг.
+    """Мы используем файлы cookie для корректной работы нашего сайта (www.refyapi.com) и предоставления посетителям и пользователям («пользователь(и)» или «вы») наиболее релевантных услуг.
 
 <p>Настоящая Политика cookie подготовлена для информирования о cookie и способах их управления.</p>""",
   )),
@@ -150,15 +150,15 @@ SECTIONS = [
 <p>Отключение некоторых cookie может нарушить работу функций сайта.</p>""",
   )),
   ("contact", "8. Bize ulaşın", (
-    """FNV Elektronik, Çerez Politikası'nın hükümlerini dilediği zaman değiştirebilecektir. Çerez Politikasında yaptığımız değişikliklerden veya güncellemelerden haberdar olabilmek için aralıklı olarak bu sayfayı kontrol edebilirsiniz.
+    """REF YAPI, Çerez Politikası'nın hükümlerini dilediği zaman değiştirebilecektir. Çerez Politikasında yaptığımız değişikliklerden veya güncellemelerden haberdar olabilmek için aralıklı olarak bu sayfayı kontrol edebilirsiniz.
 
-<p>Çerez Politikası veya internet sitemizdeki çerez kullanımı hakkında soru, görüş ve önerileriniz için bizimle <a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a> adresi üzerinden iletişime geçebilirsiniz.</p>""",
-    """FNV Elektronik may change the provisions of this Cookie Policy at any time. You may check this page periodically to stay informed of changes or updates.
+<p>Çerez Politikası veya internet sitemizdeki çerez kullanımı hakkında soru, görüş ve önerileriniz için bizimle <a href="mailto:info@refyapi.com">info@refyapi.com</a> adresi üzerinden iletişime geçebilirsiniz.</p>""",
+    """REF YAPI may change the provisions of this Cookie Policy at any time. You may check this page periodically to stay informed of changes or updates.
 
-<p>For questions, comments or suggestions about this Cookie Policy or cookie use on our website, contact us at <a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a>.</p>""",
-    """FNV Elektronik вправе изменять настоящую Политику cookie в любое время. Периодически проверяйте эту страницу для актуальной информации.
+<p>For questions, comments or suggestions about this Cookie Policy or cookie use on our website, contact us at <a href="mailto:info@refyapi.com">info@refyapi.com</a>.</p>""",
+    """REF YAPI вправе изменять настоящую Политику cookie в любое время. Периодически проверяйте эту страницу для актуальной информации.
 
-<p>По вопросам использования cookie на сайте: <a href="mailto:info@fnvelektronik.com">info@fnvelektronik.com</a>.</p>""",
+<p>По вопросам использования cookie на сайте: <a href="mailto:info@refyapi.com">info@refyapi.com</a>.</p>""",
   )),
 ]
 
@@ -212,7 +212,7 @@ html = f'''<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/logo-mark.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/logo-mark.png" />
-  <title>Çerez Politikası — FNV Elektronik</title>
+  <title>Çerez Politikası — REF YAPI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />

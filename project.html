@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <script>try{var l=localStorage.getItem('refyapi-lang');if(l==='en'||l==='ru')document.documentElement.classList.add('lang-'+l);}catch(e){}</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/logo-icon.png?v=3" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/logo-icon.png?v=3" />
+  <title>Proje — REF YAPI</title>
+  <meta name="description" id="metaDesc" content="REF YAPI proje referansı." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css?v=67" />
+</head>
+<body data-base="proj">
+
+<nav class="nav solid" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img class="logo-light" src="assets/logo-white.png?v=3" alt="REF YAPI">
+    <img class="logo-dark" src="assets/logo-mark.png?v=3" alt="REF YAPI">
+  </a>
+  <button class="hbg" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-panel">
+    <ul class="nav-links">
+      <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About</span><span data-lang="ru">О нас</span></a></li>
+      <li><a href="references.html"><span data-lang="tr">Referanslar</span><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></a></li>
+      <li><a href="documents.html"><span data-lang="tr">Belgeler</span><span data-lang="en">Documents</span><span data-lang="ru">Документы</span></a></li>
+      <li class="nav-offices">
+        <a href="index.html#iletisim"><span data-lang="tr">Ofisler</span><span data-lang="en">Offices</span><span data-lang="ru">Офисы</span></a>
+        <ul class="dd">
+          <li><a href="istanbul.html"><span data-lang="tr">İstanbul</span><span data-lang="en">Istanbul</span><span data-lang="ru">Стамбул</span></a></li>
+          <li><a href="london.html"><span data-lang="tr">Londra</span><span data-lang="en">London</span><span data-lang="ru">Лондон</span></a></li>
+          <li><a href="middle-east-asia.html"><span data-lang="tr">Orta Doğu ve Asya</span><span data-lang="en">Middle East &amp; Asia</span><span data-lang="ru">Ближний Восток и Азия</span></a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-panel-foot">
+      <button type="button" class="btn-nav-quote quote-trigger"><span data-lang="tr">Teklif Al</span><span data-lang="en">Get a Quote</span><span data-lang="ru">Смета</span></button>
+      <div class="nav-langs">
+        <button class="lbtn on" onclick="setLang('tr')">TR</button>
+        <button class="lbtn" onclick="setLang('en')">EN</button>
+        <button class="lbtn" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="projMain">
+  <!-- Case-study hero -->
+  <section class="cs-hero">
+    <div class="cs-hero-bg"><img id="csImg" src="" alt="" /></div>
+    <div class="cs-hero-content wrap">
+      <nav class="crumb" aria-label="breadcrumb">
+        <a href="index.html"><span data-lang="tr">Ana Sayfa</span><span data-lang="en">Home</span><span data-lang="ru">Главная</span></a>
+        <span class="sep">/</span>
+        <a href="references.html"><span data-lang="tr">Referanslar</span><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></a>
+        <span class="sep">/</span>
+        <span class="cur" id="csCrumb"></span>
+      </nav>
+      <p class="cs-sector" id="csSector"></p>
+      <h1 class="cs-title" id="csTitle"></h1>
+      <p class="cs-place" id="csPlace"></p>
+    </div>
+  </section>
+
+  <!-- Overview + information -->
+  <section class="cs-body">
+    <div class="wrap cs-grid">
+      <div class="cs-overview">
+        <p class="eyebrow"><span data-lang="tr">Genel bakış</span><span data-lang="en">Overview</span><span data-lang="ru">Обзор</span></p>
+        <h2 class="cs-h2" id="csOverviewH"></h2>
+        <p class="cs-lead" id="csOverviewP"></p>
+
+        <div class="cs-expertise">
+          <p class="eyebrow"><span data-lang="tr">İlgili uzmanlık</span><span data-lang="en">Relevant expertise</span><span data-lang="ru">Профильная экспертиза</span></p>
+          <ul class="cs-disc" id="csDisc"></ul>
+        </div>
+      </div>
+
+      <aside class="cs-info" aria-label="Project information">
+        <p class="cs-info-head"><span data-lang="tr">Proje bilgileri</span><span data-lang="en">Project information</span><span data-lang="ru">Информация о проекте</span></p>
+        <dl class="cs-facts" id="csFacts"></dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- More projects -->
+  <section class="cs-more">
+    <div class="wrap">
+      <div class="work-head">
+        <div class="work-head-l">
+          <p class="eyebrow"><span data-lang="tr">Diğer projeler</span><span data-lang="en">More projects</span><span data-lang="ru">Другие проекты</span></p>
+          <h2><span data-lang="tr">Benzer işler</span><span data-lang="en">Related work</span><span data-lang="ru">Похожие проекты</span></h2>
+        </div>
+        <a href="references.html" class="text-link"><span data-lang="tr">Tüm referanslar</span><span data-lang="en">All projects</span><span data-lang="ru">Все проекты</span></a>
+      </div>
+      <div class="cs-more-grid" id="csMore"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cs-cta">
+    <div class="wrap cs-cta-inner">
+      <h2>
+        <span data-lang="tr">Bir sonraki projeyi birlikte inşa edelim.</span>
+        <span data-lang="en">Let's build what's next, together.</span>
+        <span data-lang="ru">Построим следующее вместе.</span>
+      </h2>
+      <button type="button" class="btn-line btn-line-lg quote-trigger">
+        <span data-lang="tr">Projenizi konuşalım</span>
+        <span data-lang="en">Discuss a project</span>
+        <span data-lang="ru">Обсудить проект</span>
+      </button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap ft-top">
+    <div>
+      <img class="ft-brand-logo" src="assets/logo-white.png?v=3" alt="REF YAPI">
+      <p class="ft-brand-sub"><span data-lang="tr">İnşaat ve yapı. 2005’ten beri.</span><span data-lang="en">Construction and building. Since 2005.</span><span data-lang="ru">Строительство. С 2005 года.</span></p>
+    </div>
+    <div>
+      <p class="ft-col-head"><span data-lang="tr">Site</span><span data-lang="en">Site</span><span data-lang="ru">Сайт</span></p>
+      <ul class="ft-links">
+        <li><a href="index.html#hakkimizda"><span data-lang="tr">Hakkımızda</span><span data-lang="en">About</span><span data-lang="ru">О нас</span></a></li>
+        <li><a href="references.html"><span data-lang="tr">Referanslar</span><span data-lang="en">Projects</span><span data-lang="ru">Проекты</span></a></li>
+        <li><a href="documents.html"><span data-lang="tr">Belgeler</span><span data-lang="en">Documents</span><span data-lang="ru">Документы</span></a></li>
+        <li><a href="istanbul.html">İstanbul</a></li>
+        <li><a href="london.html">London</a></li>
+        <li><a href="middle-east-asia.html"><span data-lang="tr">Taşkent</span><span data-lang="en">Tashkent</span><span data-lang="ru">Ташкент</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="ft-col-head"><span data-lang="tr">İletişim</span><span data-lang="en">Contact</span><span data-lang="ru">Контакт</span></p>
+      <ul class="ft-links"><li><a href="mailto:info@refyapi.com">info@refyapi.com</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap ft-bottom">
+    <span>© 2026 REF YAPI</span>
+    <span class="ft-legal-links">
+      <a href="privacy-policy.html" class="ft-legal-link"><span data-lang="tr">Gizlilik</span><span data-lang="en">Privacy</span><span data-lang="ru">Конфиденциальность</span></a>
+      <span class="ft-legal-sep">·</span>
+      <a href="cookie-policy.html" class="ft-legal-link"><span data-lang="tr">Çerezler</span><span data-lang="en">Cookies</span><span data-lang="ru">Cookie</span></a>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/project-data.js?v=2"></script>
+<script src="assets/project-render.js?v=1"></script>
+<script src="assets/site.js?v=52"></script>
+</body>
+</html>
