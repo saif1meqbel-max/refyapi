@@ -804,7 +804,7 @@ body.home .work-lead .work-cap {
   background: linear-gradient(transparent, rgba(12, 11, 10, .8));
   border-radius: 0 0 var(--r-lg) var(--r-lg);
 }
-body.home .work-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+body.home .work-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
 body.home .work-item .work-cap { padding: 16px 2px 0; }
 body.home .work-name { font-weight: 600; font-size: 1.05rem; }
 body.home .work-lead .work-name { font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 700; }
