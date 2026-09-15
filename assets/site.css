@@ -984,6 +984,10 @@ body.home .collab-brand {
   font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase;
   text-shadow: 0 1px 14px rgba(0,0,0,.35);
 }
+body.home .collab-logo {
+  display: block; width: auto; height: auto; max-height: 40px; max-width: 64%; object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 8px rgba(0,0,0,.35));
+}
 body.home .collab-name { display: block; color: #fff; font-family: var(--f-head); font-weight: 600; font-size: 1.08rem; letter-spacing: -.01em; margin-bottom: 6px; }
 body.home .collab-info { display: block; color: rgba(255,255,255,.82); font-size: .82rem; line-height: 1.45; }
 
