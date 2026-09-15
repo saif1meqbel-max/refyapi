@@ -646,7 +646,9 @@ footer { background: var(--char); color: rgba(255,255,255,.5); }
     left: 0; right: 0; width: auto;
     border-left: 0; border-right: 0;
   }
-  .hero { min-height: 86vh; padding-bottom: 56px; }
+  .hero { min-height: 62vh; padding-bottom: 44px; }
+  .hero-video { object-position: center 42%; }
+  .hero-bg { background-position: center 40%; }
   .about, .work, .offices { padding: 72px 0; }
   .facts { grid-template-columns: 1fr; gap: 16px; }
   .work-grid, .refs-grid, .lib-grid { grid-template-columns: 1fr; }
@@ -849,7 +851,7 @@ body.home .office-city { font-weight: 700; }
   body.home .stat:nth-child(odd) { border-left: 0; padding-left: 0; }
 }
 @media (max-width: 720px) {
-  body.home .hero { min-height: 88vh; }
+  body.home .hero { min-height: 62vh; padding-bottom: 44px; }
   body.home .work-grid { grid-template-columns: 1fr; }
   body.home .work-lead .work-media img { height: 300px; }
   body.home .work-item .work-media img { height: 320px; }
@@ -988,6 +990,7 @@ body.home .collab-logo {
   display: block; width: auto; height: auto; max-height: 40px; max-width: 64%; object-fit: contain;
   filter: brightness(0) invert(1) drop-shadow(0 1px 8px rgba(0,0,0,.35));
 }
+body.home .collab-logo-tall { max-height: 54px; }
 body.home .collab-name { display: block; color: #fff; font-family: var(--f-head); font-weight: 600; font-size: 1.08rem; letter-spacing: -.01em; margin-bottom: 6px; }
 body.home .collab-info { display: block; color: rgba(255,255,255,.82); font-size: .82rem; line-height: 1.45; }
 
