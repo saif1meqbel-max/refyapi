@@ -964,6 +964,41 @@ body.home .reach-stats dd { font-size: .76rem; color: var(--ink-3); margin-top: 
   body.home .story-panel { padding-bottom: 56px; }
 }
 
+/* ── Built for leading brands (DAMAC-style portrait cards) ── */
+body.home .collab { background: var(--white); padding: 116px 0 124px; }
+body.home .collab-head { margin-bottom: 44px; }
+body.home .collab-head h2 { font-family: var(--f-head); font-weight: 700; font-size: clamp(2rem, 3.4vw, 2.8rem); letter-spacing: -.02em; }
+body.home .collab-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+body.home .collab-card { position: relative; display: block; aspect-ratio: 3 / 4; border-radius: var(--r-lg); overflow: hidden; background: var(--char); }
+body.home .collab-media { position: absolute; inset: 0; }
+body.home .collab-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+body.home .collab-card:hover .collab-media img { transform: scale(1.05); }
+body.home .collab-inner {
+  position: absolute; inset: 0; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  padding: 30px 22px 28px; text-align: center;
+  background: linear-gradient(180deg, rgba(12,11,10,.5) 0%, rgba(12,11,10,.05) 26%, rgba(12,11,10,.05) 52%, rgba(12,11,10,.82) 100%);
+}
+body.home .collab-brand {
+  color: #fff; font-family: var(--f-head); font-weight: 600;
+  font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase;
+  text-shadow: 0 1px 14px rgba(0,0,0,.35);
+}
+body.home .collab-name { display: block; color: #fff; font-family: var(--f-head); font-weight: 600; font-size: 1.08rem; letter-spacing: -.01em; margin-bottom: 6px; }
+body.home .collab-info { display: block; color: rgba(255,255,255,.82); font-size: .82rem; line-height: 1.45; }
+
+@media (max-width: 960px) {
+  body.home .collab-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+@media (max-width: 720px) {
+  body.home .collab { padding: 84px 0; }
+  body.home .collab-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 440px) {
+  body.home .collab-grid { grid-template-columns: 1fr; }
+  body.home .collab-card { aspect-ratio: 4 / 3; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
    PROJECT CASE STUDY (project.html — body.proj)
    ═══════════════════════════════════════════════════════════════ */
