@@ -617,50 +617,6 @@ window.REF_PROJECTS = [
     }
   },
   {
-    "id": "ref30",
-    "img": "assets/projects/ref30-ronesans-mobilizasyon-trafo.png",
-    "alt": "Rönesans Mobilizasyon trafo merkezi",
-    "year": "2020",
-    "country": "uzbekistan",
-    "title": {
-      "tr": "Rönesans Mobilizasyon",
-      "en": "Renaissance Mobilization",
-      "ru": "Rönesans Mobilizasyon"
-    },
-    "loc": {
-      "tr": "Özbekistan",
-      "en": "Uzbekistan",
-      "ru": "Узбекистан"
-    },
-    "sector": {
-      "tr": "Altyapı",
-      "en": "Infrastructure",
-      "ru": "Инфраструктура"
-    }
-  },
-  {
-    "id": "ref31",
-    "img": "assets/projects/ref31-ronesans-mobilizasyon-yangin.png",
-    "alt": "Rönesans Mobilizasyon",
-    "year": "2020",
-    "country": "uzbekistan",
-    "title": {
-      "tr": "Rönesans Mobilizasyon",
-      "en": "Renaissance Mobilization",
-      "ru": "Rönesans Mobilizasyon"
-    },
-    "loc": {
-      "tr": "Özbekistan",
-      "en": "Uzbekistan",
-      "ru": "Узбекистан"
-    },
-    "sector": {
-      "tr": "Altyapı",
-      "en": "Infrastructure",
-      "ru": "Инфраструктура"
-    }
-  },
-  {
     "id": "ref32",
     "img": "assets/projects/ref32-halkbank-headquarters.png",
     "alt": "Halkbank Genel Müdürlük",

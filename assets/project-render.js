@@ -106,6 +106,17 @@
     return '<div><dt>' + span(f[0]) + '</dt><dd>' + span(f[1]) + '</dd></div>';
   }).join(''));
 
+  // Google Maps link for the project location (city-level search)
+  var mapEl = document.getElementById('csMap');
+  if (mapEl) {
+    var locStr = proj.loc.en || proj.loc.tr || proj.loc.ru || '';
+    if (locStr) {
+      var q = encodeURIComponent(((proj.title.en || proj.title.tr) + ' ' + locStr).trim());
+      mapEl.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + q);
+      mapEl.hidden = false;
+    }
+  }
+
   // More projects — same sector first, then fill by recency
   var others = P.filter(function (p) { return p.id !== proj.id; });
   var same = others.filter(function (p) { return p.sector.en === proj.sector.en; });
