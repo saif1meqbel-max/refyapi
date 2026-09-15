@@ -1096,3 +1096,62 @@ body.proj .btn-line-lg:hover { color: #fff; border-color: #fff; }
   body.proj .cs-card-media img { height: 240px; }
   body.proj .cs-cta { padding: 72px 0; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   ABOUT PAGE (hakkimizda.html — body.about)
+   ═══════════════════════════════════════════════════════════════ */
+body.about .about-hero { min-height: 480px; }
+body.about .about-hero-bg { background-position: center 40%; }
+
+/* Intro */
+body.about .ab-intro { background: var(--paper); padding: 104px 0 76px; }
+body.about .ab-intro-inner { max-width: 800px; }
+body.about .ab-lead-h { font-family: var(--f-edit); font-weight: 500; font-size: clamp(2.1rem, 4vw, 3.4rem); line-height: 1.12; margin: 4px 0 26px; letter-spacing: 0; }
+body.about .ab-lead-p { font-size: 1.1rem; line-height: 1.85; color: var(--ink-2); max-width: 64ch; }
+
+/* Stats band */
+body.about .ab-stats { background: var(--char); color: #fff; padding: 40px 0; }
+body.about .ab-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+body.about .ab-stat { display: flex; flex-direction: column; gap: 6px; padding: 16px 30px; border-left: 1px solid rgba(255,255,255,.12); }
+body.about .ab-stat:first-child { border-left: 0; padding-left: 0; }
+body.about .ab-stat-n { font-family: var(--f-head); font-weight: 700; font-size: clamp(2rem, 3.4vw, 2.9rem); line-height: 1; letter-spacing: -.02em; }
+body.about .ab-stat-l { font-size: .78rem; color: rgba(255,255,255,.5); }
+
+/* Story split */
+body.about .ab-story { background: var(--paper); padding: 112px 0; }
+body.about .ab-story-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+body.about .ab-story-fig img { width: 100%; height: 520px; object-fit: cover; border-radius: var(--r-lg); }
+body.about .ab-h2 { font-family: var(--f-head); font-weight: 700; font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: -.02em; line-height: 1.14; margin-bottom: 18px; }
+body.about .ab-p { font-size: 1.02rem; line-height: 1.8; color: var(--ink-2); margin-bottom: 8px; }
+
+/* Why choose us */
+body.about .ab-why { background: var(--white); padding: 112px 0 120px; }
+body.about .ab-why-head { max-width: 640px; margin-bottom: 56px; }
+body.about .ab-why-head .ab-h2 { margin-top: 6px; margin-bottom: 0; }
+body.about .ab-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 56px; }
+body.about .ab-reason { padding: 32px 0; border-top: 1px solid var(--line); }
+body.about .ab-reason h3 { font-family: var(--f-head); font-weight: 600; font-size: 1.12rem; letter-spacing: -.01em; margin-bottom: 12px; }
+body.about .ab-reason h3::before { content: ''; display: block; width: 26px; height: 2px; background: var(--mark); margin-bottom: 18px; }
+body.about .ab-reason p { font-size: .94rem; line-height: 1.7; color: var(--ink-2); }
+
+/* CTA */
+body.about .ab-cta { background: var(--char); color: #fff; padding: 96px 0; }
+body.about .ab-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+body.about .ab-cta h2 { font-family: var(--f-edit); font-weight: 500; font-size: clamp(1.9rem, 3.4vw, 3rem); line-height: 1.12; max-width: 20ch; }
+body.about .btn-line-lg { font-size: .95rem; color: #fff; border-color: rgba(255,255,255,.6); padding-bottom: 6px; }
+body.about .btn-line-lg:hover { color: #fff; border-color: #fff; }
+
+@media (max-width: 900px) {
+  body.about .ab-story-inner { grid-template-columns: 1fr; gap: 40px; }
+  body.about .ab-story-fig { order: -1; }
+  body.about .ab-why-grid { grid-template-columns: 1fr 1fr; column-gap: 40px; }
+  body.about .ab-stats-grid { grid-template-columns: 1fr 1fr; }
+  body.about .ab-stat:nth-child(odd) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 640px) {
+  body.about .ab-intro { padding: 72px 0 52px; }
+  body.about .ab-story, body.about .ab-why { padding: 72px 0; }
+  body.about .ab-story-fig img { height: 340px; }
+  body.about .ab-why-grid { grid-template-columns: 1fr; }
+  body.about .ab-cta { padding: 72px 0; }
+}
