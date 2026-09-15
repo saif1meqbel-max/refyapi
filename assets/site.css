@@ -144,17 +144,21 @@ button { font-family: inherit; }
   padding: 0 0 80px; overflow: hidden;
 }
 .hero-bg {
-  position: absolute; inset: 0;
+  position: absolute; inset: 0; z-index: 0;
   background-size: cover;
   background-position: 78% 42%;
   background-repeat: no-repeat;
 }
-.hero-bg::after {
-  content: '';
-  position: absolute; inset: 0;
+.hero-video {
+  position: absolute; inset: 0; z-index: 1;
+  width: 100%; height: 100%; object-fit: cover;
+  pointer-events: none;
+}
+.hero-scrim {
+  position: absolute; inset: 0; z-index: 2;
   background: linear-gradient(90deg, rgba(12,11,10,.78) 0%, rgba(12,11,10,.38) 52%, rgba(12,11,10,.18) 100%);
 }
-.hero-content { position: relative; padding: 0 var(--gutter); max-width: 640px; width: 100%; min-width: 0; }
+.hero-content { position: relative; z-index: 3; padding: 0 var(--gutter); max-width: 640px; width: 100%; min-width: 0; }
 .hero-meta {
   font-size: .78rem; letter-spacing: .08em; color: rgba(255,255,255,.55);
   margin-bottom: 20px;
@@ -732,10 +736,14 @@ body.home .btn-pill:hover { background: transparent; color: var(--ink); }
 
 /* ── Hero ── */
 body.home .hero { min-height: 96vh; padding-bottom: 92px; }
-body.home .hero-bg::after {
+body.home .hero-scrim {
   background:
     linear-gradient(90deg, rgba(12,11,10,.82) 0%, rgba(12,11,10,.46) 48%, rgba(12,11,10,.16) 100%),
     linear-gradient(0deg, rgba(12,11,10,.55) 0%, transparent 38%);
+}
+/* Reduced motion: show the static photo instead of the video */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
 }
 body.home .hero-content { max-width: 780px; }
 body.home .hero-meta {
