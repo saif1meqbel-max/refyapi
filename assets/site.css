@@ -1116,6 +1116,8 @@ body.about .ab-intro { background: var(--paper); padding: 104px 0 76px; }
 body.about .ab-intro-inner { max-width: 800px; }
 body.about .ab-lead-h { font-family: var(--f-edit); font-weight: 500; font-size: clamp(2.1rem, 4vw, 3.4rem); line-height: 1.12; margin: 4px 0 26px; letter-spacing: 0; }
 body.about .ab-lead-p { font-size: 1.1rem; line-height: 1.85; color: var(--ink-2); max-width: 64ch; }
+body.about .ab-lead-sec { padding-top: 0; }
+body.about .ab-lead-sec .ab-intro-inner { border-top: 1px solid var(--line, rgba(0,0,0,.1)); padding-top: 72px; }
 
 /* Stats band */
 body.about .ab-stats { background: var(--char); color: #fff; padding: 40px 0; }
