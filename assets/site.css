@@ -1163,3 +1163,17 @@ body.about .btn-line-lg:hover { color: #fff; border-color: #fff; }
   body.about .ab-why-grid { grid-template-columns: 1fr; }
   body.about .ab-cta { padding: 72px 0; }
 }
+
+/* ── Footer: 4-column with office contact blocks ── */
+.ft-top-4 { grid-template-columns: 1.2fr 1.1fr 1.1fr .8fr; gap: 44px; }
+.ft-office .ft-col-head { margin-bottom: 14px; }
+.ft-addr { font-style: normal; display: flex; flex-direction: column; gap: 9px; font-size: .82rem; line-height: 1.5; color: rgba(255,255,255,.5); }
+.ft-addr a { color: rgba(255,255,255,.55); transition: color .2s; }
+.ft-addr a:hover { color: #fff; }
+.ft-addr-line { color: rgba(255,255,255,.42); }
+@media (max-width: 1024px) {
+  .ft-top-4 { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 640px) {
+  .ft-top-4 { grid-template-columns: 1fr; gap: 32px; }
+}
